@@ -11,7 +11,7 @@ const { EnvironmentCredentials } = require('aws-sdk');
 const config = {
   title: 'Appsmith',
   tagline: 'Open source, low code - Build, Ship and maintain Internal tools',
-  url: 'https://docs.appsmith.com',
+  url: 'https://docs.appsmithai.com',
   baseUrl: '/',
   favicon: 'img/Appsmith-Logo.png',
   "trailingSlash": false,
