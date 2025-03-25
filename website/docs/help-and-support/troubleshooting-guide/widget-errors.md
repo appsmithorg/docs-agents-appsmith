@@ -9,7 +9,6 @@ You may see below errors when binding data to widgets from an API, Query, or [JS
 
 You may see this error when executing an API, Query, JS Object in a widget property that expects data, and can't be used to trigger an action. 
 
-![Error action can't be triggered](/img/Troubleshooting-Widget-errors-action-cannot-be-triggered.png)
 
 #### Error message
 
@@ -62,7 +61,6 @@ The problem can be caused when you are trying to bind:
 * A huge JSON object which has a lot of fields
 * The whole query data rather than a selected row or triggered row in a table
 
-![When the data had more than 50 fields](</img/Troubleshooting__Widget_Errors__JSON_Form_Errors__Source_Exceeds_50_Fields.png>)
 
 
 #### Solution

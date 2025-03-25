@@ -24,9 +24,6 @@ messageContent='Response size exceeded the maximum supported size of <SIZE_SPECI
 #### Cause
 The error response could be caused when the API/query response size exceeds the allowed maximum limit of **5 MB** or the size setup.
 
-![Response larger than the supported size](/img/Query-errors-response-size-larger-than-5MB.png)
-
-![Response larger than the supported size error shown in errors tab](/img/Query-errors-response-size-larger-than-5MB-errors-tab.png)
 
 #### Solution
 You could resolve the error response by doing one of the following:
@@ -74,7 +71,6 @@ mongodb+srv://mockdb-admin:****@mockdb.kce5o.mongodb.net/movies?w=majority&retry
 
 In the snippet, `mockdb.kce5o.mongodb.net/` is the host, `movies` is the database name, and the items after the `?` are optional arguments.
 
-![](/img/mongoerr_dbname.png)
 
 :::info
 If you can't find what you are looking for and need help debugging an error, please raise your issue on [Discord Server](https://discord.com/invite/rBTTVJp) or email at support@appsmith.com.

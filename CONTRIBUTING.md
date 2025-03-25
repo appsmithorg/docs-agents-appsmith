@@ -21,12 +21,9 @@ You can raise an issue by using different templates to choose the one that best 
 - Click Issues
 - Click New Issue
 
-![Raise a doc Issue](/website/static/img/Raise-Issues.png)
 
 ### Types
 You could select one of the available templates for raising an issue.
-
-![Issue Types](/website/static/img/Issue-Types.png)
 
 - Documentation Improvement - to raise an improvement request. You could select this issue for raising issues in the existing documents.
 - Documentation Feature - to raise a new documentation request. You could select this type of issue for raising a new documentation request.
@@ -35,7 +32,6 @@ You could select one of the available templates for raising an issue.
 
 You can use this template to raise any improvements on the existing documentation. The improvement request could include replacing images/videos/modifying the content to enhance readability etc. You’ll have to add the below details to raise a doc improvement issue.
 
-![Documentation Improvement Issue](/website/static/img/Documentation-Improvement-Issue-Template.png)
 
 | Attribute | Description |
 | --- | --- |
@@ -51,7 +47,6 @@ You can use this template to raise any improvements on the existing documentatio
 
 You can use this template to raise a new documentation request. For example, if you couldn't find documentation for GraphQL or if you want to submit an upcoming feature documentation request.
 
-![Documentation Feature Issue](/website/static/img/Documentation-Feature-Issue-Template.png)
 
 | Attribute | Description |
 | --- | --- |
@@ -110,7 +105,6 @@ The reviews would happen as part of the pull request, as pull request comments.
 * As you apply changes to the PR, please mark the comments as resolved.
 * You can verify the content changes as part of the deploy review, available on the conversation tab under the vercel section.
 
-  ![Preview your changes](/website/static/img/Deploy-preview-Content-Changes.png)
 
 * Once all the review comments are addressed, please re-request the review.
 

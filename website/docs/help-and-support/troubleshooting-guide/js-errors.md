@@ -126,8 +126,6 @@ messageContent="The value does not evaluate to type Array [{x: string, y: number
 The below image shows that there is an error in the `Chart Data field` of the [Chart](/reference/widgets/chart) widget. The Evaluated Value here indicates the current value of the field, and in the screenshot below, you can see that the current value is an array while the error indicates that it must be an array\<x, y>.
 
 
-![](/img/chart_error.png)
-
 
 #### Solution
 
@@ -261,7 +259,6 @@ This error occurs when there is invalid JavaScript inside the handlebars `{{ }}`
 In the example below, fetch isn't defined anywhere in the application
 
 
-![](/img/syntax_error.png)
 
 
 
