@@ -1,0 +1,137 @@
+---
+description: The page provides steps to expose your Appsmith Kubernetes installation to the internet.
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Expose K8s to Internet
+The page provides steps to expose your Appsmith Kubernetes installation to the internet.
+
+## Prerequisites
+1.  A self-hosted Appsmith installation on a Kubernetes cluster. If not installed yet, see the [Kubernetes installation guide](/getting-started/setup/installation-guides/kubernetes) for installing Appsmith.
+2. A running Kubernetes cluster with at least one node.
+
+## Before you begin
+1. Install NGINX Ingress controller on your Kubernetes cluster. If not installed yet, follow these steps:
+
+  a. Add ingress chart repository with:
+
+    ```bash
+    helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+    ```
+
+  b. Load ingress chart repository with:
+
+    ```bash
+    helm repo update
+    ```
+  c. Deploy ingress with:
+
+    ```bash
+    helm upgrade --namespace ingress-nginx -i ingress-nginx ingress-nginx/ingress-nginx --create-namespace --version 4.4.0
+   ```
+
+  d. Verify ingress installation with:
+
+    ```bash
+    kubectl get pods -n ingress-nginx
+    ``` 
+
+## Configure instance
+
+<Tabs groupId="appsmithEditions" queryString="current-edition">
+
+<TabItem label="Community Edition" value="communityEdition"> 
+
+  1. Go to the Appsmith installation directory, open values.yaml file, and update the `ingress` attribute as shown below:
+
+  ```yaml 
+    ingress:
+      ## @param ingress.enabled Enable ingress record generation for Ghost
+      ##
+      #highlight-next-line
+      enabled: true
+      annotations:
+        nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+        nginx.ingress.kubernetes.io/limit-rps: "15"
+      ## @param ingress.annotations Additional custom annotations for the ingress record
+      ## NOTE: If `ingress.certManager=true`, annotation `kubernetes.io/tls-acme: "true"` will automatically be added
+      ##
+      className: nginx
+      hosts:
+        #highlight-next-line
+        - host: <REPLACE-WITH-YOUR-DOMAIN>
+          paths:
+          - path: "/"
+            pathType: Prefix
+    service:
+      ## @param service.type Kubernetes Service type
+      ##
+      type: ClusterIP
+  ```
+
+  2. Run the below command once the parameter values are updated:
+
+      ```bash 
+      helm upgrade -i appsmith appsmith/appsmith --f values.yaml
+      ```
+  3. It takes a few minutes for the ingress to get a public IP assigned. Once it has been assigned, you should see an IPv4 address or a domain name in the `ADDRESS` column. Run the below command to get this address:
+
+  ```bash
+  kubectl get ingress -n appsmith
+  ```
+
+</TabItem>
+ <TabItem label="Commercial Edition" value="commercialEdition">
+
+  1. Go to the Appsmith installation directory, open values.yaml file, and update `ingress` attribute as shown below:
+  
+    ```yaml 
+      ingress:
+        ## @param ingress.enabled Enable ingress record generation for Ghost
+        ##
+        #highlight-next-line
+        enabled: true
+        annotations:
+          nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+          nginx.ingress.kubernetes.io/limit-rps: "15"
+        ## @param ingress.annotations Additional custom annotations for the ingress record
+        ## NOTE: If `ingress.certManager=true`, annotation `kubernetes.io/tls-acme: "true"` will automatically be added
+        ##
+        className: nginx
+        hosts:
+          #highlight-next-line
+          - host: <REPLACE-WITH-YOUR-DOMAIN>
+            paths:
+            - path: "/"
+              pathType: Prefix
+      service:
+        ## @param service.type Kubernetes Service type
+        ##
+        type: ClusterIP
+    ```
+    
+  2. Run the below command once the parameter values are updated:
+
+    ```bash 
+    helm upgrade -i appsmith-ee appsmith-ee/appsmith -n appsmith-ee -f values.yaml
+    ```
+
+  3. It takes a few minutes for the ingress to get a public IP assigned. Once it has been assigned, you should see an IPv4 address or a domain name in the `ADDRESS` column. Run the below command to get this address:
+
+  ```bash
+  kubectl get ingress -n appsmith-ee
+  ```
+
+</TabItem>
+</Tabs>
+  
+
+## Troubleshooting
+
+If you face issues, contact the support team using the chat widget at the bottom right of this page.
+
+## See also
+* [Configure TLS](/getting-started/setup/instance-configuration/custom-domain/configure-tls)
+* [Configure Appsmith instance](/getting-started/setup/instance-configuration/configure-using-environment-variables)
+* [Manage Appsmith instance](/getting-started/setup/instance-management/)

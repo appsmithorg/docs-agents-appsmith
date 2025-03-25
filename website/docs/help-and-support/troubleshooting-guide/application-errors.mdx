@@ -1,0 +1,122 @@
+# Application Errors
+
+Understanding how to effectively troubleshoot errors in your Appsmith applications can save you time and help maintain a smooth development process. This guide will walk you through common issues you may encounter and how to resolve them efficiently.
+
+## Testing datasource connection
+
+If you suspect an error related to your datasource, the first step is to test the datasource connection. This will quickly tell you whether the issue is with the connectivity to your data source or something else.
+
+1. Navigate to your Appsmith application's datasource page.
+2. Find the datasource in question and click on the "Test" button.
+3. If the "Test Configuration" option indicates failure, proceed to troubleshoot the datasource connectivity.
+
+<!-- -->
+
+### Troubleshooting datasource connectivity
+
+- Ensure that your datasource URL, authentication credentials, and other settings are correctly configured.
+- Verify that any IP whitelisting or firewall rules allow traffic from Appsmith's servers.
+- Review any error messages returned by the Test Configuration for clues to the problem.
+
+See guides on common [datasource errors](/help-and-support/troubleshooting-guide/action-errors/datasource-errors).
+
+<!-- -->
+
+## Debugging query errors
+
+Once you have confirmed that your datasource is connected, the next step is to ensure your queries are running as expected.
+
+- Remove any mustache bindings temporarily and use hard-coded parameters to test the basic query.
+- If the query fails to run, analyze the SQL or command errors, and adjust your query accordingly.
+
+See guides on common [query errors](/help-and-support/troubleshooting-guide/action-errors).
+
+<!-- -->
+
+### Inspecting evaluated values
+
+- In the Appsmith editor, inspect the evaluated value of the query to ensure that mustache parameters are being interpreted correctly.
+- Hover over parameters within your query to confirm they are present and formatted as expected.
+
+<!-- -->
+
+### Troubleshoot mustache bindings
+
+- Verify the syntax of your mustache bindings. Incorrect bindings can lead to errors when the query attempts to execute.
+- If the binding syntax is correct, check whether the widgets referenced in the bindings are configured correctly on the page.
+
+<!-- -->
+
+## Debugging widget errors
+
+Errors in widget properties are often related to the validation rules of those properties.
+
+### Validation errors
+
+- Ensure that any data bound to widgets is in the format expected by the property. For example, a Table widget expects an array of objects.
+- You may need to transform or access nested arrays differently if they do not match the expected input.
+
+**Example:** a Table widget is bound to the result of an API that returns a JSON object instead of an array of objects, which the Table widget expects for its data source.
+
+**Solution:** Transform the JSON object into an array of objects using JavaScript within the query or within a JS Object. You can use the `.map()` function to achieve the desired transformation if the data contains an array nested within the object.
+
+<!-- -->
+
+## Debug JS Errors
+
+You can use the `debugger` statement or `console.log()` to debug and inspect your code in the browser console or the **Console** tab. This allows you to check the state of your code and step through it line by line to help identify and fix any errors.
+
+While writing javascript in Appsmith, you may encounter the following errors in your code.
+
+#### Reference errors
+
+These occur when the code references an entity or variable that is not defined on the page. Review your bindings and the names of the entities to correct these errors.
+
+#### Lint errors
+
+Review the syntax of the mustache bindings for any syntax errors that could be causing issues. Javascript written inside mustache bindings can only be single line code. Use JSObjects for multi-line functions.
+
+#### Type errors
+Check your JavaScript operations to ensure you are not performing unsupported operations on certain data types.
+
+### With debugger statement
+
+To invoke the debugger, insert a `debugger` keyword in your code where you want it to pause, and then run your app. The code execution pauses on the debugger statement. It works like a `breakpoint`. You can then use the debugger tools to step through your code, inspect variables, and see how your code is executing.
+
+**Syntax**
+
+```
+debugger;
+```
+
+**Example**:
+
+```
+export default {
+    getUserDetails: async () => {
+        const userInfo = await userDetailsAPI.run();
+        debugger; // the execution is paused at this point
+        console.log(“user information: “+userInfo); // The value of the userInfo
+        variable is printed in the Logs tab.
+        return userInfo;
+    }
+}
+```
+
+### With console.log()
+
+In addition to using the debugger statement, you can use `console.log()` to print information about your code to the browser's console. This can help inspect the values of variables or the state of your app at different points during the execution of your code.
+
+**Syntax**
+
+```
+console.log(<VARIABLE_NAME>);
+```
+
+<VideoEmbed host="youtube" videoId="EYNPm9cJWGw" title="How To Debug JavaScript With Console.log" caption="How To Debug JavaScript With Console.log"/>
+
+
+
+## Getting help
+
+If after following these steps you're still encountering errors, the support team is here to help you. So don't hesitate to reach out for assistance via the chat widget on this page.
