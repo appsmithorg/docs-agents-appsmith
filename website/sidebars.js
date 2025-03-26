@@ -8,6 +8,7 @@ const sidebars = {
       label: 'Get Started',
       items: [
         'intro',
+        'getting-started/build-your-first-app',
       ],
     }, //getting started section end
     
