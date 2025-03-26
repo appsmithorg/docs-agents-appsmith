@@ -14,7 +14,7 @@ import VideoEmbedNew from "@site/src/components/VideoEmbedNew";
 Appsmith Agents enable businesses to build custom AI-powered assistants that streamline operations, automate workflows, and enhance customer and employee interactions. These conversational agents integrate seamlessly with your data sources, applications, and existing workflows to deliver context-aware, secure, and scalable automation—without requiring AI expertise.
 
 
-<CalloutCard text="This documentation +site is in beta, and some functionalities may be updated. We appreciate your input as we enhance the documentation." isBeta />
+<CalloutCard text="This documentation site is in beta, and some features may change. We appreciate your feedback as we continue to improve it." isBeta />
 
 
 <VideoEmbedNew videoId="NwA6DAQiEMY" title="" />
