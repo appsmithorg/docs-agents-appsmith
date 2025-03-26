@@ -1,24 +1,24 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    gap: 20px;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    border: 1px solid #ddd;
-  }
-  
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Always 2 cards per row */
+  gap: 20px;
+  padding: 20px;
+  margin: 0;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Increased padding for bigger cards */
+  display: flex;
+  align-items: center;
+  text-align: left;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid #ddd;
+}
+
   .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
@@ -48,10 +48,9 @@
     line-height: 1.5;
   }
   
-  /* ✅ Responsive: 1 column on small screens */
-  @media (max-width: 600px) {
-    .container {
-      grid-template-columns: repeat(1, 1fr);
-    }
+/* ✅ Responsive: 1 column on small screens */
+@media (max-width: 800px) { 
+  .container {
+      grid-template-columns: repeat(1, 1fr); /* 1 column layout for small screens */
   }
-  
+}
