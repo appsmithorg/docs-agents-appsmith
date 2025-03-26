@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./HomepageCards.module.css"; // ✅ Import styles
 
-// Import SVG assets properly for Docusaurus
+// Import SVG assets for Docusaurus
 import learningBg from "@site/static/img/learning-bg.svg";
 import guidesBg from "@site/static/img/guides-bg.svg";
 import widgetsBg from "@site/static/img/widgets-bg.svg";
@@ -38,12 +38,12 @@ const HomePageCards = () => {
           href={card.link}
           key={index}
           className={`${styles.card} ${card.className}`}
-          style={{ backgroundImage: `url(${card.bg})` }}
         >
           <div className={styles.text}>
             <h3>{card.title}</h3>
             <p>{card.description}</p>
           </div>
+          <div className={styles.icon} style={{ backgroundImage: `url(${card.bg})` }}></div>
         </a>
       ))}
     </div>

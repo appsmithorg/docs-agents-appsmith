@@ -1,0 +1,12 @@
+.calloutCard {
+    background: #f8f9fa; /* Light gray background for a professional look */
+    border-left: 4px solid #0066cc; /* Blue accent for emphasis */
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 15px;
+    color: #333; /* Dark gray for readability */
+    font-weight: 500;
+    border-radius: 6px;
+    line-height: 1.6;
+  }
+  
