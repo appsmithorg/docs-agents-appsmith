@@ -23,6 +23,17 @@ const sidebars = {
         
       ]
     }, //Data end
+
+    {
+      //WIDGET start
+      type: 'category',
+      collapsed: false,
+      label: 'Widget',
+      items: [
+      'build-apps/widgets/overview',   
+        
+      ]
+    }, //WIDGET end
   ],
 };
 
