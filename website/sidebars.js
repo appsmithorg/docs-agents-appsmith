@@ -9,10 +9,20 @@ const sidebars = {
       items: [
         'intro',
         'getting-started/build-your-first-app',
+      
       ],
     }, //getting started section end
     
-    
+    {
+      //Data start
+      type: 'category',
+      collapsed: false,
+      label: 'Connect Data',
+      items: [
+            'connect-data/integrations/overview',   
+        
+      ]
+    }, //Data end
   ],
 };
 

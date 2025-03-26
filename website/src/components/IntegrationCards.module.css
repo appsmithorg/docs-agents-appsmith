@@ -1,0 +1,57 @@
+.integrationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.integrationCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Align content to the left */
+  text-align: left;
+  text-decoration: none;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.integrationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.integrationIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .integrationGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .integrationGrid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+  }
+}
