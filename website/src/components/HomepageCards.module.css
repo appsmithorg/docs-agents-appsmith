@@ -1,0 +1,58 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 16px; /* Reduce gap for a tighter layout */
+    padding: 20px;
+    max-width: 100%; /* Use full width */
+    margin: 0; /* Remove centering */
+    justify-content: start; /* Align to the left */
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px; /* Slightly reduce border radius */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #ddd;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+  
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+  }
+  
+  .text {
+    flex: 1;
+  }
+  
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+  }
+  
+  p {
+    font-size: 13px;
+    color: #555;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  
+  /* ✅ Responsive: Adjust to full width for small screens */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: repeat(1, 1fr); /* 1 column layout */
+    }
+  }
+  
