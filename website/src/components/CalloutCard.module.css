@@ -1,24 +1,24 @@
 .calloutCard {
-    background: #f8faff; /* Very light blue for official tone */
-    border-left: 4px solid #1976d2; /* Material Blue for emphasis */
-    padding: 12px 16px; /* Reduced padding for compactness */
-    margin-bottom: 12px; /* Less spacing */
-    font-size: 14px;
-    color: #333;
-    font-weight: 500;
-    border-radius: 6px;
-    line-height: 1.5;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Softer shadow */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+  background: #f8faff; /* Very light blue for official tone */
+  border-left: 4px solid #1976d2; /* Material Blue for emphasis */
+  padding: 12px 16px; /* Reduced padding for compactness */
+  margin-bottom: 12px; /* Less spacing */
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  border-radius: 6px;
+  line-height: 1.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
   
-  .betaTag {
-    align-self: flex-start; /* Aligns inside callout */
-    background: #e3f2fd; /* Light blue shade */
-    color: #1976d2; /* Darker blue text for contrast */
+  .tag {
+    align-self: flex-start;
+    background: #e3f2fd;
+    color: #1976d2;
     font-size: 11px;
     font-weight: 600;
     padding: 2px 8px;

@@ -62,7 +62,7 @@ The dynamic menu option supports a maximum of 10 menu items.
 
 Displays a list of available menu items in the dropdown. Each item can trigger specific actions or navigation events when selected. You can customize, rearrange, or configure these items by clicking on the ⚙️ gear icon. 
 
-See the <a href="/reference/widgets/menu/menu-items">Menu Items</a> reference guide for configuring menu items.
+See the <a href="https://docs.appsmith.com/reference/widgets/menu/menu-items">Menu Items</a> reference guide for configuring menu items.
 
 </dd>
 

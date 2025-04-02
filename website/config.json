@@ -11,10 +11,10 @@
 	],
 	"sitemap_alternate_links": true,
 	"stop_urls": [
-		"https://docs.appsmith.com/getting-started/setup/upgrade-to-business-edition/upgrade-docker-to-business-edition",
-		"https://docs.appsmith.com/getting-started/setup/upgrade-to-business-edition/upgrade-k8s-to-business-edition",
-		"https://docs.appsmith.com/getting-started/setup/installation-guides/kubernetes/install-k8s-business-edition",
-		"https://docs.appsmith.com/getting-started/setup/installation-guides/docker/install-business-edition"
+		"https://docs.appsmith.comhttps://docs.appsmith.com/getting-started/setup/upgrade-to-business-edition/upgrade-docker-to-business-edition",
+		"https://docs.appsmith.comhttps://docs.appsmith.com/getting-started/setup/upgrade-to-business-edition/upgrade-k8s-to-business-edition",
+		"https://docs.appsmith.comhttps://docs.appsmith.com/getting-started/setup/installation-guides/kubernetes/install-k8s-business-edition",
+		"https://docs.appsmith.comhttps://docs.appsmith.com/getting-started/setup/installation-guides/docker/install-business-edition"
 	],
 	"selectors": {
 		"lvl0": {

@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./CalloutCard.module.css";
 
-const CalloutCard = ({ text, isBeta }) => {
+const CalloutCard = ({ text, tag }) => {
   return (
     <div className={styles.calloutCard}>
-      {isBeta && <span className={styles.betaTag}>Beta</span>}
+      {tag && <span className={styles.tag}>{tag}</span>}
       <p>{text}</p>
     </div>
   );
@@ -13,11 +13,11 @@ const CalloutCard = ({ text, isBeta }) => {
 
 CalloutCard.propTypes = {
   text: PropTypes.string.isRequired,
-  isBeta: PropTypes.bool,
+  tag: PropTypes.string, // Accepts any string as a tag
 };
 
 CalloutCard.defaultProps = {
-  isBeta: false,
+  tag: "", // Default to empty, meaning no tag
 };
 
 export default CalloutCard;
