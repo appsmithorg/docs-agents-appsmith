@@ -547,12 +547,6 @@
    border: 0 !important;
    line-height: normal;
  }
-
- dd {
-  font-family: inherit;
-  font-size: inherit;
-}
-
  
  .codeBlockTitle_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
    font-weight: 800 !important;
@@ -917,24 +911,32 @@
    margin: 20px 0;
    padding-bottom: 2px;
  }
+ 
+ 
+ .download-btn {
+   background-color: #3366ff;
+   color: white;
+   padding: 10px 16px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .download-btn:hover {
+   background-color: #254eda;
+ }
 
-.download-btn {
-  background-color: #3366ff;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+/* Ensure a consistent font across all text elements */
+body, h3, h4, h5, h6, p, div, span, li, dd {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  color: #333 !important;
 }
 
-.download-btn:hover {
-  background-color: #254eda;
-}
-
-
+/* Fix bold text rendering */
 strong, b {
-  font-family: inherit;
-  font-weight: bold;
+  font-weight: bold !important;
 }

@@ -26,13 +26,15 @@ const sidebars = {
               collapsed: true,
               label: 'Knowledge Bases',
               link: { type: 'doc', id: 'connect-data/integrations/overview' },
-                 items: ['connect-data/integrations/reference/knowledge-bases/overview'],
+              items: [
+                'connect-data/integrations/reference/knowledge-bases/google-drive'
+              ],
             },
             {
               type: 'category',
               collapsed: true,
               label: 'Integrations Tools',
-              items: [
+               items: [
                 //category- Api
                 {
                   type: 'category',
@@ -102,16 +104,14 @@ const sidebars = {
               ],
             },
           ],
-        },
-        'connect-data/integrations/reference/query-settings',
-        
+        },       
       ],
     },
     
     {
       type: 'category',
       collapsed: false,
-      label: 'Build Apps / Agents',
+      label: 'Build Agents',
       items: [
       
         'build-agents/overview',
@@ -132,6 +132,7 @@ const sidebars = {
               type: 'category',
               collapsed: true,
               label: 'Widgets',
+              link: { type: 'doc', id: 'build-agents/widgets/overview' },
               items: [
                 'build-agents/widgets/reference/AIChat', 
                 'build-agents/widgets/reference/button',  
@@ -168,17 +169,7 @@ const sidebars = {
               ],
     },
     
-    {
-      type: 'category',
-      collapsed: false,
-      label: 'Troubleshooting',
-      items: [
-       
-        'help-and-support/troubleshooting/overview',
-        'help-and-support/troubleshooting/widget-errors',
-        'help-and-support/troubleshooting/datasource-errors',
-      ],
-    },
+   
   ],
 };
 
