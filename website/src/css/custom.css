@@ -414,26 +414,32 @@
  
  h1 {
    font-size: 2rem;
+   --ifm-font-family-base: Inter, Inter var, sans-serif;
  }
  
  h2 {
    font-size: 1.75rem;
+      --ifm-font-family-base: Inter, Inter var, sans-serif;
  }
  
  h3 {
    font-size: 1.5rem;
+   --ifm-font-family-base: Inter, Inter var, sans-serif;
  }
  
  h4 {
    font-size: 1.2rem;
+   --ifm-font-family-base: Inter, Inter var, sans-serif;
  }
  
  h5 {
    font-size: 1rem;
+   --ifm-font-family-base: Inter, Inter var, sans-serif;
  }
  
  h6 {
    font-size: 0.75rem;
+   --ifm-font-family-base: Inter, Inter var, sans-serif;
  }
  
  .tabs {
@@ -927,16 +933,3 @@
  .download-btn:hover {
    background-color: #254eda;
  }
-
-/* Ensure a consistent font across all text elements */
-body, h3, h4, h5, h6, p, div, span, li, dd {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 16px !important;
-  font-weight: normal !important;
-  color: #333 !important;
-}
-
-/* Fix bold text rendering */
-strong, b {
-  font-weight: bold !important;
-}

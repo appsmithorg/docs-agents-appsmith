@@ -86,9 +86,67 @@ Download the FAQ document below and upload it to Appsmith AI:
 
 </dd>
 
-2. text etxt eece
-2. text etxt eece
+9. After uploading, save the source configuration to enable document-based retrieval.
 
-ece
-ecece
+<dd>
+
+To verify the setup, enter a query in the Chat Widget, such as "What is the refund policy?" or "How long does it take to resolve a ticket?" The AI should generate responses based on the uploaded document. 
+
+
+</dd>
+
+## Retrieve Ticket Status with Function Calling
+
+Function calling enables the AI to query a connected database for real-time ticket status updates. In this section, you will configure a PostgreSQL database and set up queries for retrieving ticket details.
+
+1. Go to the Data section and create a PostgreSQL database with the following details:
+
+<dd>
+
+```js
+Host: dpg-cvmgjgje5dus73f5f3tg-a
+Port: 5432
+Database Name: customer_support_db
+Username: <your_username>
+Password: <your_password>
+```
+
+</dd>
+
+2. Create a new query (`Create_New_Ticket`) to add a support ticket to the database:
+
+<dd>
+
+```sql
+INSERT INTO tickets (user_id, issue_type, status, created_at) 
+VALUES ({{this.params.user_id}}, {{this.params.issue_type}}, 'Open', NOW()) 
+RETURNING ticket_id;
+```
+
+This query inserts a new ticket into the tickets table. The `{{this.params.user_id}}` and `{{this.params.issue_type}} `placeholders allow dynamic values to be passed at runtime, enabling function calling to create tickets based on user input.
+
+
+</dd>
+
+3. Create a new query (`Get_Ticket_Status`) to retrieve the status of a specific ticket:
+
+<dd>
+
+```sql
+SELECT ticket_id, user_id, issue_type, status, created_at, updated_at 
+FROM tickets 
+WHERE ticket_id = {{this.params.ticket_id}};
+```
+
+This query fetches ticket details based on the provided `ticket_id`. The `{{this.params.ticket_id}}` placeholder ensures that the AI dynamically retrieves information based on user input.
+
+</dd>
+
+4. Navigate to Chat Query and add both functions (`Create_New_Ticket` and `Get_Ticket_Status`) to enable AI-driven database interactions. If required, enable Requires Approval to review and approve database actions before execution, ensuring control over ticket creation and retrieval.
+
+
+
+
+
+
 
