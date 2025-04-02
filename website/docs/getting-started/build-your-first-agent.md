@@ -10,6 +10,7 @@ This tutorial guides you through building a customer support AI agent that can a
   tag="Estimated Time"  
 />  
 
+## Set Up Your AI Agent
 
 1. Open the Appsmith Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
 
@@ -95,7 +96,7 @@ To verify the setup, enter a query in the Chat Widget, such as "What is the refu
 
 </dd>
 
-## Retrieve Ticket Status with Function Calling
+## Set Up Function Calling
 
 Function calling enables the AI to query a connected database for real-time ticket status updates. In this section, you will configure a PostgreSQL database and set up queries for retrieving ticket details.
 

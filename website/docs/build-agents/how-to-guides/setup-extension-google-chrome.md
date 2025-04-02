@@ -29,6 +29,15 @@ https://ai.appsmithai.com/app/ai-agent/page1-67ecebbb3a72292?embed=true
 
 *Example:* To set up different AI Agents for Zendesk, Salesforce, and LinkedIn, add the respective assistant URLs for each domain in the URL Mappings section.
 
+
+
+<ZoomImage
+  src="/img/ai-agent-chrome.png" 
+  alt=""
+  caption=""
+/>
+
+
 </dd>
 
 
