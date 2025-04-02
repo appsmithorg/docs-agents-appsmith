@@ -70,7 +70,7 @@ The following section is a reference guide that provides a description of the av
 ### AI Chat Assistant
 
 
-The AI Chat Assistant command allows you to interact with AI models using the [AI Chat Widget](/build-apps/widgets/reference/AIChat). Users can input queries and receive AI-generated responses directly within the chat interface, without the need to bind or pass additional data. 
+The AI Chat Assistant command allows you to interact with AI models using the [AI Chat Widget](/build-agents/widgets/reference/AIChat). Users can input queries and receive AI-generated responses directly within the chat interface, without the need to bind or pass additional data. 
 
 
 

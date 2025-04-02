@@ -48,13 +48,13 @@ The **Data Type** property defines the type of input for the widget. For the Ema
 
 Options:
 
-- **Single-line text**: Accepts a single line of text, such as names or titles. Additional text beyond one line is not displayed. See [Input widget]( /build-apps/widgets/reference/input ).
-- **Multi-line text**: Allows multiple lines of text, ideal for longer entries like comments or descriptions. See [Multi-line text widget]( /build-apps/widgets/reference/multilineInput ).
-- **Number**: Accepts only numeric values. See [Number widget]( /build-apps/widgets/reference/number-input ).
-- **Password**: Masks input for sensitive information such as passwords or pins. See [Password widget]( /build-apps/widgets/reference/password-input ).
-- **Email**: Validates and accepts text in email format. See [Email widget]( /build-apps/widgets/reference/emailinput ).
-- **Phone number**: Accepts phone numbers, often formatted with country code and dashes. See [Phone number widget]( /build-apps/widgets/reference/phone-input ).
-- **Currency**: Accepts numeric input displayed in currency format. See [Currency widget]( /build-apps/widgets/reference/currency-input ).
+- **Single-line text**: Accepts a single line of text, such as names or titles. Additional text beyond one line is not displayed. See [Input widget]( /build-agents/widgets/reference/input ).
+- **Multi-line text**: Allows multiple lines of text, ideal for longer entries like comments or descriptions. See [Multi-line text widget]( /build-agents/widgets/reference/multilineInput ).
+- **Number**: Accepts only numeric values. See [Number widget]( /build-agents/widgets/reference/number-input ).
+- **Password**: Masks input for sensitive information such as passwords or pins. See [Password widget]( /build-agents/widgets/reference/password-input ).
+- **Email**: Validates and accepts text in email format. See [Email widget]( /build-agents/widgets/reference/emailinput ).
+- **Phone number**: Accepts phone numbers, often formatted with country code and dashes. See [Phone number widget]( /build-agents/widgets/reference/phone-input ).
+- **Currency**: Accepts numeric input displayed in currency format. See [Currency widget]( /build-agents/widgets/reference/currency-input ).
 - **Date**: Accepts date input, with a datepicker for selection.
 
 
