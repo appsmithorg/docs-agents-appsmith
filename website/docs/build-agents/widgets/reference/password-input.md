@@ -1,12 +1,12 @@
 ---
-title: Input
+title: Password Input
 hide_title: true
 toc_max_heading_level: 2
 ---
 <!-- vale off -->
 
 <div className="tag-wrapper">
- <h1>Input (AI Assistant)</h1>
+ <h1>Password Input (AI Assistant)</h1>
 
 <Tags
 tags={[
@@ -20,14 +20,8 @@ tags={[
 
 <!-- vale on -->
 
+This page provides information on using the Password Input widget *(available in AI Assistant Apps)*, which allows you to capture and validate password entries.
 
-This page provides information on using the Input widget *(available in AI Assistant Apps)*, which allows you to capture and validate various types of user input, including text, numbers, emails, and passwords.
-
- <ZoomImage
-    src="/img/input-widget-anvil.png" 
-    alt=""
-    caption=""
-  /> 
 
 
 
@@ -44,18 +38,18 @@ These properties are customizable options present in the property pane of the wi
 
 <dd>
 
-The **Data Type** property defines the type of input for the widget. Selecting a specific data type automatically adjusts the widget’s properties to match the input requirements.
+The **Data Type** property defines the type of input for the widget. For the **Password Input** widget, the **Data Type** is set to Password by default. If you change the data type, the widget’s properties and behavior change accordingly.
 
 Options:
 
-- **Single-line text**: Accepts a single line of text, such as names or titles. Additional text beyond one line is not displayed. 
-- **Multi-line text**: Allows multiple lines of text, ideal for longer entries like comments or descriptions. See [Multi-line text widget]( /build-apps/widgets/reference/multilineInput ).
-- **Number**: Accepts only numeric values. See [Number widget]( /build-apps/widgets/reference/number-input ).
-- **Password**: Masks input for sensitive information such as passwords or pins. See [Password widget]( /build-apps/widgets/reference/password-input ).
-- **Email**: Validates and accepts text in email format. See [Email widget]( /build-apps/widgets/reference/emailinput ).
-- **Phone number**: Accepts phone numbers, often formatted with country code and dashes. See [Phone number widget]( /build-apps/widgets/reference/phone-input ).
-- **Currency**: Accepts numeric input displayed in currency format.
-- **Date**: Accepts date input, with a datepicker for selection. See [Date widget]( /build-apps/widgets/reference/date ).
+- **Single-line text**: Accepts a single line of text, such as names or titles. Additional text beyond one line is not displayed. See [Input widget]( /build-agents/widgets/reference/input ).
+- **Multi-line text**: Allows multiple lines of text, ideal for longer entries like comments or descriptions. See [Multi-line text widget]( /build-agents/widgets/reference/multilineInput ).
+- **Number**: Accepts only numeric values. See [Number widget]( /build-agents/widgets/reference/number-input ).
+- **Password**: Masks input for sensitive information such as passwords or pins. 
+- **Email**: Validates and accepts text in email format. See [Email widget]( /build-agents/widgets/reference/emailinput ).
+- **Phone number**: Accepts phone numbers, often formatted with country code and dashes. See [Phone number widget]( /build-agents/widgets/reference/phone-input ).
+- **Currency**: Accepts numeric input displayed in currency format. See [Currency widget]( /build-agents/widgets/reference/currency-input ).
+- **Date**: Accepts date input, with a datepicker for selection. See [Date widget]( /build-agents/widgets/reference/date ).
 
 
 </dd>
@@ -66,9 +60,7 @@ Options:
 
 <dd>
 
-Defines the initial value displayed in the widget when it loads. This value serves as the default input until the user modifies it.
-
-
+Defines the initial value displayed in the widget when it loads. This value serves as the default input until the user modifies it. The entered value is hidden by default. You can click on the eye icon to show the password.
 </dd>
 
 ### Label
@@ -98,23 +90,6 @@ This validation feature allows you to designate the Input as a mandatory field. 
 
 </dd>
 
-#### Max characters	`number`
-
-
-<dd>
-
-Defines the maximum number of characters a user can enter. This property is available only when the **Data Type** is set to Single-line text or Multi-line text.
-
-
-</dd>
-
-#### Spellcheck `boolean`
-
-<dd>
-
-When enabled, the widget automatically checks for spelling errors and highlights them, with a red underline. This property is applicable to Single-line text and Multi-line text data types.
-
-</dd>
 
 
 #### Regex `string`
@@ -123,68 +98,12 @@ When enabled, the widget automatically checks for spelling errors and highlights
 
 The Regex property, short for Regular Expression, enables you to apply custom validations on user input by defining specific constraints using regular expressions. If the user enters a value that does not adhere to the specified pattern, the widget displays an error message indicating `"invalid input"`.
 
-For instance, if you want to validate that the user enters a value in multiples of 5. You can set **Regex** as:
-
-```js
-.*[05]$
-```
-
-*Examples:*
-
-**Email validation**
-
-To validate whether an entered email is correct, use the following regular expression code inside the Regex property of an Input widget:
-
+For instance, if you want to validate that the password entered contains at least one uppercase letter, one lowercase letter, and one number, you can set Regex as:
 
 
 ```js
-//regex
-^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$
+^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$
 ```
-
-**Phone number validation**
-
-To get phone number in a specific format or length, you can use the following codes:
-
-*Example:* if you want to validate international phone numbers starting with a plus sign (+) and a total length between 6 and 14 digits, use the following code inside the **Regex** property:
-
-
-```js
-//regex
-^\+(?:[0-9]●?){6,14}[0-9]$
-```
-
-
-**Number validation**
-
-If you need to add number validation for fields like currency or prices, you can use the following regular expression code inside the **Regex** property of any Input widget:
-
-
-```js
-//Regex
-
-//Range Validation - 0 to 100:  
-^(0*100(\.0*)?)$|^([1-9]?[0-9](\.\d*)?)$
-
-//Positive Number Validation:  
-^[1-9][0-9]*$
-
-//Decimal Number Validation:  
-^-?\d+(\.\d{2})?$
-
-//Minimum and Maximum Value Validation(1000 and 10,000):
-Regex: ^(10000|[1-9][0-9]{3,4})$ 
-```
-
-**URL validation**
-
-This validation is used to ensure that URLs provided by users for files or images adhere to the required format.
-
-```js
-//Regex
-(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?
-```
-
 
 
 
@@ -196,15 +115,12 @@ This validation is used to ensure that URLs provided by users for files or image
 
 Allows you to define custom validation rules and error messages to guide users when their input doesn't meet required criteria. 
 
-For instance, you can use this property to validate a Create Password field, making sure it doesn't contain certain strings like `password` or `123`.
+For instance, you can use this property to validate that the password input field must be at least 8 characters long and contain at least one number.
 
-_Example:_
 
 ```js
 {{
-  !["password", "123", "admin"].some(subStr => {
-    return Input1.text.toLowerCase().includes(subStr)
-  })
+  PasswordInput1.text.length >= 8 && /\d/.test(PasswordInput1.text)
 }}
 ```
 
@@ -217,35 +133,17 @@ _Example:_
 
 Allows customization of the error message displayed when the user enters an incorrect value. By default, the input widget shows a generic `"invalid input"` message.
 
-*Example:*  If you want to add password validation, ensuring it is greater than 10 characters and contains at least one digit, you can use the following code in the **Error message** property.
+*Example:* 
 
 ```js
-//Valid property
-{{Input1.text.length > 10 && /\d/.test(Input1.text) ? true : false}}
-
-
-//Error message property
-{{Input1.text.length > 10 || !/\d/.test(Input1.text) ? "Error: Length should be at least 10 characters and contain at least one digit" : ""}}
+{{
+  PasswordInput1.text.length < 8 || !/\d/.test(PasswordInput1.text)
+    ? "Error: Password must be at least 8 characters long and contain at least one number"
+    : ""
+}}
 ```
 
-This code checks the length of Input is exactly 10 characters and if it contains at least one digit. If not, it returns the error message
 
-
-</dd>
-
-#### Min `number`
-
-<dd>
-
-Sets a minimum value allowed for user input. Only appears when **Data Type** is set to Number.
-
-</dd>
-
-#### Max `number`
-
-<dd>
-
-Sets a maximum value allowed for user input. Only appears when **Data Type** is set to Number.
 
 </dd>
 
@@ -396,7 +294,7 @@ Allows you to set an icon for the Stats widget. You can choose from a predefined
 *Example:* To display different icons based on whether the input is valid or not, you can use the following JavaScript expression:
 
 ```js
-{{ Input1.isValid ? "check" : "alert-circle" }}
+{{ PasswordInput1.isValid ? "check" : "alert-circle" }}
 ```
 
 </dd>
@@ -404,7 +302,7 @@ Allows you to set an icon for the Stats widget. You can choose from a predefined
 
 ## Reference properties
 
-Reference properties are properties that are not available in the property pane but can be accessed using the dot operator in other widgets or JavaScript functions. They provide additional information or allow interaction with the widget programmatically. For instance, to get the visibility status, you can use `Input1.isVisible`.
+Reference properties are properties that are not available in the property pane but can be accessed using the dot operator in other widgets or JavaScript functions. They provide additional information or allow interaction with the widget programmatically. For instance, to get the visibility status, you can use `PasswordInput1.isVisible`.
 
 #### parsedText `string`
 
@@ -414,7 +312,7 @@ The `parsedText` property retrieves the input value of the widget.
 
 *Example:*
 ```js
-{{Input1.text}}
+{{PasswordInput1.parsedText}}
 ```
 
 </dd>
@@ -428,7 +326,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 *Example:*
 ```js
-{{Input1.isValid}}
+{{PasswordInput1.isValid}}
 ```
 
 </dd>
@@ -441,7 +339,7 @@ The `isReadOnly` property indicates the read-only state of a widget, with `true`
 
 *Example:*
 ```js
-{{Input1.isReadOnly}}
+{{PasswordInput1.isReadOnly}}
 ```
 
 </dd>
@@ -454,7 +352,7 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 *Example:*
 ```js
-{{Input1.isDisabled}}
+{{PasswordInput1.isDisabled}}
 ```
 
 </dd>
@@ -468,7 +366,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{Input1.isVisible}}
+{{PasswordInput1.isVisible}}
 ```
 
 </dd>
@@ -491,7 +389,7 @@ Sets the visibility of the widget. This method is useful when you want to dynami
 *Example*:
 
 ```js
-Input1.setVisibility(true)
+PasswordInput1.setVisibility(true)
 ```
 
 
@@ -508,15 +406,15 @@ Sets the disabled state of the widget. This method can be used to prevent user i
 *Example*:
 
 ```js
-Input1.setDisabled(false)
+PasswordInput1.setDisabled(false)
 ```
 *Example:* If you want to disable an input field for anonymous users, you can use:
 
 ```js
 if (appsmith.user.isAnonymous) {
-  Input1.setDisabled(true) // Disable input for anonymous users
+  PasswordInput1.setDisabled(true) // Disable input for anonymous users
 } else {
-  Input1.setDisabled(false) // Enable input for logged-in users
+  PasswordInput1.setDisabled(false) // Enable input for logged-in users
 }
 ```
 
@@ -531,7 +429,7 @@ Allows you to dynamically set the value of the widget. This is useful when you n
 *Example*:
 
 ```js
-Input1.setValue("John Doe")
+PasswordInput1.setValue("John@appsmith.com")
 ```
 
 </dd>
@@ -547,7 +445,7 @@ Sets whether the widget is required or not. This method can be used to dynamical
 *Example*:
 
 ```js
-Input1.setRequired(true)
+PasswordInput1.setRequired(true)
 ```
 
 
@@ -562,15 +460,15 @@ Sets the read-only state of the widget. This method is useful when you want to p
 *Example:*
 
 ```js
-Input1.setReadOnly(true)
+PasswordInput1.setReadOnly(true)
 ```
  *Example:* If you only want the widget to be editable for specific users (e.g., logged-in users), use:
 
 ```js
 if (appsmith.user.isAnonymous) {
-  Input1.setReadOnly(true) // Prevent modification for anonymous users
+  PasswordInput1.setReadOnly(true) // Prevent modification for anonymous users
 } else {
-  Input1.setReadOnly(false) // Allow modification for logged-in users
+  PasswordInput1.setReadOnly(false) // Allow modification for logged-in users
 }
 ```
 

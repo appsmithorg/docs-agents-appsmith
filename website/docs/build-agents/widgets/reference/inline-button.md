@@ -44,7 +44,7 @@ This property allows you to define the buttons within the Inline Buttons widget.
 
 Each button is configured individually, and you can edit its label, action, and style by clicking the gear icon next to the button.For more details, see [Button Settings](#buttons-settings).
 
-By default, a **Separator** is included between button groups to visually distinguish them. The separator can be removed or repositioned, but only one separator is allowed in the widget at a time. If you need multiple separators, you can use the [Toolbar widget](/build-apps/widgets/reference/toolbar).
+By default, a **Separator** is included between button groups to visually distinguish them. The separator can be removed or repositioned, but only one separator is allowed in the widget at a time. If you need multiple separators, you can use the [Toolbar widget](/build-agents/widgets/reference/toolbar).
 
 
 </dd>

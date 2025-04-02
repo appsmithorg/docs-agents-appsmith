@@ -1,12 +1,12 @@
 ---
-title: Phone Input
+title: Input
 hide_title: true
 toc_max_heading_level: 2
 ---
 <!-- vale off -->
 
 <div className="tag-wrapper">
- <h1>Phone Input (AI Assistant)</h1>
+ <h1>Input (AI Assistant)</h1>
 
 <Tags
 tags={[
@@ -15,14 +15,16 @@ tags={[
 />
 
 
+
 </div>
 
 <!-- vale on -->
 
-This page provides information on using the Phone Number Input widget *(available in AI Assistant Apps)*, which allows you to capture and validate phone number user inputs.
+
+This page provides information on using the Input widget *(available in AI Assistant Apps)*, which allows you to capture and validate various types of user input, including text, numbers, emails, and passwords.
 
  <ZoomImage
-    src="/img/phone_input_widget.png" 
+    src="/img/input-widget-anvil.png" 
     alt=""
     caption=""
   /> 
@@ -42,18 +44,19 @@ These properties are customizable options present in the property pane of the wi
 
 <dd>
 
-The **Data Type** property defines the type of input for the widget. For the Phone Number Input widget, the Data Type is set to Phone Number by default. If you change the data type, the widget’s properties and behavior adjust accordingly to match the selected input type.
+The **Data Type** property defines the type of input for the widget. Selecting a specific data type automatically adjusts the widget’s properties to match the input requirements.
 
 Options:
 
-- **Single-line text**: Accepts a single line of text, such as names or titles. Additional text beyond one line is not displayed. See [Input widget]( /build-apps/widgets/reference/input )
-- **Multi-line text**: Allows multiple lines of text, ideal for longer entries like comments or descriptions. See [Multi-line text widget]( /build-apps/widgets/reference/multilineInput )
-- **Number**: Accepts only numeric values. See [Number widget]( /build-apps/widgets/reference/number-input ).
-- **Password**: Masks input for sensitive information such as passwords or pins. See [Password widget]( /build-apps/widgets/reference/password-input ).
-- **Email**: Validates and accepts text in email format. See [Email widget]( /build-apps/widgets/reference/emailinput ).
-- **Phone number**: Accepts phone numbers, often formatted with country code and dashes. 
-- **Currency**: Accepts numeric input displayed in currency format. See [Currency widget]( /build-apps/widgets/reference/currency-input ).
-- **Date**: Accepts date input, with a datepicker for selection. See [Date widget]( /build-apps/widgets/reference/date ).
+- **Single-line text**: Accepts a single line of text, such as names or titles. Additional text beyond one line is not displayed. 
+- **Multi-line text**: Allows multiple lines of text, ideal for longer entries like comments or descriptions. See [Multi-line text widget]( /build-agents/widgets/reference/multilineInput ).
+- **Number**: Accepts only numeric values. See [Number widget]( /build-agents/widgets/reference/number-input ).
+- **Password**: Masks input for sensitive information such as passwords or pins. See [Password widget]( /build-agents/widgets/reference/password-input ).
+- **Email**: Validates and accepts text in email format. See [Email widget]( /build-agents/widgets/reference/emailinput ).
+- **Phone number**: Accepts phone numbers, often formatted with country code and dashes. See [Phone number widget]( /build-agents/widgets/reference/phone-input ).
+- **Currency**: Accepts numeric input displayed in currency format.
+- **Date**: Accepts date input, with a datepicker for selection. See [Date widget]( /build-agents/widgets/reference/date ).
+
 
 </dd>
 
@@ -63,28 +66,10 @@ Options:
 
 <dd>
 
-Defines the initial value displayed in the widget when it loads. This value serves as the default input until the user modifies it. To dynamically populate the field with a value from a table, you can reference a selected row's data, such as a phone number from a database or table. For example:
+Defines the initial value displayed in the widget when it loads. This value serves as the default input until the user modifies it.
 
-```js
-{{Table1.selectedRow.phoneNumber}}
-```
 
 </dd>
-
-#### Default country code
-
-<dd>
-
-The Default Country Code property allows users to select a country from a dropdown or manually enter a country code (e.g., `+256`). You can dynamically update the country code based on the user's selection or input.
-
-```js
-{{CountryDropdown.selectedOptionValue === "Uganda" ? "+256" : "+1"}}
-```
-
-</dd>
-
-
-
 
 ### Label
 
@@ -113,7 +98,23 @@ This validation feature allows you to designate the Input as a mandatory field. 
 
 </dd>
 
+#### Max characters	`number`
 
+
+<dd>
+
+Defines the maximum number of characters a user can enter. This property is available only when the **Data Type** is set to Single-line text or Multi-line text.
+
+
+</dd>
+
+#### Spellcheck `boolean`
+
+<dd>
+
+When enabled, the widget automatically checks for spelling errors and highlights them, with a red underline. This property is applicable to Single-line text and Multi-line text data types.
+
+</dd>
 
 
 #### Regex `string`
@@ -122,13 +123,66 @@ This validation feature allows you to designate the Input as a mandatory field. 
 
 The Regex property, short for Regular Expression, enables you to apply custom validations on user input by defining specific constraints using regular expressions. If the user enters a value that does not adhere to the specified pattern, the widget displays an error message indicating `"invalid input"`.
 
+For instance, if you want to validate that the user enters a value in multiples of 5. You can set **Regex** as:
+
+```js
+.*[05]$
+```
 
 *Examples:*
 
+**Email validation**
+
+To validate whether an entered email is correct, use the following regular expression code inside the Regex property of an Input widget:
+
+
 
 ```js
-//Regex for phone number with country code
-^\+(\d{1,3})\s(\d{1,4})\s(\d{3})\s(\d{4})$
+//regex
+^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$
+```
+
+**Phone number validation**
+
+To get phone number in a specific format or length, you can use the following codes:
+
+*Example:* if you want to validate international phone numbers starting with a plus sign (+) and a total length between 6 and 14 digits, use the following code inside the **Regex** property:
+
+
+```js
+//regex
+^\+(?:[0-9]●?){6,14}[0-9]$
+```
+
+
+**Number validation**
+
+If you need to add number validation for fields like currency or prices, you can use the following regular expression code inside the **Regex** property of any Input widget:
+
+
+```js
+//Regex
+
+//Range Validation - 0 to 100:  
+^(0*100(\.0*)?)$|^([1-9]?[0-9](\.\d*)?)$
+
+//Positive Number Validation:  
+^[1-9][0-9]*$
+
+//Decimal Number Validation:  
+^-?\d+(\.\d{2})?$
+
+//Minimum and Maximum Value Validation(1000 and 10,000):
+Regex: ^(10000|[1-9][0-9]{3,4})$ 
+```
+
+**URL validation**
+
+This validation is used to ensure that URLs provided by users for files or images adhere to the required format.
+
+```js
+//Regex
+(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?
 ```
 
 
@@ -140,16 +194,17 @@ The Regex property, short for Regular Expression, enables you to apply custom va
 
 <dd>
 
-Allows you to define custom validation rules and error messages to guide users when their input doesn't meet required criteria.
+Allows you to define custom validation rules and error messages to guide users when their input doesn't meet required criteria. 
 
-For instance, you can use this property to validate a Phone Number Input field, ensuring the number follows a valid format, such as a 10-digit phone number.
-
+For instance, you can use this property to validate a Create Password field, making sure it doesn't contain certain strings like `password` or `123`.
 
 _Example:_
 
 ```js
 {{
-  /^\d{10}$/.test(PhoneNumberInput.text)
+  !["password", "123", "admin"].some(subStr => {
+    return Input1.text.toLowerCase().includes(subStr)
+  })
 }}
 ```
 
@@ -162,22 +217,37 @@ _Example:_
 
 Allows customization of the error message displayed when the user enters an incorrect value. By default, the input widget shows a generic `"invalid input"` message.
 
-*Example:* If you want to validate a Phone Number Input, ensuring it contains exactly 10 digits, you can use the following code in the Error message property.
-
+*Example:*  If you want to add password validation, ensuring it is greater than 10 characters and contains at least one digit, you can use the following code in the **Error message** property.
 
 ```js
 //Valid property
-{{/^\d{10}$/.test(PhoneNumberInput.text) ? true : false}}
+{{Input1.text.length > 10 && /\d/.test(Input1.text) ? true : false}}
 
-// Error message property
-{{!/^\d{10}$/.test(PhoneNumberInput.text) ? "Error: The phone number must be exactly 10 digits" : ""}}
+
+//Error message property
+{{Input1.text.length > 10 || !/\d/.test(Input1.text) ? "Error: Length should be at least 10 characters and contain at least one digit" : ""}}
 ```
 
-This ensures that the user is prompted with a custom error message when the number entered is outside the specified range of 10 to 100.
+This code checks the length of Input is exactly 10 characters and if it contains at least one digit. If not, it returns the error message
 
 
 </dd>
 
+#### Min `number`
+
+<dd>
+
+Sets a minimum value allowed for user input. Only appears when **Data Type** is set to Number.
+
+</dd>
+
+#### Max `number`
+
+<dd>
+
+Sets a maximum value allowed for user input. Only appears when **Data Type** is set to Number.
+
+</dd>
 
 ### General
 
@@ -311,10 +381,30 @@ Clears the input value after submission. This ensures that the field is reset to
 
 </dd>
 
+## Style properties
+
+Style properties allow you to change the look and feel of the widget.
+
+### Icon
+
+#### Icon `string`
+
+<dd>
+
+Allows you to set an icon for the Stats widget. You can choose from a predefined list of available icons. By enabling JS, you can dynamically change the icon based on data or user interactions.
+
+*Example:* To display different icons based on whether the input is valid or not, you can use the following JavaScript expression:
+
+```js
+{{ Input1.isValid ? "check" : "alert-circle" }}
+```
+
+</dd>
+
 
 ## Reference properties
 
-Reference properties are properties that are not available in the property pane but can be accessed using the dot operator in other widgets or JavaScript functions. They provide additional information or allow interaction with the widget programmatically. For instance, to get the visibility status, you can use `PhoneInput1.isVisible`.
+Reference properties are properties that are not available in the property pane but can be accessed using the dot operator in other widgets or JavaScript functions. They provide additional information or allow interaction with the widget programmatically. For instance, to get the visibility status, you can use `Input1.isVisible`.
 
 #### parsedText `string`
 
@@ -324,7 +414,7 @@ The `parsedText` property retrieves the input value of the widget.
 
 *Example:*
 ```js
-{{PhoneInput1.text}}
+{{Input1.text}}
 ```
 
 </dd>
@@ -338,7 +428,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 *Example:*
 ```js
-{{PhoneInput1.isValid}}
+{{Input1.isValid}}
 ```
 
 </dd>
@@ -351,7 +441,7 @@ The `isReadOnly` property indicates the read-only state of a widget, with `true`
 
 *Example:*
 ```js
-{{PhoneInput1.isReadOnly}}
+{{Input1.isReadOnly}}
 ```
 
 </dd>
@@ -364,7 +454,7 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 *Example:*
 ```js
-{{PhoneInput1.isDisabled}}
+{{Input1.isDisabled}}
 ```
 
 </dd>
@@ -378,7 +468,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{PhoneInput1.isVisible}}
+{{Input1.isVisible}}
 ```
 
 </dd>
@@ -401,7 +491,7 @@ Sets the visibility of the widget. This method is useful when you want to dynami
 *Example*:
 
 ```js
-PhoneInput1.setVisibility(true)
+Input1.setVisibility(true)
 ```
 
 
@@ -418,15 +508,15 @@ Sets the disabled state of the widget. This method can be used to prevent user i
 *Example*:
 
 ```js
-PhoneInput1.setDisabled(false)
+Input1.setDisabled(false)
 ```
 *Example:* If you want to disable an input field for anonymous users, you can use:
 
 ```js
 if (appsmith.user.isAnonymous) {
-  PhoneInput1.setDisabled(true) // Disable input for anonymous users
+  Input1.setDisabled(true) // Disable input for anonymous users
 } else {
-  PhoneInput1.setDisabled(false) // Enable input for logged-in users
+  Input1.setDisabled(false) // Enable input for logged-in users
 }
 ```
 
@@ -441,7 +531,7 @@ Allows you to dynamically set the value of the widget. This is useful when you n
 *Example*:
 
 ```js
-PhoneInput1.setValue("+256241234567")
+Input1.setValue("John Doe")
 ```
 
 </dd>
@@ -457,7 +547,7 @@ Sets whether the widget is required or not. This method can be used to dynamical
 *Example*:
 
 ```js
-PhoneInput1.setRequired(true)
+Input1.setRequired(true)
 ```
 
 
@@ -472,15 +562,15 @@ Sets the read-only state of the widget. This method is useful when you want to p
 *Example:*
 
 ```js
-PhoneInput1.setReadOnly(true)
+Input1.setReadOnly(true)
 ```
  *Example:* If you only want the widget to be editable for specific users (e.g., logged-in users), use:
 
 ```js
 if (appsmith.user.isAnonymous) {
-  PhoneInput1.setReadOnly(true) // Prevent modification for anonymous users
+  Input1.setReadOnly(true) // Prevent modification for anonymous users
 } else {
-  PhoneInput1.setReadOnly(false) // Allow modification for logged-in users
+  Input1.setReadOnly(false) // Allow modification for logged-in users
 }
 ```
 
