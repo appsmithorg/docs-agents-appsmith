@@ -1,0 +1,94 @@
+import DownloadButton from '@site/src/components/DownloadButton';
+import CalloutCard from "@site/src/components/CalloutCard";
+
+# Build Your First Agent
+
+This tutorial guides you through building a customer support AI agent that can answer FAQs from a knowledge base and retrieve ticket statuses from a database.
+
+<CalloutCard  
+  text={`This tutorial takes approximately 30-45 minutes to complete.`}  
+  tag="Estimated Time"  
+/>  
+
+
+1. Open the Appsmith Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
+
+2. To create a new app, click the **Create New** dropdown in the top-right corner of the workspace and select **AI Agents**.
+
+3. The editor opens with a default layout:
+
+
+<dd> 
+
+
+The Editor Pane includes:
+
+</dd>
+
+
+
+
+4. Add a **System Prompt** to define how the AI should behave. The prompt provides instructions to guide AI responses based on the uploaded knowledge base and function calling setup.
+
+<dd> 
+
+Example system prompt:
+"This AI assists users with customer support inquiries by retrieving information from the uploaded FAQ document and checking ticket statuses in the PostgreSQL database. Always reference the document before responding and call the database function when asked about ticket status."
+
+</dd>
+
+5. In the AI Query Settings, configure the following parameters:
+
+<dd>
+
+- **Model:** Select gpt-4o for optimal performance in understanding and responding to customer queries.
+
+- **Temperature**: Controls the randomness of responses.
+
+    - Lower values (e.g., 0.2) make responses more predictable.
+
+    - Higher values (e.g., 0.8) introduce more creativity.
+
+    - Set to 0.3 for this lesson to keep responses accurate and consistent.
+
+- **Top-p (Nucleus Sampling):** Determines the probability mass used for response generation.
+
+    - Set to `0.9` to balance creativity and reliability.
+
+- **Re-ranking Model:** Helps prioritize the most relevant responses when multiple answers exist.
+
+- **Number of Chunks:** Defines how the document is split for retrieval-augmented generation (RAG).
+
+    - Set to `4` to optimize retrieval while keeping context intact.
+
+</dd>
+
+
+
+6. In the AI Query, go to the Sources section. This source acts as the AI’s knowledge base, allowing it to retrieve accurate responses.
+
+7. Click Add Source, then select Import Source. Choose Local File as the import option.
+
+<dd>
+
+Download the FAQ document below and upload it to Appsmith AI:
+
+
+
+<DownloadButton
+  fileName="Customer_Support_SLA_Guide.pdf"
+  fileUrl="/user-files/Customer_Support_SLA_Guide.pdf"
+  description="Download the agent configuration file (used for step 2 setup)"
+/>
+
+
+
+
+</dd>
+
+2. text etxt eece
+2. text etxt eece
+
+ece
+ecece
+

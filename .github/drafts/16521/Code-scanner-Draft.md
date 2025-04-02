@@ -69,10 +69,10 @@ You can define functions that will be called when these events are triggered in 
 When a valid barcode or QR code is detected, this event triggers an action. 
 The Appsmith framework allows triggering actions for widget events and inside JS Objects. Let’s take an example to understand how the onCodeDetected event works.
 
-In this example, we will use the [Modal widget](https://docs.appsmith.com/reference/widgets/modal) to display the code response.
+In this example, we will use the [Modal widget](https://docs.appsmith.comhttps://docs.appsmith.com/reference/widgets/modal) to display the code response.
 
 - Set the onCodeDetected event to open a New Modal, and choose to Create New.
-- This will open up a new modal; let's drag the [text widget](https://docs.appsmith.com/reference/widgets/text) into the modal.
+- This will open up a new modal; let's drag the [text widget](https://docs.appsmith.comhttps://docs.appsmith.com/reference/widgets/text) into the modal.
 - In the property section, add the following code:
 
 ```

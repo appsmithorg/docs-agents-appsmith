@@ -15,10 +15,10 @@
     gap: 4px;
   }
   
-  .betaTag {
-    align-self: flex-start; /* Aligns inside callout */
-    background: #e3f2fd; /* Light blue shade */
-    color: #1976d2; /* Darker blue text for contrast */
+  .tag {
+    align-self: flex-start;
+    background: #e3f2fd;
+    color: #1976d2;
     font-size: 11px;
     font-weight: 600;
     padding: 2px 8px;

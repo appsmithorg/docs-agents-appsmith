@@ -1,13 +1,27 @@
 import React from 'react';
 
 const DownloadButton = ({ fileName, fileUrl, description }) => {
-  const handleClick = () => {
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleClick = async () => {
+    try {
+      // Ensure the correct full URL is used
+      const fullUrl = fileUrl.startsWith('http') ? fileUrl : window.location.origin + fileUrl;
+      
+      // Fetch the file to ensure it exists and get the correct MIME type
+      const response = await fetch(fullUrl);
+      if (!response.ok) throw new Error('File not found');
+
+      // Create a Blob from the file response
+      const blob = await response.blob();
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading file:', error);
+      alert('Failed to download the file. Please check the file URL.');
+    }
   };
 
   return (
