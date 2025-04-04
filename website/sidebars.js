@@ -20,8 +20,8 @@ const sidebars = {
           collapsed: false,
           label: 'Reference',
           items: [
-               'connect-data/integrations/reference/chat-query',
-            {
+               'connect-data/integrations/appsmith-ai',
+                          {
               type: 'category',
               collapsed: true,
               label: 'Knowledge Bases',

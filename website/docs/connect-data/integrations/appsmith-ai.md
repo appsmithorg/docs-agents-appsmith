@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 <!-- vale off -->
 
 <div className="tag-wrapper">
- <h1>Appsmith AI (AI Assistant)</h1>
+ <h1>Appsmith AI </h1>
 
 <Tags
 tags={[
@@ -24,7 +24,7 @@ tags={[
 
 
 
-This page provides information on creating queries with Appsmith AI datasource *(available in AI Assistant Apps)*, which allows you to configure applications with advanced AI features such as chat assistants, text generation, image classification, and sentiment analysis without the need for any API keys or datasource authentication.
+This page provides information on creating queries with Appsmith AI datasource, which allows you to configure applications with advanced AI features such as chat assistants, text generation, image classification, and sentiment analysis without the need for any API keys or datasource authentication.
 
 :::note Data, Privacy and Security
 Appsmith is committed to providing safe and responsible access to AI capabilities. Your prompts, outputs, embeddings, and data are not shared with other users and are never utilized to fine-tune models. 
@@ -58,30 +58,6 @@ Submission of files is not mandatory, and you can use Appsmith AI without upload
 
 For example, if you are working on a loan approval application and want to upload an SOP for insights into user preferences and financial details, the system uses the provided information to generate tailored recommendations and guidance.
 
-
-</dd>
-
-
-## Query Appsmith AI
-
-
-The following section is a reference guide that provides a description of the available commands with their parameters to create Appsmith AI queries.
-
-### AI Chat Assistant
-
-
-The AI Chat Assistant command allows you to interact with AI models using the [AI Chat Widget](/build-agents/widgets/reference/AIChat). Users can input queries and receive AI-generated responses directly within the chat interface, without the need to bind or pass additional data. 
-
-
-
-
-#### System Instructions
-
-<dd>
-
-The System Instructions property enables you to define specific behaviors and guidelines for the AI assistant, ensuring its responses align with your requirements. 
-
-*Example:* "You are an AI assistant integrated with Zendesk. Your primary task is to help users with support ticket inquiries. Always prioritize providing ticket status updates, customer issue resolutions, and guiding users through submitting new tickets in a clear and efficient manner."
 
 </dd>
 
@@ -135,316 +111,187 @@ Allows you to connect to various datasources or upload files to provide addition
 
 </dd>
 
-### Generate text 
+## Query Appsmith AI
 
 
-The Generate Text action allows you to generate text based on specific prompts.
+The following section is a reference guide that provides a description of the available commands with their parameters to create Appsmith AI queries.
 
-<ZoomImage
-  src="/img/appsmith-ai-loan-example.png" 
-  alt="Appsmith AI"
-  caption="Generate text query"
-/>
+### AI Chat Assistant
 
 
+The AI Chat Assistant command allows you to interact with AI models using the [AI Chat Widget](/build-agents/widgets/reference/AIChat). Users can input queries and receive AI-generated responses directly within the chat interface, without the need to bind or pass additional data. 
 
+
+
+
+#### System Instructions
 
 <dd>
 
-#### Prompt
+The System Instructions property enables you to define specific behaviors and guidelines for the AI assistant, ensuring its responses align with your requirements. 
+
+You can also pass parameters between queries using `this.params.name`, allowing for a connected and dynamic experience.
 
 
-This field allows you to input prompts for text generation. You can also add data from queries or JSObjects using mustache bindings `{{}}`, like `{{user_Input.text}}`.
+*Example:* You want the AI assistant to help users fetch support ticket details. The user enters a prompt in the chat widget, such as “Can you check the status of ticket 498?”
 
+You can extract the ticket ID from this prompt and pass it to the query as a parameter. In your query configuration, use `{{this.params.id}}` wherever the ticket ID is required.
 
-*Example*:
+For example, if you are querying a backend API or database:
 
-<Tabs>
-  <TabItem value="apple" label="With file as context" default>
-    
-    ```
-  You are helpful assistant who can help loan agents with loan approval or rejection recommendations. Analyse the loan details and generate a recommendation based on the SOP document that you have access to. 
-
-  Loan details: 
-  Credit score: `{{tbl_users.selectedRow.creditscore}}`
-  DTI Ratio: `{{tbl_users.selectedRow.dtiratio}}`
-
-  Your response should contain a recommendation followed by a list of all reasons. The format should be: 
-  Recommendation: `<your recommendation. Possible values: (Approve/Conditional Approve/Reject)>`
-  Reasons: `<your reasons>`
-    ```
-
-  </TabItem>
-  <TabItem value="orange" label="Without File">
-    ```
-    Write a creative product description for an electric car named RevaX, with the keywords- fast charging, 200 miles per single charge, compact, eco-friendly, economical. This is targeted towards a climate concious tech/EV enthusiast who enjoys driving. Also describe the benefits of this product in less than 80 words.
-    ```
-  </TabItem>
-</Tabs>
-
-
-
+```sql
+SELECT * FROM tickets WHERE id = {{this.params.id}};
+```
 
 
 </dd>
 
+#### Model
+
 <dd>
 
-#### Use context from files
+The Model dropdown allows you to select the AI model to use for processing the chat prompt. Different models offer varying levels of performance, speed, and capability depending on the complexity of your use case.
 
-Enhance the quality of AI responses by selecting relevant files that provide context. 
-
-Upload your files through the [datasource](#files) to enable the system to better understand and generate more accurate and context-aware responses.
+Choosing the right model depends on the required response quality and system performance. If your application requires basic text generation or short responses, a lower-tier model may be sufficient. For more advanced use cases like summarization, multi-turn conversations, or data-driven assistance, higher-tier models are recommended.
 
 </dd>
 
-### Classify text
-
-
-
-This action allows you to analyze and categorize text based on its content. You can gain insights into the nature of the provided text, making it a valuable for text classification tasks in your applications.
-
-
+#### Temperature
 
 <dd>
 
-#### Input
+The Temperature parameter controls the randomness or creativity of the AI's responses. It accepts a numeric value ranging from 0 to 2.
 
+- A lower value (e.g., 0) results in more focused, predictable, and deterministic outputs. This is ideal for factual, structured, or repetitive tasks where consistency is important.
 
-
-This field enables you to input prompts for text classification. You can provide either a simple text or an array of text, such as chat details, for classification. Additionally, you can add data from queries or JSObjects using mustache bindings `{{}}`.
-
-For example, you can input a user's product review, like:
-
-"Received my laptop stand from Macazon after a significant delay in delivery, which was a bit disappointing. Upon unboxing, I noticed the build seemed sturdy, but unfortunately, the stand doesn't function as expected. It's supposed to be adjustable, but the mechanism is quite stiff, making it challenging to change angles or heights."
+- A higher value (e.g., 1.5 – 2) produces more creative, diverse, and open-ended responses, which may be useful for brainstorming, storytelling, or idea generation.
 
 </dd>
 
+
+#### Top p
+
 <dd>
 
-#### Label
+The Top P parameter (also known as nucleus sampling) controls the diversity of the AI’s responses by limiting the selection of next-word candidates to a subset of the most probable options.
 
-The Label property is a group of customizable settings that define the main text displayed on the widget. s
+It accepts a numeric value between 0 and 1:
 
+- A lower value (e.g., 0.1) restricts the output to only the top most likely tokens, making responses more focused and deterministic.
 
+- A higher value (e.g., 0.9 – 1) allows a wider range of possible outputs, increasing creativity and variability in the responses.
 
-Labels refer to predefined categories or classes assigned to the analyzed text. These labels are essential for organizing and identifying the nature of the text content. 
-
-For example, if you are classifying product reviews, labels could include categories such as "Urgent," "High priority," or "Low."
+Top P is often used in conjunction with Temperature. While both influence randomness, Top P provides a probabilistic cutoff, whereas Temperature adjusts the sharpness of probability distribution. In most cases, adjusting one of the two is sufficient.
 
 </dd>
 
+#### Re-ranking model
+
 <dd>
 
-#### Additional Instructions
+The Re-ranking Model setting determines how retrieved documents or contextual chunks are evaluated and ordered before being passed to the AI model. This is especially useful when working with file uploads or knowledge base applications where relevance ranking impacts the quality of responses.
 
+Available options:
 
-This property allows you to provide additional instructions to fine-tune the text classification process. You can use this field to offer specific guidance or adjustments to the AI.
+- **Cohere**: Uses Cohere’s re-ranking model to score and reorder the most relevant document chunks based on semantic similarity to the user's input. This enhances response accuracy when multiple documents are involved.
 
-For example, you can use the following label descriptions:
+- **Jina**: Utilizes Jina AI’s re-ranking capabilities, which apply deep learning techniques to prioritize the most relevant content. Ideal for use cases requiring strong contextual alignment, such as AI support bots or content summarization.
 
-* Urgent: Issues that prevent a customer from using the product.
-* High priority: Issues that are impactful but still allow the product to be usable.
-* Low priority: Issues that, while present, can be lived with.
-
-
+- **None**: Disables re-ranking. Documents are processed in their original order of retrieval. This may be faster but can reduce the relevance of the AI-generated response if many sources are involved.
 
 
 </dd>
 
 
-### Summarise text
-
-
-
-This action condenses and distills lengthy pieces of text into concise summaries, providing a quick overview of the main points or key information. This feature is particularly useful for extracting essential details from large bodies of text, making it easier to comprehend and work with voluminous content.
-
+#### Number of chunks
 
 <dd>
 
-#### Input
+The Number of Chunks setting determines how many document or file chunks are retrieved and passed to the AI model as context during prompt execution. This is applicable when files are uploaded to enhance the assistant’s understanding of domain-specific information.
 
+- A lower value (e.g., 1–5) limits context to only the most relevant chunks, improving performance and reducing token usage.
 
-
-This field allows you to provide input for text summarization.  For instance, you can input text from a support conversation or any other lengthy content that you want to condense into a concise summary. 
+- A higher value (e.g., 15–20) includes more supporting content, which may improve accuracy for complex queries but could increase response time or cost.
 
 </dd>
 
-<dd>
-
-#### Additional Instructions
-
-
-
-This property allows you to provide additional instructions to fine-tune the text summarization process. You can use this field to offer specific guidance or adjustments to the AI.
-
-
-For example, if the summary appears either too brief or detailed, customize the summarization length with the instruction: "Summarize the content in approximately 5 sentences."
-
-
-
-</dd>
-
-
-### Extract entities from text
-
-
-This action allows you to identify and extract specific pieces of information, such as names, addresses, and other entities, from a given text. 
-
+#### Knowledge Source
 
 <dd>
 
-#### Input
+You can add sources from the Appsmith AI Knowledge Base, which provides contextual information to enhance the accuracy and relevance of AI responses. These sources serve as reference material for the AI assistant when generating responses to user queries.
 
+Appsmith AI allows you to connect various types of knowledge sources, including:
 
+- **File Uploads:** Add PDFs, Word documents, text files, and more.
 
-This field allows you to provide text from which you want to extract entities. For example, you can pass a user's email content to extract information such as name, email, address, and other relevant details.
+- **Web Links:** Provide URLs to publicly available content for AI to reference.
+
+- **Connected SaaS Tools:** Integrate with external tools such as Google Drive, Notion, Confluence, Jira, and others. This allows the assistant to access real-time or stored content from your organization’s systems.
+
+You can select one or more knowledge sources based on your use case. 
+
+*Example:*
+
+- Select a Google Drive folder for a document-based assistant.
+
+- Add Jira as a source if the AI needs access to support tickets or engineering tasks.
+
+- Upload an internal training manual to help the AI guide new employees.
 
 </dd>
 
 
+#### Function calls
 
 <dd>
 
-#### Entities
+The Function Calls feature allows you to extend the AI assistant’s capabilities by connecting it to custom backend logic. This enables dynamic, actionable experiences where the assistant can trigger application logic in response to user intent.
+
+You can associate one or more Appsmith functions—such as queries, APIs, or JavaScript objects—with the AI assistant. When a user initiates a request like “Check ticket status” or “Update user profile,” the assistant can intelligently call the appropriate function and return the result directly in the chat interface.
+
+This functionality empowers developers to build AI agents that go beyond simple Q&A by actively interacting with business data and services. Whether you are creating a customer support assistant, an internal operations bot, or a data retrieval tool, function calls allow the assistant to bridge user input with actionable outcomes—offering a intelligent application experience.
 
 
+*Example:* Zendesk Ticket Assistant
 
-Entities are specific pieces of information that you want to extract from the provided input text. In this field, you should provide a comma-separated list of the entities you want to extract. 
+Consider an AI assistant designed to help users with Zendesk ticket inquiries. You can configure the assistant to run two backend queries to fetch and display ticket details based on user input.
 
-For example, if you are extracting information, your list might include entities like "Name," "Email," and "Address". 
+- Prompt example:
+
+```
+Can you show me the details of ticket ID 498?
+```
+
+
+- Function calls setup:
+
+Query 1: `getTicketDetails`
+
+<dd>
+
+```sql
+SELECT * FROM zendesk_tickets WHERE ticket_id = {{ this.params.id }}
+```
 
 </dd>
 
+Query 2: `getTicketComments`
+
 <dd>
 
-#### Additional Instructions
-
-
-
-This property allows you to provide additional instructions to fine-tune the entity extraction process. You can use this field to offer specific guidance or adjustments to the AI.
-
-For example, you can instruct the model that "If you’re unable to extract an entity, respond with "Not found".
+```sql
+SELECT * FROM zendesk_comments WHERE ticket_id = {{ this.params.id }}
+```
 
 </dd>
 
+Execution flow:
 
-### Classify Image
+1. The assistant extracts 498 from the prompt and assigns it to this.params.id.
 
+2. Both queries are triggered using this dynamic parameter.
 
- 
-This action is designed to analyze and categorize the content of an image, automatically assigning labels or categories to images.
-
-
-
-<dd>
-
-#### Input
-
-
-
-This field allows you to provide the image, either in the form of an image URL or as a base64 encoded image. If you want to upload an image from a Filepicker, you can use `{{upload_FilePicker.files[0]}}`.
-
-
-
-
-</dd>
-
-<dd>
-
-#### Label
-
-The Label property is a group of customizable settings that define the main text displayed on the widget. s
-
-
-
-In this field, provide a comma-separated list of labels to classify the input image. These labels serve as the identified categories or characteristics that the AI system uses to categorize and classify the content of the provided image.
-
-For example, you can add product categories such as Jacket, Shirt, Pant, T-Shirt, Shorts, Dress, Skirt in this field. 
-</dd>
-
-<dd>
-
-#### Additional Instructions
-
-
-
-This property allows you to provide additional instructions to fine-tune the classification process. You can use this field to offer specific guidance or adjustments to the AI.
-
-For example, you can instruct the model to "Identify the category of clothing. Apply only one category.".
-
-</dd>
-
-### Describe Image
-
-
- 
-This action generates textual information about an image, producing a descriptive summary of the visual content captured within the image.
-
-
-
-<dd>
-
-#### Input
-
-
-
-This field allows you to provide the image, either in the form of an image URL or as a base64 encoded image. If you want to upload an image from a Filepicker, you can use `{{upload_FilePicker.files[0]}}`.
-
-
-
-
-</dd>
-
-<dd>
-
-#### Additional Instructions
-
-
-
-This property allows you to provide additional instructions to fine-tune the caption. You can use this field to offer specific guidance or adjustments to the AI.
-
-For example, you can instruct the model to "Write a 200 word product description".
-
-</dd>
-
-### Extract entities from image
-
-
- 
-This action involves the identification and extraction of specific pieces of information or entities from an image. This feature uses advanced image processing techniques to recognize and retrieve relevant data points, such as text, objects, or other elements, from the visual content captured in the image. 
-
-
-<dd>
-
-#### Input
-
- 
-This field allows you to provide the image, either in the form of an image URL or as a base64 encoded image. If you want to upload an image from a Filepicker, you can use `{{upload_FilePicker.files[0]}}`.
-
-</dd>
-
-<dd>
-
-#### Entities
-
-
-
-Entities are specific pieces of information or features within the visual content of the image that you want to identify and retrieve. Entities could include text, objects, landmarks, or any other distinct elements present in the image.
-
-For example, if you want to extract details from an ID card, you can specify entities such as name, date of birth, gender, license number, and height.
-
-</dd>
-
-<dd>
-
-#### Additional Instructions
-
-
-
-This property allows you to provide additional instructions to fine-tune the entity extraction. You can use this field to offer specific guidance or adjustments to the AI.
-
-For example, you can instruct the model that "The date should be in dd/mm/yyyy format".
-
+3. The results—ticket metadata and user comments—are returned in the assistant’s response.
 
 </dd>
