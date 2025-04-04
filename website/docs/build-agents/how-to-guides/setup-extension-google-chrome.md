@@ -2,11 +2,20 @@
 
 This guide shows you how to set up the Appsmith AI Agents Chrome extension, which allows you to embed AI directly into the platforms you use every day.
 
-<ZoomImage
-  src="/img/embed-ai1.png" 
-  alt=""
-  caption=""
-/>
+
+<div style={{ position: "relative", paddingBottom: "calc(50.52% + 41px)", height: 0, width: "100%" }}>
+  <iframe
+    src="https://demo.arcade.software/Qe9bsfed2hNtNIT5EgWh?embed"
+    frameBorder="0"
+    loading="lazy"
+    webkitAllowFullScreen
+    mozAllowFullScreen
+    allowFullScreen
+    allow="fullscreen"
+    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+    title="Appsmith | Connect Data"
+  />
+</div>
 
 1. Open your Appsmith AI Agents application and navigate to Settings from the left-side panel.
 
