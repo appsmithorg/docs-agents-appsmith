@@ -34,9 +34,9 @@ Appsmith is committed to providing safe and responsible access to AI capabilitie
 ## Connect Appsmith AI
 
 <ZoomImage
-  src="/img/-appsmith-ai-home.png" 
+  src="/img/appsmith-ai-agents.png" 
   alt="Appsmith AI"
-  caption="Appsmith AI query"
+  caption="Appsmith AI"
 />
 
 
@@ -61,16 +61,9 @@ For example, if you are working on a loan approval application and want to uploa
 
 </dd>
 
-#### Datasource 
+#### VectorDB 
 
 <dd>
-
-<ZoomImage
-  src="/img/appsmithai-chat.gif" 
-  alt="Appsmith AI"
-  caption="AI Chat Assistant"
-/>
-
 
 
 
@@ -122,6 +115,11 @@ The following section is a reference guide that provides a description of the av
 The AI Chat Assistant command allows you to interact with AI models using the [AI Chat Widget](/build-agents/widgets/reference/AIChat). Users can input queries and receive AI-generated responses directly within the chat interface, without the need to bind or pass additional data. 
 
 
+<ZoomImage
+  src="/img/appsmith-ai-agents2.png" 
+  alt="Appsmith AI"
+  caption="Appsmith AI query"
+/>
 
 
 #### System Instructions
