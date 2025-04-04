@@ -1,14 +1,10 @@
+
+
 import DownloadButton from '@site/src/components/DownloadButton';
-import CalloutCard from "@site/src/components/CalloutCard";
 
 # Build Your First Agent
 
 This tutorial guides you through building a customer support AI agent that can answer FAQs from a knowledge base and retrieve ticket statuses from a database.
-
-<CalloutCard  
-  text={`This tutorial takes approximately 30-45 minutes to complete.`}  
-  tag="Estimated Time"  
-/>  
 
 ## Set Up Your AI Agent
 
@@ -75,12 +71,13 @@ Example system prompt:
 Download the FAQ document below and upload it to Appsmith AI:
 
 
-
 <DownloadButton
   fileName="Customer_Support_SLA_Guide.pdf"
   fileUrl="/user-files/Customer_Support_SLA_Guide.pdf"
   description="Download the agent configuration file (used for step 2 setup)"
 />
+
+
 
 
 

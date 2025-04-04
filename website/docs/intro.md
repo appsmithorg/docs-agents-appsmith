@@ -4,9 +4,6 @@ title: Introduction
 slug: /
 ---
 import HomepageCards from '@site/src/components/HomepageCards';
-import WhyAppsmith from "@site/src/components/WhyAppsmith";
-import CalloutCard from "@site/src/components/CalloutCard";
-import VideoEmbedNew from "@site/src/components/VideoEmbedNew";
 
 
 # What is Appsmith Agents?
@@ -15,20 +12,12 @@ Appsmith Agents enable businesses to build custom AI-powered assistants that str
 
 
 
-<CalloutCard text="This documentation site is in beta, and some features may change. We appreciate your feedback as we continue to improve it." tag="Beta" />
-
-<VideoEmbedNew videoId="NwA6DAQiEMY" title="" />
-
 
 
 
 ## Why Appsmith?
 
 Appsmith makes it easy to build AI-powered agents that integrate seamlessly into your business processes while ensuring security and scalability.
-
-
-
-<WhyAppsmith />
 
 
 ## Get Started
