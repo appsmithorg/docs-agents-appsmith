@@ -87,7 +87,7 @@ const config = {
         indexName: 'docs_appsmithai_com_6g9o1qp75u_pages',
         contextualSearch: false,
 
-        //... other Algolia params
+      
       },
       navbar: {
         title: '',
