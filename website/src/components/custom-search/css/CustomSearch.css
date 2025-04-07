@@ -1,46 +1,59 @@
-.custom-segmented-search-option {
-  display: flex;
-  overflow: hidden;
-  background-color: #FFFFFF;
-  border: 1px solid #CDD5DF;
-  box-sizing: border-box;
-  border-radius: 4px;
-  flex-direction: row;
-}
-
-.custom-search-option {
-  height: 36px;
-  display: flex;
-  cursor: pointer;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  gap: 8px;
-  padding: 8px;
-  white-space: nowrap;
-  font-size: 14px;
-  background-color: #FFFFFF;
-  color: #4C5664;
-  border-right: 1px solid #CDD5DF;
-}
-
-.custom-search-option:last-child {
-  border-right: none;
-}
-
-.custom-search-option:hover {
-  background-color: #CDD5DF;
-}
-
-.custom-search-option:active {
-  background-color: #99A4B3;
-}
-
-.custom-search-option:last-child {
-  border-right: none;
-}
-
-.hideSearchButtons {
-  display: none !important;
-}
+.custom-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 1rem;
+  }
+  
+  .custom-segmented-search-option {
+    display: flex;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .custom-search-option {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .custom-search-option.selected {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .custom-search-option:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .search-bar-wrapper {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .navbar .DocSearch-Button {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+  }
+  
+  .navbar .DocSearch-Button:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.1);
+  }
+  
