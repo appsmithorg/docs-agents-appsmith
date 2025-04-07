@@ -86,8 +86,8 @@ const config = {
         apiKey: '9a9a704407540f884f3724fdfb298aa8',
         indexName: 'docs_appsmithai_com_6g9o1qp75u_pages',
         contextualSearch: false,
-
         // other Algolia params
+
       },
       navbar: {
         title: '',
