@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@docsearch/js": "^3.9.0",
+    "@docsearch/react": "^3.9.0",
+    "algoliasearch": "^5.23.3"
+  }
+}
