@@ -83,7 +83,7 @@ const config = {
       },
       algolia: {
         appId: '6G9O1QP75U',
-        apiKey: '5f6c2e82412d0ddd7c5a0b51f73a1c25',
+        apiKey: '8cbca580e78a33f64b613b6150d56d47',
         indexName: 'docs_appsmithai_com_6g9o1qp75u_pages',
         contextualSearch: false,
 
