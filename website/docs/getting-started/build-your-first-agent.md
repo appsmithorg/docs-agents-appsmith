@@ -8,29 +8,37 @@ This tutorial guides you through building a customer support AI agent that can a
 
 ## Set Up Your AI Agent
 
-1. Open the Appsmith Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
+1. Open the [Appsmith Agents](https://login.test.appsmithai.com/) Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
 
-2. To create a new app, click the **Create New** dropdown in the top-right corner of the workspace and select **AI Agents**.
+2. To create a new agent, click the **Create New** dropdown in the top-right corner of the workspace and select **AI Agents**.
 
-3. The editor opens with a default layout:
-
+3. When the AI Agent editor opens, you'll see a split layout. The chat widget appears on the right, where you can interact with your agent. On the left, the editor pane allows you to configure how your agent behaves.
 
 <dd> 
 
 
-The Editor Pane includes:
+By default, you're in the Query tab with a pre-configured AI Chat Query. This is where you can:
+
+- Add knowledge sources, such as uploaded documents or URLs.
+
+- Connect to database queries for function calling, so your agent can perform actions like checking a ticket status.
+
 
 </dd>
 
 
-
-
-4. Add a **System Prompt** to define how the AI should behave. The prompt provides instructions to guide AI responses based on the uploaded knowledge base and function calling setup.
+4. Add a **System Instructions** to define how the AI should behave. This prompt guides the AI's responses by setting clear expectations for how it should use the knowledge base and database functions.
 
 <dd> 
 
-Example system prompt:
-"This AI assists users with customer support inquiries by retrieving information from the uploaded FAQ document and checking ticket statuses in the PostgreSQL database. Always reference the document before responding and call the database function when asked about ticket status."
+Within the prompt, you can explicitly define which queries the AI can call and what kind of data each query expects. 
+
+
+*Example system prompt:*
+
+```js
+This AI assists users with customer support inquiries by retrieving information from the uploaded FAQ document and checking ticket statuses in the PostgreSQL database. Always reference the document before responding. To retrieve ticket status, call the Get_Ticket_Status function with the ticket_id provided by the user. To create a new ticket, use the Create_New_Ticket function with the user's user_id and the issue_type.
+```
 
 </dd>
 
@@ -38,48 +46,33 @@ Example system prompt:
 
 <dd>
 
-- **Model:** Select gpt-4o for optimal performance in understanding and responding to customer queries.
+- **Model:** Select `gpt-4o` for the best results in understanding and handling customer support queries with speed and accuracy.
 
-- **Temperature**: Controls the randomness of responses.
+- **Temperature**: Set to` 0.3`. This controls the randomness of responses—lower values (e.g., `0.2`) yield more focused, deterministic replies, while higher values (e.g., `0.8`) allow for more varied or creative output.
 
-    - Lower values (e.g., 0.2) make responses more predictable.
+- **Top-p (Nucleus Sampling):** Set to `0.9`. This determines the cumulative probability mass considered when generating responses, helping strike a balance between reliability and diversity.
 
-    - Higher values (e.g., 0.8) introduce more creativity.
+- **Re-ranking Model:** Select `JINA` for optimal performance. Re-ranking helps the AI prioritize the most relevant responses when multiple documents or answers are retrieved. 
 
-    - Set to 0.3 for this lesson to keep responses accurate and consistent.
-
-- **Top-p (Nucleus Sampling):** Determines the probability mass used for response generation.
-
-    - Set to `0.9` to balance creativity and reliability.
-
-- **Re-ranking Model:** Helps prioritize the most relevant responses when multiple answers exist.
-
-- **Number of Chunks:** Defines how the document is split for retrieval-augmented generation (RAG).
-
-    - Set to `4` to optimize retrieval while keeping context intact.
+- **Number of Chunks:** Set to `4`. This defines how the knowledge document is split for retrieval-augmented generation (RAG), ensuring that the AI can access relevant context without losing coherence.
 
 </dd>
 
 
 
-6. In the AI Query, go to the Sources section. This source acts as the AI’s knowledge base, allowing it to retrieve accurate responses.
+6.  In the AI Query, navigate to the **Knowledge Sources** section. This is where you configure the AI's knowledge base, enabling it to retrieve accurate responses from uploaded documents.
 
-7. Click Add Source, then select Import Source. Choose Local File as the import option.
+7. Click **Add Source**, then select **Import Source**. Choose Local File as the import option. You can also connect to external storage services such as Google Drive, Dropbox, or OneDrive to import documents. 
 
 <dd>
 
-Download the FAQ document below and upload it to Appsmith AI:
-
+Download the FAQ document provided below and upload it to Appsmith AI to serve as the primary knowledge base for your agent.
 
 <DownloadButton
   fileName="Customer_Support_SLA_Guide.pdf"
   fileUrl="/user-files/Customer_Support_SLA_Guide.pdf"
   description="Download the agent configuration file (used for step 2 setup)"
 />
-
-
-
-
 
 
 </dd>
@@ -95,23 +88,25 @@ To verify the setup, enter a query in the Chat Widget, such as "What is the refu
 
 ## Set Up Function Calling
 
-Function calling enables the AI to query a connected database for real-time ticket status updates. In this section, you will configure a PostgreSQL database and set up queries for retrieving ticket details.
+Function calling allows the AI to interact with connected databases and fetch real-time information. In this section, you will connect a PostgreSQL database and configure queries to retrieve ticket status details dynamically based on user input.
 
-1. Go to the Data section and create a PostgreSQL database with the following details:
+1. Navigate to the **Data** section, click the **+** icon, and select PostgreSQL. Create a new PostgreSQL database using the following connection details:
 
 <dd>
 
 ```js
-Host: dpg-cvmgjgje5dus73f5f3tg-a
+Host: dpg-cvmgjgje5dus73f5f3tg-a.oregon-postgres.render.com
 Port: 5432
-Database Name: customer_support_db
-Username: <your_username>
-Password: <your_password>
+Database: customer_support_db
+Username: admin
+Password: Jfy1wkrukPb5n4QMS3o5A0Ju7vx3uvjO
 ```
+
+This datasource will be used to retrieve real-time data during AI interactions, such as checking the status of support tickets.
 
 </dd>
 
-2. Create a new query (`Create_New_Ticket`) to add a support ticket to the database:
+2.  Create a new query (`Create_New_Ticket`) that allows the AI to add a new support ticket to the database based on user input:
 
 <dd>
 
@@ -126,7 +121,8 @@ This query inserts a new ticket into the tickets table. The `{{this.params.user_
 
 </dd>
 
-3. Create a new query (`Get_Ticket_Status`) to retrieve the status of a specific ticket:
+3. Create a new query (`Get_Ticket_Status`) to retrieve the current status of a specific support ticket:
+
 
 <dd>
 
@@ -142,9 +138,17 @@ This query fetches ticket details based on the provided `ticket_id`. The `{{this
 
 4. Navigate to Chat Query and add both functions (`Create_New_Ticket` and `Get_Ticket_Status`) to enable AI-driven database interactions. If required, enable Requires Approval to review and approve database actions before execution, ensuring control over ticket creation and retrieval.
 
+5. Once configured, save the query to make it available for AI function calling.
 
 
+<dd>
+
+You can now test the integration by entering prompts in the chat, such as "Fetch details of ticket 2" or "John P is having an issue with payment. Create a new high-priority ticket."
+</dd>
 
 
+## See also
 
+- [Set Up the AI Agents Chrome Extension](/build-agents/how-to-guides/setup-extension-google-chrome): Learn how to install and configure the Chrome extension to use AI agents across web applications.
 
+- [Appsmith AI Integration](/connect-data/integrations/appsmith-ai): Understand how to integrate Appsmith with AI features for chat-based data interaction and function calling.
