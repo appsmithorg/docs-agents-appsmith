@@ -112,6 +112,15 @@ const sidebars = {
       items: [
       
         'build-agents/overview',
+        'build-agents/agent',
+        {
+          type: 'category',
+          collapsed: false,
+          label: 'Concepts',
+          items: [
+            'build-agents/concepts/functions',
+          ],
+        },
         {
           type: 'category',
           collapsed: false,

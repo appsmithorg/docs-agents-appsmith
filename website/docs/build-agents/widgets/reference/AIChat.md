@@ -1,12 +1,12 @@
 ---
-title: AI Chat
+title: Chat
 hide_title: true
 toc_max_heading_level: 2
 ---
 <!-- vale off -->
 
 <div className="tag-wrapper">
- <h1>AI Chat (AI Assistant)</h1>
+ <h1>Chat Widget</h1>
 
 <Tags
 tags={[
@@ -53,17 +53,6 @@ In the query, you can upload files or connect to various platforms like Zendesk,
 ### General
 
 General properties are essential configurations that provide overall control over the widget's behavior and appearance.
-
-#### Description
-
-<dd>
-
-The Description property allows you to add text that guides users on how to use the Chat widget. This section can include instructions, context, or any additional information to help users interact with the chat effectively. You can also use `{{}}` to dynamically display data from JavaScript functions or queries.
-
-When users click on the info icon in the Chat widget, a modal is displayed showing this description, providing additional guidance or context.
-
-
-</dd>
 
 
 #### Placeholder
