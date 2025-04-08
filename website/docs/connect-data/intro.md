@@ -1,4 +1,4 @@
-# Connecting Data to Appsmith Agents
+# Overview
 
 Appsmith Agents become powerful and intelligent when they're connected to your data. Agents gain context and capabilities through two primary methods:
 
@@ -42,6 +42,12 @@ With Appsmith, you can connect to any API using the built-in REST API plugin or 
 - HubSpot
 - Outlook
 - Notion
+
+### Supported AI Integrations:
+
+- OpenAI
+- Gemini
+- Anthropic
 
 ## Next Steps
 
