@@ -1,7 +1,6 @@
 ---
 title: Function Calls
 description: Learn how Appsmith agents can call queries and JavaScript functions
-tags: [agents, functions, integrate]
 ---
 
 # Function Calls
