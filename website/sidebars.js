@@ -25,7 +25,8 @@ const sidebars = {
               type: 'category',
               collapsed: true,
               label: 'Knowledge Sources',
-              link: { type: 'doc', id: 'connect-data/integrations/overview' }
+              link: { type: 'doc', id: 'connect-data/integrations/overview' },
+              items: [],
             },
             {
               type: 'category',
