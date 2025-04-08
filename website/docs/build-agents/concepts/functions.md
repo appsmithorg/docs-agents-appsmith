@@ -9,7 +9,7 @@ description: Learn how Appsmith agents can call queries and JavaScript functions
 This concept page explains what these functions are, how they differ, and the key ideas behind how they work in agent-powered applications.
 
 
-# What Are Function Calls?
+## What Are Function Calls?
 
 Agents in Appsmith can interact with your application logic through two primary types of function calls:
 

@@ -118,7 +118,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          collapsed: false,
+          collapsed: true,
           label: 'Concepts',
           items: [
             'build-agents/concepts/functions',
@@ -168,6 +168,7 @@ const sidebars = {
             },
           ],
         },
+        'build-agents/best-practices',
               ],
     },
     {
