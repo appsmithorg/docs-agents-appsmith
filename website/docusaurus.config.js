@@ -125,6 +125,10 @@ const config = {
       async: false,
     },
     {
+      src: '/mixpanel.js',
+      async: true,
+    },
+    {
       src:
         '/scripts/analyticsEvents.js',
       defer: true,
