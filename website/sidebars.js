@@ -169,7 +169,22 @@ const sidebars = {
         },
               ],
     },
-    
+    {
+      // Product Start
+      type: 'category',
+      collapsed: false,
+      label: 'Product',
+      items: [
+        'product/security',
+        'product/telemetry',
+        'product/support',
+        {
+          type: 'link',
+          label: 'Privacy Policy',
+          href: 'https://www.appsmith.com/privacy-policy',
+        },
+      ],
+    }, // Product End
    
   ],
 };
