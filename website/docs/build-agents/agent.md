@@ -139,7 +139,7 @@ You can select one or more knowledge sources based on your use case.
 
 The Function Calls feature allows you to extend the AI assistant’s capabilities by connecting it to custom backend logic. This enables dynamic, actionable experiences where the assistant can trigger application logic in response to user intent.
 
-You can associate one or more Appsmith functions—such as queries, APIs, or JavaScript objects—with the AI assistant. When a user initiates a request like “Check ticket status” or “Update user profile,” the assistant can intelligently call the appropriate function and return the result directly in the chat interface.
+You can associate one or more Appsmith functions—such as queries, APIs, or JavaScript objects—with the AI agent. When a user initiates a request like “Check ticket status” or “Update user profile,” the assistant can intelligently call the appropriate function and return the result directly in the chat interface.
 
 This functionality empowers developers to build AI agents that go beyond simple Q&A by actively interacting with business data and services. Whether you are creating a customer support assistant, an internal operations bot, or a data retrieval tool, function calls allow the assistant to bridge user input with actionable outcomes—offering a intelligent application experience.
 

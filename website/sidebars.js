@@ -119,6 +119,7 @@ const sidebars = {
           label: 'Concepts',
           items: [
             'build-agents/concepts/functions',
+            'build-agents/concepts/ui-workflows',
           ],
         },
         {
@@ -126,7 +127,7 @@ const sidebars = {
           collapsed: false,
           label: 'How-to Guides',
           items: [
-                'build-agents/how-to-guides/setup-extension-google-chrome',
+            'build-agents/how-to-guides/embed-agents',
           ],
         },
         {

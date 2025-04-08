@@ -1,6 +1,6 @@
-# Set Up the AI Agents Chrome Extension
+# Embed Appsmith Agents
 
-This guide shows you how to set up the Appsmith AI Agents Chrome extension, which allows you to embed AI directly into the platforms you use every day.
+This guide shows you how to set up the Appsmith Agents Chrome extension, which allows you to embed AI Agents directly into the platforms you use every day.
 
 
 <div style={{ position: "relative", paddingBottom: "calc(50.52% + 41px)", height: 0, width: "100%" }}>
@@ -19,7 +19,7 @@ This guide shows you how to set up the Appsmith AI Agents Chrome extension, whic
 
 1. Open your Appsmith AI Agents application and navigate to Settings from the left-side panel.
 
-2. Click on Share & Embed and make the application public.
+2. Click on Share & Embed.
 
 3. Copy the embed URL. It should look something like:
 
