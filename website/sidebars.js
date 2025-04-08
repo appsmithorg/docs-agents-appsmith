@@ -24,16 +24,13 @@ const sidebars = {
                           {
               type: 'category',
               collapsed: true,
-              label: 'Knowledge Bases',
-              link: { type: 'doc', id: 'connect-data/integrations/overview' },
-              items: [
-                'connect-data/integrations/reference/knowledge-bases/google-drive'
-              ],
+              label: 'Knowledge Sources',
+              link: { type: 'doc', id: 'connect-data/integrations/overview' }
             },
             {
               type: 'category',
               collapsed: true,
-              label: 'Integrations Tools',
+              label: 'Functions',
                items: [
                 //category- Api
                 {
