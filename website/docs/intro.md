@@ -12,6 +12,21 @@ import HomepageCards from '@site/src/components/HomepageCards';
 
 With Appsmith Agents, you can quickly create AI-powered experiences that are deeply integrated with your business data, workflows, and user interfaces. Whether you're enhancing an existing application or building something entirely new, Agents help you go from idea to impact — fast.
 
+
+## What You Can Do with Agents
+
+- **Connect to your business data**  
+Securely access databases, APIs, and other data sources using Appsmith’s built-in integrations.
+
+- **Add AI to any UI**  
+Drop agents into your dashboards, forms, admin panels — anywhere you already use Appsmith.
+
+- **Orchestrate intelligent workflows**  
+Combine AI with UI widgets and JavaScript logic to automate multi-step processes.
+
+- **Keep humans in the loop**  
+Design flows where agents and people work together, with checkpoints, reviews, and approvals.
+
 ## What Are Appsmith Agents?
 
 Appsmith Agents are intelligent, customizable AI assistants that can:
@@ -30,17 +45,6 @@ Whether you're automating support tasks, streamlining onboarding, helping users 
 - **Frictionless customization**: Use JavaScript, drag-and-drop UI, and conditional logic to tailor agent behavior to your exact needs.
 - **Seamless integration**: Embed agents into dashboards, admin panels, or any other Appsmith app with a few clicks.
 
-## What's Next?
-
-In the following sections, you'll learn how to:
-
-- Create your first agent  
-- Connect it to data sources  
-- Design multi-step workflows  
-- Embed agents in your applications  
-- Customize logic and behavior with JavaScript  
-
-Let’s get started and bring your internal tools to life with AI — powered by **Appsmith Agents**.
 
 ## Get Started
 <HomepageCards />

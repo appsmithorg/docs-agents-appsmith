@@ -9,7 +9,7 @@ import widgetsBg from "@site/static/img/widgets-bg.svg";
 const HomePageCards = () => {
   const cards = [
     {
-      title: "Tutorials",
+      title: "Build Your First Agent",
       description: "Learn how to use our platform with step-by-step guides.",
       link: "/getting-started/build-your-first-agent",
       bg: learningBg,
