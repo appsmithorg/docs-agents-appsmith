@@ -1,5 +1,3 @@
-
-
 import DownloadButton from '@site/src/components/DownloadButton';
 
 # Build Your First Agent
@@ -149,6 +147,5 @@ You can now test the integration by entering prompts in the chat, such as "Fetch
 
 ## See also
 
-- [Set Up the AI Agents Chrome Extension](/build-agents/how-to-guides/setup-extension-google-chrome): Learn how to install and configure the Chrome extension to use AI agents across web applications.
-
-- [Appsmith AI Integration](/connect-data/integrations/appsmith-ai): Understand how to integrate Appsmith with AI features for chat-based data interaction and function calling.
+- [Set Up the AI Agents Chrome Extension](/build-agents/how-to-guides/embed-agents): Learn how to install and configure the Chrome extension to use AI agents across web applications.
+- [Appsmith AI Integration](/build-agents/overview): Understand how to integrate Appsmith with AI features for chat-based data interaction and function calling.

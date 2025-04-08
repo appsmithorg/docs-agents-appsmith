@@ -46,7 +46,7 @@ These properties allow you to set and manage data for the AI Chat widget.
 
 When the Chat widget is added to the canvas, a default AI Chat Query is automatically created to process messages. This query contains the main logic and data required for the Chat widget to function. You can change this query by selecting a different one from the Chat Query dropdown in the widget's property pane.
 
-In the query, you can upload files or connect to various platforms like Zendesk, Salesforce, Google, etc., to provide data. However, you can only connect a query from the Appsmith AI datasource with the [AI Chat Assistant](/connect-data/integrations/appsmith-ai#ai-chat-assistant) as a command. 
+In the query, you can upload files or connect to various platforms like Zendesk, Salesforce, Google, etc., to provide data. However, you can only connect a query from the Appsmith AI datasource with the [AI Chat Assistant](/build-agents/agent.md) as a command. 
 
 </dd>
 
