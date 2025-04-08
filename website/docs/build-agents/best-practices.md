@@ -1,4 +1,4 @@
-# Best Practices for Building Agent
+# Best Practices 
 
 When developing AI agents, it's essential to adopt clear, reliable, and consistent design practices. Agents rely on well-defined instructions, predictable behavior, and robust underlying functions to deliver effective outcomes.
 
