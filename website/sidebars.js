@@ -20,13 +20,7 @@ const sidebars = {
           collapsed: false,
           label: 'Reference',
           items: [
-            {
-              type: 'category',
-              collapsed: true,
-              label: 'Knowledge Sources',
-              link: { type: 'doc', id: 'connect-data/integrations/overview' },
-              items: [],
-            },
+            'connect-data/integrations/overview',
             {
               type: 'category',
               collapsed: true,

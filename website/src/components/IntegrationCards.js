@@ -2,20 +2,14 @@ import React from "react";
 import styles from "./IntegrationCards.module.css"; // Import CSS Module
 
 const integrations = [
-  { name: "Box", icon: "/img/box.svg", description: "Access enterprise content managed in Box", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
-  { name: "Confluence", icon: "/img/confluence.svg", description: "Access Confluence documentation shared by your teams", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
-  { name: "Dropbox", icon: "/img/dropbox.svg", description: "Access enterprise content managed in Dropbox", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
   { name: "File Upload", icon: "/img/file_upload.svg", description: "Directly upload documents for agents to reference", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
-  { name: "Freshdesk", icon: "/img/freshdesk.svg", description: "Access customer tickets and support conversations", docPath: "/connect-data/integrations/reference/tools/authenticated-api" },
+  { name: "Box", icon: "/img/box.svg", description: "Access enterprise content managed in Box", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
+  { name: "Dropbox", icon: "/img/dropbox.svg", description: "Access enterprise content managed in Dropbox", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
   { name: "Google Drive", icon: "/img/google_drive.svg", description: "Access files and documents in GDrive", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
-  { name: "Intercom", icon: "/img/intercom.svg", description: "Access customer and prospect messages", docPath: "/connect-data/integrations/reference/tools/authenticated-api" },
-  { name: "Jira", icon: "/img/jira.svg", description: "Access issue and project information in Jira", docPath: "/connect-data/integrations/reference/tools/authenticated-api" },
   { name: "Notion", icon: "/img/notion.svg", description: "Access documents and data in Notion", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
   { name: "OneDrive", icon: "/img/onedrive.svg", description: "Access content stored in the OneDrive cloud", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
-  { name: "Salesforce", icon: "/img/salesforce.svg", description: "Access sales and customer data in Salesforce", docPath: "/connect-data/integrations/reference/tools/hubspot" },
-  { name: "SharePoint", icon: "/img/sharepoint.svg", description: "Access enterprise content managed in SharePoint", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
   { name: "Web Scraper", icon: "/img/web_scraper.svg", description: "Pull data from any internal or external website", docPath: "/connect-data/integrations/reference/tools/rest-api" },
-  { name: "Zendesk", icon: "/img/zendesk.svg", description: "Access customer tickets and support conversations", docPath: "/connect-data/integrations/reference/tools/authenticated-api" },
+  { name: "Confluence", icon: "/img/confluence.svg", description: "Access Confluence documentation shared by your teams", docPath: "/connect-data/integrations/reference/knowledge-bases/overview" },
 ];
 
 const IntegrationCard = ({ name, icon, description, docPath }) => {
