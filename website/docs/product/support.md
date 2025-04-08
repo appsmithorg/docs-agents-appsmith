@@ -14,12 +14,6 @@ The Discord community serves as a valuable resource for users seeking help and c
 1. Join Appsmith on [Discord Server](https://discord.com/invite/rBTTVJp).
 2. Navigate to the [Support channel](https://discord.com/channels/725602949748752515/1006426744129069096) to raise queries.
 
-## Intercom
-
-If you need immediate help while using Appsmith, you can access support directly through the Intercom chat feature:
-
-- Click the **Help** button within Appsmith.
-- Select **Chat with Us** to start a conversation with the support team.
 
 ## Priority support
 
