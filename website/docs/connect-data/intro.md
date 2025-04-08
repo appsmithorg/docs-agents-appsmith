@@ -1,60 +1,54 @@
-# Overview
+# Connecting Data to Appsmith Agents
 
-Datasources are used to connect to your external databases & APIs. Appsmith can connect to a variety of [Datasources](https://docs.appsmith.com/connect-data/reference) and any REST API. Queries can be created on top of datasources to read and write data from them. Queries interact with widgets via javascript to display and capture data.
+Appsmith Agents become powerful and intelligent when they're connected to your data. Agents gain context and capabilities through two primary methods:
 
-## Security
+1. **Knowledge Sources (for unstructured data)**
+2. **Function Calling (for structured data)**
 
-Appsmith encrypts all your datasource credentials and stores them securely. Appsmith doesn't store any data returned from your datasources and acts only as a proxy layer to orchestrate the execution of queries. Read about the [Security Measures](https://docs.appsmith.com/product/security#security-measures-within-appsmith).
+## Knowledge Sources
 
-## Get started
+Knowledge sources enable your Appsmith Agents to access and understand unstructured data from files, documents, or websites. Using Retrieval-Augmented Generation (RAG), knowledge sources chunk and index content into a vector database, allowing the agent to retrieve relevant context whenever users ask questions.
 
-1. [Find your datasource](https://docs.appsmith.com/connect-data/reference) and connect to it.
-   - Learn how to identify and connect your data source to Appsmith to get started with building apps.
+Keep in mind, when you first connect a knowledge source, Appsmith Agents may take some time to sync data to the vector database. Once synced, agents can seamlessly access and utilize the information.
 
-2. Learn about [parameterising queries](https://docs.appsmith.com/connect-data/concepts/dynamic-queries).
-   - Discover how to use dynamic queries by adding parameters to make your app more flexible and interactive.
+### Supported Knowledge Sources:
 
-3. Start [app building](https://docs.appsmith.com/build-apps/overview).
-   - Begin building applications by using connected data sources and designing interactive workflows.
+- Local File Upload
+- Website Scraping
+- Google Drive
+- Notion
+- Dropbox
+- Box
+- Confluence
+- OneDrive
 
----
+## Function Calling
 
-<div className="containerGridSampleApp">
-   <a className="containerAnchor containerColumnSampleApp columnGrid column-one" href="/connect-data/how-to-guides">
-      <div className="containerHead">
-         <div className="containerHeading">
-            <b>How-to Guides</b>
-         </div>
-      </div>
-      <hr className="gradient-hr" />
-      <div className="containerDescription">
-         Step-by-step guides to help you understand how to connect, configure, and query different data sources in Appsmith.
-      </div>
-   </a>
+Function calling enables Appsmith Agents to interact directly with structured data sources like APIs and databases. Agents can fetch real-time information or trigger actions across various services, integrating seamlessly into your workflows.
 
-   <a className="containerAnchor containerColumnSampleApp columnGrid column-two" href="/connect-data/reference">
-      <div className="containerHead">
-         <div className="containerHeading">
-            <b>Reference</b>
-         </div>
-      </div>
-      <hr className="gradient-hr" />
-      <div className="containerDescription">
-         Detailed technical documentation on data sources, query syntax, and connection options to deepen your understanding.
-      </div>
-   </a>
-</div>
+With Appsmith, you can connect to any API using the built-in REST API plugin or leverage ready-to-use integrations with popular SaaS services.
 
-<div className="containerGridSampleApp">
-   <a className="containerAnchor containerColumnSampleApp columnGrid column-one" href="/connect-data/concepts">
-      <div className="containerHead">
-         <div className="containerHeading">
-            <b>Concepts</b>
-         </div>
-      </div>
-      <hr className="gradient-hr" />
-      <div className="containerDescription">
-         Learn core concepts related to data integration, query management, and how to use Appsmith effectively to build powerful apps.
-      </div>
-   </a>
-</div>
+### Supported SaaS Integrations:
+
+- Slack
+- Salesforce
+- Zendesk
+- Jira
+- Gmail
+- Google Sheets
+- Airtable
+- Twilio
+- Asana
+- HubSpot
+- Outlook
+- Notion
+
+## Next Steps
+
+In the upcoming sections, you'll learn detailed steps to:
+
+- Set up knowledge sources
+- Integrate structured data sources using APIs
+- Create custom agent workflows
+
+Connect your data now and unlock the full potential of your Appsmith Agents.
