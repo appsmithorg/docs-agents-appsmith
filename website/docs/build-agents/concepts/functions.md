@@ -3,62 +3,101 @@ title: Function Calls
 description: Learn how Appsmith agents can call queries and JavaScript functions
 ---
 
+
 # Function Calls
 
-Appsmith agents are capable of calling two types of functions to perform operations and interact with data:
+This concept page explains what these functions are, how they differ, and the key ideas behind how they work in agent-powered applications.
 
-1. **Queries**: For data operations and integrations with external systems
-2. **JavaScript Functions**: For implementing business logic and complex workflows
+
+# What Are Function Calls?
+
+Agents in Appsmith can interact with your application logic through two primary types of function calls:
+
+- **Query Functions** – for interacting with external systems and data sources.
+
+- **JavaScript Functions** – for implementing business logic and workflows.
 
 ## Query Functions
 
-Queries in Appsmith are used to interact with data sources, including:
+Query functions are operations that allow agents to interact with external systems and data sources in Appsmith. These functions are typically used to retrieve, send, or manipulate data and are defined using Appsmith's built-in query editors.
 
-- REST APIs
-- Databases (SQL, NoSQL)
-- GraphQL endpoints
-- Other supported data integrations
+They form the foundation for external communication in agent-driven workflows, enabling access to APIs, databases, and third-party services.
+
+Query functions can connect to a variety of data sources, including:
+
+- **REST APIs** — for sending HTTP requests to external services.
+
+- **SQL and NoSQL Databases** — such as PostgreSQL, MySQL, MongoDB, etc.
+
+- **GraphQL Endpoints** — for querying or mutating structured APIs.
+
+- **Third-party Integrations** — including services like Stripe, Twilio, or SendGrid.
 
 When an agent needs to retrieve, create, update, or delete data, it can invoke query functions that you've configured in your application.
 
-### Use Cases for Query Functions
+#### Use Cases
 
-- Fetching data from a database
-- Sending data to an external API
-- Performing CRUD operations on your data sources
-- Integrating with third-party services
+Agents may invoke query functions in a wide range of scenarios, including:
+
+- Retrieving a list of users from a database.
+- Submitting form data to an external API.
+- Filtering product listings based on search criteria.
+- Creating a new order record in a backend system.
+-  Fetching shipping status from a third-party logistics service.
 
 ## JavaScript Functions
 
-JavaScript functions serve as business logic wrappers in Appsmith. They allow you to:
+JavaScript functions in Appsmith allow you to define and execute business logic directly within your application. These functions are written inside JS Objects and provide a flexible way to orchestrate logic, transform data, and coordinate multiple queries or operations.
 
-- Process data
-- Chain multiple operations
-- Implement complex business rules
-- Orchestrate the execution of multiple queries
+They are essential when workflows require conditional logic, multiple steps, or integration between data sources and UI behaviors.
 
-JavaScript functions can call other functions and queries, making them powerful tools for creating sophisticated workflows.
+JavaScript functions can:
 
-### Use Cases for JavaScript Functions
+- Call one or more query functions.
+- Perform data transformations and formatting.
+- Execute conditional logic based on input or context.
+- Manage control flow (e.g., retries, delays, branching).
+- Handle errors gracefully using try-catch blocks.
+- Interact with widgets, modals, or application state.
 
-- Data transformation and manipulation
-- Conditional logic implementation
-- Error handling
-- Multi-step processes that involve several queries
+
+#### Use Cases for JS Functions
+
+Agents may rely on JavaScript functions when:
+
+- Formatting API response data before displaying it.
+- Executing different queries based on user roles or input.
+- Combining multiple queries to create a step-by-step flow.
+- Validating form data before sending it to a backend.
+- Handling errors from queries and showing user-friendly messages.
 
 ## Passing Parameters
 
+Parameters allow functions to behave dynamically based on context, input, or user interaction. In Appsmith, both Query Functions and JavaScript Functions support parameterization to make them reusable and adaptable.
+
+Parameters are critical in enabling agents to invoke functions correctly, with the appropriate values at runtime. Instead of hardcoding values, parameters allow functions to:
+
+- Accept dynamic input
+- Personalize logic per user or context
+- Reuse the same function across multiple workflows
+- Respond to real-time data or user interactions
+
 ### Parameters for Queries
 
-Parameters can be passed to queries using the mustache syntax. You define the parameter in the query field as:
+Query parameters enable the dynamic construction of API calls or database queries. These are typically referenced using mustache syntax:
+
 
 ```javascript
 {{this.params.paramName}}
 ```
 
-The parameter definition should be configured in the Agent's query function description field to provide proper documentation for the AI.
+- Use `{{this.params.<paramName>}}` to reference parameters inside queries.
 
-For example, in a SQL query:
+- Define expected parameters clearly in the function description so the agent understands what inputs are required.
+
+- Parameters are passed when calling the query at runtime.
+
+*Example*:
 
 ```sql
 SELECT * FROM users WHERE id = {{this.params.userId}}
@@ -74,24 +113,8 @@ export default function getUserDetails(userId, includeOrders) {
 }
 ```
 
-Like with queries, these parameters should be described in the function description field to help the agent understand how to use them correctly.
+- Use standard function arguments to define parameters.
 
-## Important Considerations
+- Document parameter names and types in the function description to guide agent usage.
 
-1. **Save Changes**: All modifications to JS and Query functions must be saved before they can be used by agents.
-
-2. **Function Description**: Provide clear and comprehensive descriptions for your functions to help the agent understand when and how to use them.
-
-3. **Error Handling**: Implement proper error handling in your functions to ensure robust operation of your agent-powered features.
-
-4. **Parameter Types**: Be explicit about the expected parameter types in your function descriptions to prevent type-related errors.
-
-5. **Testing**: Test your functions thoroughly before making them available to agents to ensure they work as expected.
-
-## Best Practices
-
-- Keep functions focused on a single responsibility
-- Use descriptive names for functions and parameters
-- Document parameter requirements clearly in function descriptions
-- Handle errors gracefully to provide meaningful feedback
-- Organize related functions logically to improve maintainability
+- Parameters are passed directly when calling the function.
