@@ -110,18 +110,19 @@ const sidebars = {
         {
           type: 'category',
           collapsed: false,
-          label: 'Concepts',
+          label: 'How-to Guides',
           items: [
-            'build-agents/concepts/functions',
-            'build-agents/concepts/ui-workflows',
+            'build-agents/how-to-guides/embed-agents',
+            'build-agents/how-to-guides/pass-parameters',
           ],
         },
         {
           type: 'category',
           collapsed: false,
-          label: 'How-to Guides',
+          label: 'Concepts',
           items: [
-            'build-agents/how-to-guides/embed-agents',
+            'build-agents/concepts/functions',
+            'build-agents/concepts/ui-workflows',
           ],
         },
         {
