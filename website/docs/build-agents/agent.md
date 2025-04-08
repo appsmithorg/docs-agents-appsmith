@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 <!-- vale off -->
 
 <div className="tag-wrapper">
- <h1>Appsmith AI </h1>
+ <h1>Agent Query</h1>
 
 <Tags
 tags={[
@@ -21,9 +21,6 @@ tags={[
 </div>
 
 <!-- vale on -->
-
-
-
 This page provides information on creating queries with Appsmith AI datasource, which allows you to configure applications with advanced AI features such as chat assistants, text generation, image classification, and sentiment analysis without the need for any API keys or datasource authentication.
 
 :::note Data, Privacy and Security
