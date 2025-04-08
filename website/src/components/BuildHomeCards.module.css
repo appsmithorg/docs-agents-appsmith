@@ -1,0 +1,74 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    position: relative;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-bottom: none; /* remove underline */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    border-bottom: none; /* ensure no underline on hover */
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.15;
+  }
+  
+  .tutorials::before {
+    left: 0;
+    background-image: url("/img/learning-bg.svg");
+  }
+  
+  .guides::before {
+    right: 0;
+    background-image: url("/img/guides-bg.svg");
+  }
+  
+  .widgets::before {
+    left: 0;
+    background-image: url("/img/widgets-bg.svg");
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #666;
+    position: relative;
+    z-index: 1;
+  }
+  
