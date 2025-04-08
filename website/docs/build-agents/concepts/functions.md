@@ -4,7 +4,7 @@ description: Learn how Appsmith agents can call queries and JavaScript functions
 ---
 
 
-# Function Calls
+# Function Calling
 
 This concept page explains what these functions are, how they differ, and the key ideas behind how they work in agent-powered applications.
 
