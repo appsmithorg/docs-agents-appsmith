@@ -4,11 +4,12 @@ description: This page provides information on the data collected by Appsmith.
 
 # Telemetry
 
-Telemetry in Appsmith refers to the collection of data about how users interact with the platform. This data helps the Appsmith team identify usage patterns, troubleshoot issues, and make informed decisions about new features and improvements.
+Telemetry in Appsmith refers to the collection of data about how users interact with the platform. This data helps the Appsmith team identify usage patterns, troubleshoot issues, and make informed decisions about new features and improvements. Telemetry can only be turned off in the enterprise edition of Appsmith Agents.
 
 ## Data collected by Appsmith
 
 Appsmith is a lightweight proxy and **does not capture** any data returned by your APIs, databases, or third-party tools. All data captured from a self-hosted instance is completely anonymised for user information.
+Appsmith does however store the documents synced via the knowledge sources feature into the vector database. To secure your data, you can self-host appsmith agents in the enterprise plan.
 
 ### Keep-alive ping
 
@@ -83,29 +84,9 @@ Appsmith server sends a ping first time a new instance is created. This data is 
 
 ```
 
-### Usage pulse for billing
-
-The Appsmith client triggers a usage pulse whenever a user performs an action on their Appsmith instance. The usage pulse primarily contains information such as the timestamp, a hashed `userId` to map the user, and the app mode in which the action was performed. The data is collected on the server-side and sent to the Appsmith cloud services in batches every hour. These pulses are then processed to present aggregate information to customers on customer portal. This data is collected only for paying customers, regardless of whether telemetry is on or off.
-
-```javascript title="sample usage-payload billing"
-{
-    "usageData": [{
-        "user": "f3273dd18d95bc19d51d3e6356e4a679e6f13824497272a270e7bb540b0abb9d",
-        "tenantId": "6fh76357fbe7e44f3a47a",
-        "viewMode": false, // To determine if action was done in edit mode or view mode of application
-        "isAnonymousUser": false, // To determine if pulse was triggered by logged-in user or an anonymous user
-        "createdAt": 188474747
-    }],
-    "message": "hash-message",
-    "hashedMessage": "c8ec6166d030765ff0f88ce40f4494bc6ef99f9d65dfbecd974c6359d1cac7ac",
-    "instanceId": "63ef757fbe7e44f3a47a"
-}
-
-``` 
-
 ### Navigation and clicks
 
-The client captures anonymous behavioral data around navigation and clicks. This data is only collected when telemetry is turned on. 
+The client captures anonymous behavioral data around navigation and clicks.
 
 ```javascript title="Sample event"
 {
@@ -182,29 +163,3 @@ The server shares anonymous information about successful query processes, new ap
     "userId": "70280e5dd9e61e5e91526ac8704bbd68d3f75ebad67ba439f4c354d7",
 }
 ```
-
-## Disable telemetry
-
-Sharing telemetry is optional, and you can disable telemetry either from Admin Settings or by making changes to the environment variable.
-
-### Admin Settings
-
-Follow the steps below to turn off telemetry using Admin settings:
-
-1. Go to **Admin Settings**, select **General** from left navigation bar, and scroll to **Share anonymous usage data**.
-2. Click the **Save & Restart** button to restart the container for the changes to take effect.
-
-### Environment variable
-
-You may also choose to turn off telemetry setting using environment variable `APPSMITH_DISABLE_TELEMETRY`. For example, to turn off the setting for your docker installation, follow the steps below:
-
-1. Go to the _directory_ where the `docker.env` file is located.
-2. Open the file in an editor and search for `APPSMITH_DISABLE_TELEMETRY`
-3. Change the value of `APPSMITH_DISABLE_TELEMETRY` from `false` to `true` and save it
-4. Go to the location where the `docker-compose.yml` file is located **`(docker host directory)`**
-5. Restart the container using the command
-
-```bash
-sudo docker-compose rm -fsv appsmith && sudo docker-compose up -d
-```
-Once the container restarts, Appsmith is up and running, the telemetry is turned off. You can verify that the telemetry is turned off using **Admin Settings**, select **General**, and verify the toggle is off for **Share anonymous usage data** setting.

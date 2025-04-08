@@ -236,7 +236,6 @@ const sidebars = {
         'product/security',
         'product/telemetry',
         'product/use-cases',
-        'product/support',
         {
           type: 'link',
           label: 'Privacy Policy',
