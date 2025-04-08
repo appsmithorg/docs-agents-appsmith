@@ -235,6 +235,7 @@ const sidebars = {
       items: [
         'product/security',
         'product/telemetry',
+        'product/use-cases',
         'product/support',
         {
           type: 'link',
