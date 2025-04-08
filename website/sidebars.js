@@ -109,7 +109,7 @@ const sidebars = {
         'build-agents/agent',
         {
           type: 'category',
-          collapsed: false,
+          collapsed: true,
           label: 'How-to Guides',
           items: [
             'build-agents/how-to-guides/embed-agents',
