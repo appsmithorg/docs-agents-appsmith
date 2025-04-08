@@ -62,7 +62,7 @@ To store a single key not in a hash, use `GET`:
 GET {{ SearchInput.text }}
 ```
 
-For more information on how to fetch paginated data, see [Setup Server-Side Pagination on Table](https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table).
+For more information on how to fetch paginated data, see [Setup Server-Side Pagination on Table](https://docs.appsmith.com∂/build-apps/how-to-guides/Server-side-pagination-in-table).
 
 ### Insert data
 
