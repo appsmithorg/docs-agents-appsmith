@@ -26,7 +26,7 @@ Keep in mind, when you first connect a knowledge source, Appsmith Agents may tak
 
 Function calling enables Appsmith Agents to interact directly with structured data sources like APIs and databases. Agents can fetch real-time information or trigger actions across various services, integrating seamlessly into your workflows.
 
-With Appsmith, you can connect to any API using the built-in REST API plugin or leverage ready-to-use integrations with popular SaaS services.
+Appsmith Agents can connect to any API using the built-in REST API & GraphQL plugins or leverage ready-to-use integrations with popular SaaS services.
 
 ### Supported SaaS Integrations:
 
@@ -42,6 +42,8 @@ With Appsmith, you can connect to any API using the built-in REST API plugin or 
 - HubSpot
 - Outlook
 - Notion
+- SMTP
+- S3
 
 ### Supported AI Integrations:
 
@@ -49,12 +51,29 @@ With Appsmith, you can connect to any API using the built-in REST API plugin or 
 - Gemini
 - Anthropic
 
+Appsmith Agents can also connect to the following databases
+
+### Supported Databases
+- Postgres
+- MongoDB
+- MySQL
+- MsSQL
+- DynamoDB
+- Redis
+- Redshift
+- Elasticsearch
+- Firestore
+- ArangoDB
+- Oracle
+- Snowflake
+- Databricks
+
 ## Next Steps
 
 In the upcoming sections, you'll learn detailed steps to:
 
 - Set up knowledge sources
-- Integrate structured data sources using APIs
+- Integrate structured data sources using APIs & Databases
 - Create custom agent workflows
 
 Connect your data now and unlock the full potential of your Appsmith Agents.
