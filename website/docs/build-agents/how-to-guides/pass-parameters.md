@@ -4,12 +4,11 @@ This guide explains how to pass parameters to queries and JavaScript functions u
 
 1.  Open the Agent where you want to use dynamic parameters.
 
-2. Create a new Query module to fetch data from your datasource.
+2. Create a new Query to fetch data from your datasource.
 
 <dd>
 
-- To **pass data from the AI chat** into function calls or queries, define the expected parameters in the system prompt of the agent. 
-
+- To **pass data from the AI chat** into JS function or queries, include the relevant context or variables in the system prompt. The AI will automatically send this data as parameters.
 - To **access those parameters** inside the query, use the `this.params.<paramName> `syntax.
 
 

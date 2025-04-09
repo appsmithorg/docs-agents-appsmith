@@ -28,17 +28,11 @@ This guide shows how to create a Custom UI Agent using JSObject in Appsmith. Thi
 
 </dd>
 
-4. Set the **OnClick** event of the Submit button in the Modal to create an issue when the button is clicked.
+4. Set the **onSubmit** event of the Submit button in the Modal to create an issue when the button is clicked.
 
 <dd>
 
-**Example:** To create a Jira ticket when the submit button is clicked, you can use the following code:
-
-```js
-{{create_jira_ticket.run().then(() => {
-  showAlert('Successfully created a Jira ticket!', 'success');
-});}}
-```
+**Example:** To create a Jira ticket when the submit button is clicked, you can run the create_jira_ticket query and show a success message on completion.
 
 
 
