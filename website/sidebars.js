@@ -179,7 +179,15 @@ const sidebars = {
       label: 'Write Code',
       items: [
         'write-code/overview',
-        
+        {
+          type: 'category',
+          collapsed: true,
+          label: 'How-to Guides',
+          items: [
+            'core-concepts/writing-code/javascript-promises',
+            'core-concepts/writing-code/ext-libraries',
+          ]
+        },
         {
           type: 'category',
           collapsed: false,
