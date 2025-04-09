@@ -113,7 +113,6 @@ const sidebars = {
           label: 'How-to Guides',
           items: [
             'build-agents/how-to-guides/embed-agents',
-            'build-agents/how-to-guides/pass-parameters',
             'build-agents/how-to-guides/custom-ui-agent',
           ],
         },
@@ -131,6 +130,7 @@ const sidebars = {
           collapsed: false,
           label: 'Reference',
           items: [
+            'build-agents/reference/pass-parameters',
             {
               type: 'category',
               collapsed: true,
