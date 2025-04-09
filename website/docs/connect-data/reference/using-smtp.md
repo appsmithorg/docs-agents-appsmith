@@ -130,12 +130,12 @@ Attaches one or more files to the email. Expects an array of file objects.
 
 </dd>
 
-See how to guide on [Send Emails](https://docs.appsmith.com/connect-data/how-to-guides/send-emails-using-the-SMTP-plugin).
+See how to guide on [Send Emails](https://docs.appsmithai.com/connect-data/how-to-guides/send-emails-using-the-SMTP-plugin).
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Send Emails](https://docs.appsmith.com/connect-data/how-to-guides/send-emails-using-the-SMTP-plugin) - Learn how to send emails using the SMTP plugin, including configuration and integration steps.
+- [Send Emails](https://docs.appsmithai.com/connect-data/how-to-guides/send-emails-using-the-SMTP-plugin) - Learn how to send emails using the SMTP plugin, including configuration and integration steps.

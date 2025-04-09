@@ -51,7 +51,7 @@ The following section is a reference guide that provides a complete description 
 
 For more details about any of the operations below, see the [Amazon DynamoDB Actions documentation](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Operations_Amazon_DynamoDB.html).
 
-See [Setup Server-Side Pagination on Table](https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table).
+See [Setup Server-Side Pagination on Table](https://docs.appsmithai.com//build-apps/how-to-guides/Server-side-pagination-in-table).
 
 
 ### BatchGetItem
@@ -219,7 +219,7 @@ This operation deletes an existing record, identified by its primary and sort ke
 }
 ```
 
-For information on how to delete data in a Table, see [Delete Data in Table](https://docs.appsmith.com/reference/widgets/table/inline-editing#delete-row).
+For information on how to delete data in a Table, see [Delete Data in Table](https://docs.appsmithai.com/reference/widgets/table/inline-editing#delete-row).
 
 
 
@@ -612,7 +612,7 @@ This operation adds or removes replicas in a given global table. The global tabl
 }
 ```
 
-For more information on how to update Table data, see [Update Data Guide](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data).
+For more information on how to update Table data, see [Update Data Guide](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data).
 
 
 ### UpdateGlobalTableSettings
@@ -673,11 +673,11 @@ This operation updates auto scaling settings on your global tables. For example,
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Display and Lookup Data in Table](https://docs.appsmith.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
-- [Search and Filter Table Data](https://docs.appsmith.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
-- [Update Data](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
-- [Insert Data](https://docs.appsmith.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.
+- [Display and Lookup Data in Table](https://docs.appsmithai.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
+- [Search and Filter Table Data](https://docs.appsmithai.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
+- [Update Data](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
+- [Insert Data](https://docs.appsmithai.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.

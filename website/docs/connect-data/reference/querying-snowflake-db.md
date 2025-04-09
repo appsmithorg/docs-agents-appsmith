@@ -125,7 +125,7 @@ OFFSET {{ CustomerTable.pageOffset }} ROWS
 FETCH NEXT {{ CustomerTable.pageSize }} ROWS ONLY;
 ```
 
-In the above example, `CustomerTable` is the name of the Table widget used to display the data using [**server-side pagination**](https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table) to control how much data is queried at once.
+In the above example, `CustomerTable` is the name of the Table widget used to display the data using [**server-side pagination**](https://docs.appsmithai.com//build-apps/how-to-guides/Server-side-pagination-in-table) to control how much data is queried at once.
 
 ### Insert data
 
@@ -163,11 +163,11 @@ In the above example, `CustomerTable` is the name of the Table widget where the 
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Display and Lookup Data in Table](https://docs.appsmith.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
-- [Search and Filter Table Data](https://docs.appsmith.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
-- [Update Data](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
-- [Insert Data](https://docs.appsmith.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.
+- [Display and Lookup Data in Table](https://docs.appsmithai.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
+- [Search and Filter Table Data](https://docs.appsmithai.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
+- [Update Data](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
+- [Insert Data](https://docs.appsmithai.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.

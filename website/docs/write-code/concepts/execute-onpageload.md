@@ -8,7 +8,7 @@ Appsmith automatically runs queries and functions on page load if they are bound
 
 <dd>
 
-**Example 1:** If you want to display a login modal when the page loads, you can create a function inside a JSObject using [showModal()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/show-modal) like:
+**Example 1:** If you want to display a login modal when the page loads, you can create a function inside a JSObject using [showModal()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/show-modal) like:
 
 ```js
 export default {

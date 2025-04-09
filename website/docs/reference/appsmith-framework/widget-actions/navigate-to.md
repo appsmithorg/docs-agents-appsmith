@@ -43,7 +43,7 @@ The name of the page or URL you want to navigate to. For widget events, you can 
 
 <dd>
 
-This property allows you to pass data across pages or external URLs. It uses the [URL](https://docs.appsmith.com/reference/appsmith-framework/context-object#url-object) global object to pass data.
+This property allows you to pass data across pages or external URLs. It uses the [URL](https://docs.appsmithai.com/reference/appsmith-framework/context-object#url-object) global object to pass data.
 
 
 To pass data using the Action selector, use:
@@ -114,7 +114,7 @@ If you need to navigate conditionally, based on user roles or status, you can ac
 
 
 
-When navigating across pages within your app or to external URLs, you can share data from your current page using query parameters. For more information, see [Share Data Across Pages](https://docs.appsmith.com/advanced-concepts/sharing-data-across-pages).
+When navigating across pages within your app or to external URLs, you can share data from your current page using query parameters. For more information, see [Share Data Across Pages](https://docs.appsmithai.com/advanced-concepts/sharing-data-across-pages).
 
 
 </dd>

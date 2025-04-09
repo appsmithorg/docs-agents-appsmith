@@ -6,7 +6,7 @@ description: Open a Modal widget using the showModal() Appsmith framework functi
 
 # showModal()
 
-The `showModal()` framework function is designed to open existing [Modal widget](https://docs.appsmith.com/reference/widgets/modal) and bring them into focus on your application page. With this function, you can enhance user interactions by displaying important information, forms, or alerts within a modal overlay, ensuring a intuitive user experience.
+The `showModal()` framework function is designed to open existing [Modal widget](https://docs.appsmithai.com/reference/widgets/modal) and bring them into focus on your application page. With this function, you can enhance user interactions by displaying important information, forms, or alerts within a modal overlay, ensuring a intuitive user experience.
 
 
 

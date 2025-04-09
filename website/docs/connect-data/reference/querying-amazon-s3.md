@@ -51,7 +51,7 @@ The following section is a reference guide that provides a complete description 
 
 #### Endpoint URL
 
-<dd>The network location of your S3 resource. This could be a domain or IP address. This field is required when <b>S3 service provider</b> is not Amazon S3. For a guide about connecting to a local resource, see <a href="https://docs.appsmith.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a>.</dd>
+<dd>The network location of your S3 resource. This could be a domain or IP address. This field is required when <b>S3 service provider</b> is not Amazon S3. For a guide about connecting to a local resource, see <a href="https://docs.appsmithai.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a>.</dd>
 
 #### Region
 
@@ -201,7 +201,7 @@ The length of time in minutes that the returned Signed URL is valid. Accepts num
 
 <dd>
 
-The file data to be sent to the bucket. Expects a file object. You can use widgets such as a [Filepicker](https://docs.appsmith.com/reference/widgets/filepicker) or a [Camera](https://docs.appsmith.com/reference/widgets/camera) to upload files to S3. For guides on this subject, see [Upload or Download Files to and from S3](https://docs.appsmith.com/connect-data/how-to-guides/how-to-upload-to-s3) or [Upload Images to and from S3](https://docs.appsmith.com/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images).
+The file data to be sent to the bucket. Expects a file object. You can use widgets such as a [Filepicker](https://docs.appsmithai.com/reference/widgets/filepicker) or a [Camera](https://docs.appsmithai.com/reference/widgets/camera) to upload files to S3. For guides on this subject, see [Upload or Download Files to and from S3](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-upload-to-s3) or [Upload Images to and from S3](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images).
 
 </dd>
 
@@ -250,7 +250,7 @@ The length of time in minutes that the returned Signed URL is valid. Accepts num
 
 <dd>
 
-The file data to be sent to the bucket. Expects an array of file objects. You can use widgets such as a [Filepicker](https://docs.appsmith.com/reference/widgets/filepicker) to upload files to S3. For a guide on this subject, see [Upload Files to S3](https://docs.appsmith.com/connect-data/how-to-guides/how-to-upload-to-s3) and [Download Files](https://docs.appsmith.com/connect-data/how-to-guides/how-to-download-files-using-api).
+The file data to be sent to the bucket. Expects an array of file objects. You can use widgets such as a [Filepicker](https://docs.appsmithai.com/reference/widgets/filepicker) to upload files to S3. For a guide on this subject, see [Upload Files to S3](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-upload-to-s3) and [Download Files](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-download-files-using-api).
 
 </dd>
 
@@ -339,10 +339,10 @@ Expects a JSON array of file paths to be deleted from the S3 bucket.
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
-- [Upload Files to S3](https://docs.appsmith.com/connect-data/how-to-guides/how-to-upload-to-s3) - Learn how to upload files to an S3 bucket using built-in integration and API configurations.
-- [Display and Lookup Data in List](https://docs.appsmith.com//build-apps/how-to-guides/display-search-and-filter-list-data) - Learn how to display query results in a List and enable users to look up data efficiently.
-- [Search and Filter Table Data](https://docs.appsmith.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
+- [Upload Files to S3](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-upload-to-s3) - Learn how to upload files to an S3 bucket using built-in integration and API configurations.
+- [Display and Lookup Data in List](https://docs.appsmithai.com//build-apps/how-to-guides/display-search-and-filter-list-data) - Learn how to display query results in a List and enable users to look up data efficiently.
+- [Search and Filter Table Data](https://docs.appsmithai.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
 

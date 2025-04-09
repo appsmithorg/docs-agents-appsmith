@@ -10,7 +10,7 @@ toc_max_heading_level: 4
 
 Appsmith enables writing JavaScript code almost everywhere on the GUI inside widget properties, events listeners, queries, and other settings. With the help of the JavaScript editor and the debugging tools, you can write complex reusable code and build scalable applications.
 
-Appsmith also provides the ability to [import external libraries](https://docs.appsmith.com/core-concepts/writing-code/ext-libraries#install-external-library), helping you expand the capabilities of your applications.
+Appsmith also provides the ability to [import external libraries](https://docs.appsmithai.com/core-concepts/writing-code/ext-libraries#install-external-library), helping you expand the capabilities of your applications.
 
 ## Code in JavaScript
 You can write JS code inside the **mustache syntax `{{ }}`**. You can reference entities (widgets, queries, JS objects) and their associated data and properties as JavaScript variables and perform operations on them using built-in functions.  
@@ -38,7 +38,7 @@ Sometimes, you may have to chain multiple operations, such as running queries, c
 {{updateData.run(() => {getData.run(), closeModal('ModalName')}, () => {})}}
 ```
 
-If your expression becomes too complex or challenging to fit in a single line, use multi-line code explained in the following section. To keep the code readable, you can also write a helper function in a [JS Object](https://docs.appsmith.com/core-concepts/writing-code/javascript-editor-beta#js-object).
+If your expression becomes too complex or challenging to fit in a single line, use multi-line code explained in the following section. To keep the code readable, you can also write a helper function in a [JS Object](https://docs.appsmithai.com/core-concepts/writing-code/javascript-editor-beta#js-object).
 
 #### Multi-line code
 
@@ -102,10 +102,10 @@ The example below shows how to restructure an invalid code block using **IIFE**.
 ```
 
 #### JS Objects
-JS Objects stores a collection of variables and functions, and you can use it to write reusable code in Appsmith. With it, you can manipulate data, handle events, perform advanced operations, write complex logic and invoke them anywhere within the application where it's defined. You can create JS Objects in the JavaScript Editor. For more information, see [JS Objects](https://docs.appsmith.com/core-concepts/writing-code/javascript-editor-beta).
+JS Objects stores a collection of variables and functions, and you can use it to write reusable code in Appsmith. With it, you can manipulate data, handle events, perform advanced operations, write complex logic and invoke them anywhere within the application where it's defined. You can create JS Objects in the JavaScript Editor. For more information, see [JS Objects](https://docs.appsmithai.com/core-concepts/writing-code/javascript-editor-beta).
 
 ## See also
 
-* [Using JavaScript Promises](https://docs.appsmith.com/core-concepts/writing-code/javascript-promises)
-* [Importing External Libraries](https://docs.appsmith.com/core-concepts/writing-code/ext-libraries)
-* [Working with Appsmith Framework Functions](https://docs.appsmith.com/reference/appsmith-framework)
+* [Using JavaScript Promises](https://docs.appsmithai.com/core-concepts/writing-code/javascript-promises)
+* [Importing External Libraries](https://docs.appsmithai.com/core-concepts/writing-code/ext-libraries)
+* [Working with Appsmith Framework Functions](https://docs.appsmithai.com/reference/appsmith-framework)

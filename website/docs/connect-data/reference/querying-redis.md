@@ -54,7 +54,7 @@ See the [Redis documentation](https://redis.io/commands/) for a full list of Red
 HGETALL {{ SearchInput.text }}
 ```
 
-In the above example, `SearchInput` is the name of an [Input widget](https://docs.appsmith.com/reference/widgets/input) being used to collect a user's search term and send it in the query. The `HGETALL` command returns all keys and values of a Redis hash with a matching name if it exists.
+In the above example, `SearchInput` is the name of an [Input widget](https://docs.appsmithai.com/reference/widgets/input) being used to collect a user's search term and send it in the query. The `HGETALL` command returns all keys and values of a Redis hash with a matching name if it exists.
 
 To store a single key not in a hash, use `GET`:
 
@@ -62,7 +62,7 @@ To store a single key not in a hash, use `GET`:
 GET {{ SearchInput.text }}
 ```
 
-For more information on how to fetch paginated data, see [Setup Server-Side Pagination on Table](https://docs.appsmith.com∂/build-apps/how-to-guides/Server-side-pagination-in-table).
+For more information on how to fetch paginated data, see [Setup Server-Side Pagination on Table](https://docs.appsmithai.com∂/build-apps/how-to-guides/Server-side-pagination-in-table).
 
 ### Insert data
 
@@ -70,7 +70,7 @@ For more information on how to fetch paginated data, see [Setup Server-Side Pagi
 HSET user:{{ EmailInput.text }} username {{ UsernameInput.text }} gender {{ GenderDropdown.selectedOptionVaue }}
 ```
 
-In the above example, `EmailInput`, `UsernameInput`, and `GenderDropdown` are the names of [Input](https://docs.appsmith.com/reference/widgets/input) and [Select](https://docs.appsmith.com/reference/widgets/select) widgets being used to collect user input and send it in the query to create a Redis hash.
+In the above example, `EmailInput`, `UsernameInput`, and `GenderDropdown` are the names of [Input](https://docs.appsmithai.com/reference/widgets/input) and [Select](https://docs.appsmithai.com/reference/widgets/select) widgets being used to collect user input and send it in the query to create a Redis hash.
 
 To insert a single key/value pair not in a hash, use `SET`:
 
@@ -78,12 +78,12 @@ To insert a single key/value pair not in a hash, use `SET`:
 SET username {{ UsernameInput.text }}
 ```
 
-For more information on how to insert data, see [Insert Data](https://docs.appsmith.com//build-apps/how-to-guides/insert-data).
+For more information on how to insert data, see [Insert Data](https://docs.appsmithai.com//build-apps/how-to-guides/insert-data).
 
 
 ### Update data
 
-See [Insert data](#insert-data) above, as the syntax is identical using the `HSET` and `SET` commands. For more information on how to update Table data, see [Update Data Guide](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data).
+See [Insert data](#insert-data) above, as the syntax is identical using the `HSET` and `SET` commands. For more information on how to update Table data, see [Update Data Guide](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data).
 
 
 ### Delete data
@@ -92,7 +92,7 @@ See [Insert data](#insert-data) above, as the syntax is identical using the `HSE
 HDEL user:{{ EmailInput.text }} {{ FieldDropdown.selectedOptionValue }}
 ```
 
-In the above example, `EmailInput` and `FieldDropdown` are the names of [Input](https://docs.appsmith.com/reference/widgets/input) and [Select](https://docs.appsmith.com/reference/widgets/select) widgets being used to collect user input that identifies which field of a given Redis hash to delete, and to send them in the query.
+In the above example, `EmailInput` and `FieldDropdown` are the names of [Input](https://docs.appsmithai.com/reference/widgets/input) and [Select](https://docs.appsmithai.com/reference/widgets/select) widgets being used to collect user input that identifies which field of a given Redis hash to delete, and to send them in the query.
 
 To delete the entire Redis hash or a single key/value pair, use `DEL`:
 
@@ -100,15 +100,15 @@ To delete the entire Redis hash or a single key/value pair, use `DEL`:
 DEL user:{{ EmailInput.text }}
 ```
 
-For information on how to delete data in a Table, see [Delete Data in Table](https://docs.appsmith.com/reference/widgets/table/inline-editing#delete-row).
+For information on how to delete data in a Table, see [Delete Data in Table](https://docs.appsmithai.com/reference/widgets/table/inline-editing#delete-row).
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Display and Lookup Data in Table](https://docs.appsmith.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
-- [Search and Filter Table Data](https://docs.appsmith.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
-- [Update Data](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
-- [Insert Data](https://docs.appsmith.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.
+- [Display and Lookup Data in Table](https://docs.appsmithai.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
+- [Search and Filter Table Data](https://docs.appsmithai.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
+- [Update Data](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
+- [Insert Data](https://docs.appsmithai.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.

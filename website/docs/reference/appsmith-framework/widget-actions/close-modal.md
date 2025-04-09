@@ -5,7 +5,7 @@ description: Close a Modal widget using the closeModal() Appsmith framework func
 ---
 # closeModal()
 
-This page provides information about the `closeModal()` function signature and parameters, which allows you to close an existing [Modal widget](https://docs.appsmith.com/reference/widgets/modal) that is currently open on the page.
+This page provides information about the `closeModal()` function signature and parameters, which allows you to close an existing [Modal widget](https://docs.appsmithai.com/reference/widgets/modal) that is currently open on the page.
 
 
 <ZoomImage src="/img/close-modal.png" alt="closeModal()" caption="closeModal()" />

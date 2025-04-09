@@ -97,7 +97,7 @@ To return multiple columns, separate the strings with `&`. For example, to retur
 {{ encodeURI("fields[]=name") + "&" + encodeURI("fields[]=date_of_birth") }}
 ```
 
-Below, a variable number of columns are chosen with a [Multi-Select widget](https://docs.appsmith.com/reference/widgets/multiselect) and each is encoded and joined with an `&`:
+Below, a variable number of columns are chosen with a [Multi-Select widget](https://docs.appsmithai.com/reference/widgets/multiselect) and each is encoded and joined with an `&`:
 
 ```javascript
 {{
@@ -163,7 +163,7 @@ To sort by multiple columns, separate the strings with `&`. For example, to sort
 {{ encodeURI("sort[0][field]=name") + "&" + encodeURI("sort[1][field]=date_of_birth") }}
 ```
 
-Below, a variable number of columns are chosen with a [Multi-Select widget](https://docs.appsmith.com/reference/widgets/multiselect) and each is encoded and joined with an `&`:
+Below, a variable number of columns are chosen with a [Multi-Select widget](https://docs.appsmithai.com/reference/widgets/multiselect) and each is encoded and joined with an `&`:
 
 ```javascript
 {{
@@ -350,5 +350,5 @@ Data for the records to update. Expects an array of objects, where each object h
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 

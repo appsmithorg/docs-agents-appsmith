@@ -27,9 +27,9 @@ You can define functions that will be called when these events are triggered in 
 
 | **Event** | **Description** | **Example** | **Code Snippet** |
 |-----------|-----------------|-------------|------------------|
-| **onChange** | Sets an an action to take place when the user changes the slider's value. Can be set from the GUI list of common actions (See a list of [supported actions](https://docs.appsmith.com/reference/appsmith-framework/widget-actions)), or you can define a custom JavaScript function to call instead. |  |  |
-| **onStartValueChange** | Sets an an action to take place when the user changes the range's start value. Can be set from the GUI list of common actions (See a list of [supported actions](https://docs.appsmith.com/reference/appsmith-framework/widget-actions)), or you can define a custom JavaScript function to call instead. |  |  |
-| **onEndValueChange** | Sets an an action to take place when the user changes the range's end value. Can be set from the GUI list of common actions (See a list of [supported actions](https://docs.appsmith.com/reference/appsmith-framework/widget-actions)), or you can define a custom JavaScript function to call instead. |  |  |
+| **onChange** | Sets an an action to take place when the user changes the slider's value. Can be set from the GUI list of common actions (See a list of [supported actions](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions)), or you can define a custom JavaScript function to call instead. |  |  |
+| **onStartValueChange** | Sets an an action to take place when the user changes the range's start value. Can be set from the GUI list of common actions (See a list of [supported actions](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions)), or you can define a custom JavaScript function to call instead. |  |  |
+| **onEndValueChange** | Sets an an action to take place when the user changes the range's end value. Can be set from the GUI list of common actions (See a list of [supported actions](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions)), or you can define a custom JavaScript function to call instead. |  |  |
 
 
 ## Styles

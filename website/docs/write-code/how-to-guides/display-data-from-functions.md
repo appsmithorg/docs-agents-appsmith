@@ -4,7 +4,7 @@ Functions in a JS Object can be _Synchronous_ or _Asynchronous_.
 
 Widgets have fields/properties where you can bind data or trigger actions.
 
-_Async fields_ are properties that can trigger an [action](https://docs.appsmith.com/reference/appsmith-framework/widget-actions) or perform an operation. For example, the properties like `OnTextChanged` and `OnSubmit` of an input widget are async fields. **You can call or execute the JS functions in async fields(event listeners)**.
+_Async fields_ are properties that can trigger an [action](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions) or perform an operation. For example, the properties like `OnTextChanged` and `OnSubmit` of an input widget are async fields. **You can call or execute the JS functions in async fields(event listeners)**.
 
 _Sync fields_ are properties that expect data. For example, for an Input widget, properties such as **Default Value**, **Required**, **Text** expect data and are sync fields. **You can display the response from JS functions in sync fields**.
 

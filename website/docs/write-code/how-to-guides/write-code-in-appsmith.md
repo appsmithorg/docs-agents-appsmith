@@ -37,7 +37,7 @@ Sometimes, you may have to chain multiple operations, such as running queries, c
 {{updateData.run(() => {getData.run(), closeModal('ModalName')}, () => {})}}
 ```
 
-If your expression becomes too complex or challenging to fit in a single line, use multi-line code explained in the following section. To keep the code readable, you can also write a helper function in a [JS Object](https://docs.appsmith.com/core-concepts/writing-code/javascript-editor-beta#js-object).
+If your expression becomes too complex or challenging to fit in a single line, use multi-line code explained in the following section. To keep the code readable, you can also write a helper function in a [JS Object](https://docs.appsmithai.com/core-concepts/writing-code/javascript-editor-beta#js-object).
 
 #### Multi-line code
 
@@ -101,11 +101,11 @@ The example below shows how to restructure an invalid code block using **IIFE**.
 ```
 
 #### JS Objects
-JS Objects stores a collection of variables and functions, and you can use it to write reusable code in Appsmith. With it, you can manipulate data, handle events, perform advanced operations, write complex logic and invoke them anywhere within the application where it's defined. You can create JS Objects in the JavaScript Editor. For more information, see [JS Objects](https://docs.appsmith.com/core-concepts/writing-code/javascript-editor-beta).
+JS Objects stores a collection of variables and functions, and you can use it to write reusable code in Appsmith. With it, you can manipulate data, handle events, perform advanced operations, write complex logic and invoke them anywhere within the application where it's defined. You can create JS Objects in the JavaScript Editor. For more information, see [JS Objects](https://docs.appsmithai.com/core-concepts/writing-code/javascript-editor-beta).
 
 ## See also
 
 
-* [Using JavaScript Promises](https://docs.appsmith.com/core-concepts/writing-code/javascript-promises)
-* [Importing External Libraries](https://docs.appsmith.com/core-concepts/writing-code/ext-libraries)
-* [Working with Appsmith Framework Functions](https://docs.appsmith.com/reference/appsmith-framework)
+* [Using JavaScript Promises](https://docs.appsmithai.com/core-concepts/writing-code/javascript-promises)
+* [Importing External Libraries](https://docs.appsmithai.com/core-concepts/writing-code/ext-libraries)
+* [Working with Appsmith Framework Functions](https://docs.appsmithai.com/reference/appsmith-framework)

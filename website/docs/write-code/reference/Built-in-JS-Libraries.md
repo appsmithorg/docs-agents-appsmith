@@ -46,4 +46,4 @@ For more information, see [Forge](https://github.com/digitalbazaar/forge)
 
 ## External JS Libraries
 
-You can also [follow this guide](https://docs.appsmith.com/core-concepts/writing-code/ext-libraries) to install external JavaScript libraries that are not loaded by default into your application.
+You can also [follow this guide](https://docs.appsmithai.com/core-concepts/writing-code/ext-libraries) to install external JavaScript libraries that are not loaded by default into your application.

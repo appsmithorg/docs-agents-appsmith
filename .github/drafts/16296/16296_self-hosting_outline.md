@@ -1,6 +1,6 @@
 # Self hosting
 
-Link - [https://docs.appsmith.com/getting-started/setup](https://docs.appsmith.com/getting-started/setup)
+Link - [https://docs.appsmithai.com/getting-started/setup](https://docs.appsmithai.com/getting-started/setup)
 
 To restructure and rewrite the content for the self-hosting landing page.
 

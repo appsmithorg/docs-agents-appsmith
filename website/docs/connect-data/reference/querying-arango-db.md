@@ -25,7 +25,7 @@ The following is a reference guide that provides a description of the parameters
 
 #### Host Address
 
-<dd>The network location of your ArangoDB database. This can be a domain name or an IP address. To connect to a local ArangoDB database, see <a href="https://docs.appsmith.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions. </dd>
+<dd>The network location of your ArangoDB database. This can be a domain name or an IP address. To connect to a local ArangoDB database, see <a href="https://docs.appsmithai.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions. </dd>
 
 #### Port
 
@@ -75,7 +75,7 @@ LIMIT {{ UsersTable.pageOffset }}, {{ UsersTable.pageSize }}
 RETURN user
 ```
 
-In the above example, `UsersTable` is the name of the Table widget that displays the data. It is configured to use [**server-side pagination**](https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table) to control how much data is queried at once.
+In the above example, `UsersTable` is the name of the Table widget that displays the data. It is configured to use [**server-side pagination**](https://docs.appsmithai.com//build-apps/how-to-guides/Server-side-pagination-in-table) to control how much data is queried at once.
 
 ### Create
 
@@ -115,11 +115,11 @@ In the example above, the query uses the `id` of the row selected in the `UsersT
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Display and Lookup Data in Table](https://docs.appsmith.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
-- [Search and Filter Table Data](https://docs.appsmith.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
-- [Update Data](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
-- [Insert Data](https://docs.appsmith.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.
+- [Display and Lookup Data in Table](https://docs.appsmithai.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
+- [Search and Filter Table Data](https://docs.appsmithai.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
+- [Update Data](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
+- [Insert Data](https://docs.appsmithai.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.

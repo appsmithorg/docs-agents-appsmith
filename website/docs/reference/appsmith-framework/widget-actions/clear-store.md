@@ -5,7 +5,7 @@ description: >-
 
 # clearStore()
 
-This page provides information about the `clearStore()` function signature and parameters, which clears all the data that was stored in the local storage of the browser using the [storeValue()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/store-value) function.
+This page provides information about the `clearStore()` function signature and parameters, which clears all the data that was stored in the local storage of the browser using the [storeValue()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/store-value) function.
 
 
 <ZoomImage src="/img/clearStore.png" alt="clearStore()" caption="clearStore()" />

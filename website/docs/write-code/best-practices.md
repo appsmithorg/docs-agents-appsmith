@@ -41,7 +41,7 @@ To _share data across pages_ in your application and persist the data, use the s
 
 Example:
 
-In this example, the third parameter `persist` in the [storeValue()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/store-value) function is set to `true`. This ensures that the value is stored in the browser's local storage and can be used between sessions. Set `persist` to `false` if you do not want to persist the data and remove it on page refresh.
+In this example, the third parameter `persist` in the [storeValue()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/store-value) function is set to `true`. This ensures that the value is stored in the browser's local storage and can be used between sessions. Set `persist` to `false` if you do not want to persist the data and remove it on page refresh.
 
 ```jsx
 export default {

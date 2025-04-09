@@ -116,7 +116,7 @@ The structure and content of the post body are customized based on the specific 
 
 ## See also
 
-- [Display and Lookup Data in List](https://docs.appsmith.com//build-apps/how-to-guides/display-search-and-filter-list-data) - Learn how to display query results in a List and enable users to look up data efficiently.
-- [Setup Server-side Pagination on List](https://docs.appsmith.com//build-apps/how-to-guides/Setup-Server-side-Pagination-on-List) - Guide on implementing server-side pagination in Lists for large datasets.
-- [Search and Filter Table Data](https://docs.appsmith.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
-- [Edit List Data](https://docs.appsmith.com//build-apps/how-to-guides/update-list-data) - Step-by-step guide on how to edit and update data in a List.
+- [Display and Lookup Data in List](https://docs.appsmithai.com//build-apps/how-to-guides/display-search-and-filter-list-data) - Learn how to display query results in a List and enable users to look up data efficiently.
+- [Setup Server-side Pagination on List](https://docs.appsmithai.com//build-apps/how-to-guides/Setup-Server-side-Pagination-on-List) - Guide on implementing server-side pagination in Lists for large datasets.
+- [Search and Filter Table Data](https://docs.appsmithai.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
+- [Edit List Data](https://docs.appsmithai.com//build-apps/how-to-guides/update-list-data) - Step-by-step guide on how to edit and update data in a List.

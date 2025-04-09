@@ -1,4 +1,4 @@
-<!--- This page extends https://docs.appsmith.com/reference/widgets , adding a list of properties that many widgets have in common. -->
+<!--- This page extends https://docs.appsmithai.com/reference/widgets , adding a list of properties that many widgets have in common. -->
 
 ## Common Properties
 

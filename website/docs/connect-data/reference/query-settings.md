@@ -10,13 +10,13 @@ You can find the following settings in the **Settings** tab of the query editor 
 
 #### Use Prepared Statements
 
-<dd>Toggles whether Appsmith uses pre-compiled and parameterized SQL statements to construct and execute database queries. This method improves the security of your SQL queries. This setting is turned on by default, and available for SQL database queries. For more details, see <a href="https://docs.appsmith.com/connect-data/concepts/how-to-use-prepared-statements">Prepared Statements</a>.</dd>
+<dd>Toggles whether Appsmith uses pre-compiled and parameterized SQL statements to construct and execute database queries. This method improves the security of your SQL queries. This setting is turned on by default, and available for SQL database queries. For more details, see <a href="https://docs.appsmithai.com/connect-data/concepts/how-to-use-prepared-statements">Prepared Statements</a>.</dd>
 
 #### Query timeout
 
 <dd>
 
-Sets the time duration in milliseconds that the Appsmith server waits for the query to finish before it closes the connection. If your query takes longer than this duration, Appsmith throws a [timeout-error](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors#timeout-error). This setting defaults to 10000 ms with a maximum of 60000 ms.
+Sets the time duration in milliseconds that the Appsmith server waits for the query to finish before it closes the connection. If your query takes longer than this duration, Appsmith throws a [timeout-error](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors#timeout-error). This setting defaults to 10000 ms with a maximum of 60000 ms.
 
 The Appsmith server has a default internal timeout of 60 seconds. If your queries take longer than this, you can set a value greater than 60 seconds. For self-hosted instances, you can set the `APPSMITH_SERVER_TIMEOUT` environment variable to a value greater than 60 seconds. For example, if you want a timeout of 80 seconds, use- `APPSMITH_SERVER_TIMEOUT=80`.
 
@@ -44,4 +44,4 @@ The Appsmith server has a default internal timeout of 60 seconds. If your querie
 
 #### Smart BSON substitution
 
-<dd>JavaScript objects and Binary JSON (BSON) objects are formatted similarly, however they have different rules for where quotation marks are required. When turned on, the query intelligently adds or removes quotation marks from your JavaScript data as necessary to correctly cast them into BSON. This setting is turned on by default, and available for <a href="https://docs.appsmith.com/connect-data/reference/querying-mongodb">MongoDB</a> queries.</dd>
+<dd>JavaScript objects and Binary JSON (BSON) objects are formatted similarly, however they have different rules for where quotation marks are required. When turned on, the query intelligently adds or removes quotation marks from your JavaScript data as necessary to correctly cast them into BSON. This setting is turned on by default, and available for <a href="https://docs.appsmithai.com/connect-data/reference/querying-mongodb">MongoDB</a> queries.</dd>

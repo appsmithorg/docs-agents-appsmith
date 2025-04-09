@@ -76,7 +76,7 @@ The following section lists the parameters to connect MongoDB by configuring mul
 
 #### Host Address
 
-<dd>Specifies the server's IP address or domain name where MongoDB is running. If you want to connect to a local MongoDB database, see <a href="https://docs.appsmith.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions on configuring the connection parameters. </dd>
+<dd>Specifies the server's IP address or domain name where MongoDB is running. If you want to connect to a local MongoDB database, see <a href="https://docs.appsmithai.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions on configuring the connection parameters. </dd>
 
 #### Port
 
@@ -185,7 +185,7 @@ This command fetches documents from a collection. The following section lists al
 <dd><i>Example:</i></dd>
 <dd><pre>{`{{tableItems.pageOffset}}
 `}</pre></dd>
-<dd>In the above examples for the <b>Limit</b> and <b>Skip</b> fields, the queries use <a href="https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table"><b>server-side pagination</b></a> to limit the number of query results returned by the server and fetch additional results when the user moves to the next page in the Table widget. You can fork this <a href="https://app.appsmith.com/applications/623cca594d9aea1b062b33c6/pages/623cca594d9aea1b062b33cd"><b>Sample App</b></a> to see how to implement server-side pagination on the Table widget.</dd>
+<dd>In the above examples for the <b>Limit</b> and <b>Skip</b> fields, the queries use <a href="https://docs.appsmithai.com//build-apps/how-to-guides/Server-side-pagination-in-table"><b>server-side pagination</b></a> to limit the number of query results returned by the server and fetch additional results when the user moves to the next page in the Table widget. You can fork this <a href="https://app.appsmith.com/applications/623cca594d9aea1b062b33c6/pages/623cca594d9aea1b062b33cd"><b>Sample App</b></a> to see how to implement server-side pagination on the Table widget.</dd>
 
 ### Insert Documents
 
@@ -235,7 +235,7 @@ This command modifies the documents in a collection based on a specified set of 
     "rating": {{tableItems.updatedRow.rating}}
   }
 }`}</pre></dd>
-<dd>In the above example, the query updates the <code>name</code> and <code>rating</code> fields with the values updated in the table cells using <a href="https://docs.appsmith.com/reference/widgets/table/inline-editing"><b>inline editing</b></a>.</dd>
+<dd>In the above example, the query updates the <code>name</code> and <code>rating</code> fields with the values updated in the table cells using <a href="https://docs.appsmithai.com/reference/widgets/table/inline-editing"><b>inline editing</b></a>.</dd>
 
 #### Limit
 
@@ -341,14 +341,14 @@ This command allows users to process data records and return computed results. T
 
 ### Raw
 
-This command allows you to write queries using the MongoDB database command syntax. See [**Raw Query Commands**](https://docs.appsmith.com/connect-data/reference/querying-mongodb/mongo-syntax) for more information.
+This command allows you to write queries using the MongoDB database command syntax. See [**Raw Query Commands**](https://docs.appsmithai.com/connect-data/reference/querying-mongodb/mongo-syntax) for more information.
 
 ## Troubleshooting
 
-If you're experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors), or contact the support team using the chat widget at the bottom right of this page.
+If you're experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors), or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Raw Query Commands](https://docs.appsmith.com/connect-data/reference/querying-mongodb/mongo-syntax) - Explore MongoDB raw query commands and syntax for advanced querying and data manipulation.
-- [Export Audit Logs](https://docs.appsmith.com//build-apps/how-to-guides/export-audit-logs) - Learn how to export audit logs for tracking and reviewing system activity and changes.
-- [External MongoDB and Redis](https://docs.appsmith.com/getting-started/setup/instance-configuration/custom-mongodb-redis) - Guide on configuring and integrating external MongoDB and Redis instances with your application.
+- [Raw Query Commands](https://docs.appsmithai.com/connect-data/reference/querying-mongodb/mongo-syntax) - Explore MongoDB raw query commands and syntax for advanced querying and data manipulation.
+- [Export Audit Logs](https://docs.appsmithai.com//build-apps/how-to-guides/export-audit-logs) - Learn how to export audit logs for tracking and reviewing system activity and changes.
+- [External MongoDB and Redis](https://docs.appsmithai.com/getting-started/setup/instance-configuration/custom-mongodb-redis) - Guide on configuring and integrating external MongoDB and Redis instances with your application.

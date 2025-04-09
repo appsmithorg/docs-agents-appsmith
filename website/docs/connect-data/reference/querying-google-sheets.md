@@ -166,7 +166,7 @@ The index of the row in your spreadsheet that contains the headings or labels fo
 }}
 ```
 
-See [Update single row](https://docs.appsmith.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets#update-single-row) guide.
+See [Update single row](https://docs.appsmithai.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets#update-single-row) guide.
 
 
 </dd>
@@ -282,7 +282,7 @@ This command fetches a given entity type: **Sheet Row(s)** or **Spreadsheet**. T
 
 <p>
 <br/>
-See how-to guide on [Fetch and Filter Data from Google Sheets](https://docs.appsmith.com/connect-data/how-to-guides/filter-data-google-sheet).
+See how-to guide on [Fetch and Filter Data from Google Sheets](https://docs.appsmithai.com/connect-data/how-to-guides/filter-data-google-sheet).
 </p>
 
 ### Insert Many
@@ -330,7 +330,7 @@ This command inserts multiple **Sheet Row(s)** entities. The following section l
 }]`}</pre>
 </dd>
 
-See how-to guide on [Insert and Update Data in Google Sheets](https://docs.appsmith.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets).
+See how-to guide on [Insert and Update Data in Google Sheets](https://docs.appsmithai.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets).
 
 ### Update Many
 
@@ -376,16 +376,16 @@ This command updates multiple **Sheet Row(s)** entities. The following section l
  }}
  ```
 
- See [Update multiple rows](https://docs.appsmith.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets#update-multiple-rows) guide.
+ See [Update multiple rows](https://docs.appsmithai.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets#update-multiple-rows) guide.
 
 </dd>
 
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Fetch and Filter Data from Google Sheets](https://docs.appsmith.com/connect-data/how-to-guides/filter-data-google-sheet) - Learn how to retrieve and filter data from Google Sheets∂.
-- [Insert and Update Data in Google Sheets](https://docs.appsmith.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets) - Guide on how to insert new records and update existing data in Google Sheets.
+- [Fetch and Filter Data from Google Sheets](https://docs.appsmithai.com/connect-data/how-to-guides/filter-data-google-sheet) - Learn how to retrieve and filter data from Google Sheets∂.
+- [Insert and Update Data in Google Sheets](https://docs.appsmithai.com/connect-data/how-to-guides/insert-and-update-data-in-google-sheets) - Guide on how to insert new records and update existing data in Google Sheets.

@@ -7,7 +7,7 @@ This document explains how to write asynchronous Javascript code in Appsmith.
 ## JavaScript promises
 [JavaScript Promises](https://javascript.info/promise-basics) helps achieve asynchronous workflows that are difficult to manage when using callbacks. Appsmith provides native support for JavaScript promises to make working with asynchronous operations easier. 
 
-All Appsmith framework functions like [showAlert()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/show-alert.md), [showModal()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/show-modal.md), [storeValue()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/store-value.md), and the others returns a promise, making asynchronous workflows implementation easier and readable.
+All Appsmith framework functions like [showAlert()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/show-alert.md), [showModal()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/show-modal.md), [storeValue()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/store-value.md), and the others returns a promise, making asynchronous workflows implementation easier and readable.
 
 ### Callbacks vs promises
 To understand the difference between callbacks and promise implementation, consider an example of executing three API queries in sequence and showing a message when all the APIs have finished running successfully.
@@ -189,7 +189,7 @@ Here are some general guidelines for using Promises in Appsmith:
 ```
 
 ## Async/Await
-The `async` and `await` keywords enable the [asynchronous](https://docs.appsmith.com/core-concepts/writing-code/javascript-editor-beta) workflow to be written in a cleaner style, avoiding the need to configure promise chains explicitly.
+The `async` and `await` keywords enable the [asynchronous](https://docs.appsmithai.com/core-concepts/writing-code/javascript-editor-beta) workflow to be written in a cleaner style, avoiding the need to configure promise chains explicitly.
 
 ### Async
 Adding the `async` keyword before a function always returns a promise. Other values are wrapped in a resolved promise automatically.

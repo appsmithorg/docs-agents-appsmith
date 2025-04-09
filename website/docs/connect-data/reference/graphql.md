@@ -8,7 +8,7 @@ This page provides information for connecting your application to a GraphQL API 
 
 ## Connection parameters
 
-Authenticated GraphQL API datasources share configuration fields with the Authenticated API datasource. For a reference guide of the fields for configuring your Authenticated GraphQL API, see [Authenticated API](https://docs.appsmith.com/connect-data/reference/authenticated-api).
+Authenticated GraphQL API datasources share configuration fields with the Authenticated API datasource. For a reference guide of the fields for configuring your Authenticated GraphQL API, see [Authenticated API](https://docs.appsmithai.com/connect-data/reference/authenticated-api).
 
 <ZoomImage
   src="/img/graphql-datasource-config.png" 
@@ -32,7 +32,7 @@ GraphQL queries are written in the **Body** tab of the query screen. Use the **Q
 
 Use a query like the one below to retrieve records from your datasource.
 
-In the example below, `UsersTable` is the name of a Table widget used to search for a user by name and display the results. This query uses `limit` and `offset` to implement [**server-side pagination**](https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table).
+In the example below, `UsersTable` is the name of a Table widget used to search for a user by name and display the results. This query uses `limit` and `offset` to implement [**server-side pagination**](https://docs.appsmithai.com//build-apps/how-to-guides/Server-side-pagination-in-table).
 
 In the **Query** window:
 
@@ -61,7 +61,7 @@ In the **Query variables** window:
 
 Use an insert mutation to add new records to your GraphQL datasource.
 
-In the example below, `CreateUserForm` is the name of a [Form widget](https://docs.appsmith.com/reference/widgets/form) used to collect input for the new record.
+In the example below, `CreateUserForm` is the name of a [Form widget](https://docs.appsmithai.com/reference/widgets/form) used to collect input for the new record.
 
 In the **Query** window:
 
@@ -90,7 +90,7 @@ In the **Query variables** window:
 
 Use an update mutation to modify an existing record in your dataset.
 
-In the example below, `UpdateUserForm` is the name of a [Form widget](https://docs.appsmith.com/reference/widgets/form) used to collect input for the new record.
+In the example below, `UpdateUserForm` is the name of a [Form widget](https://docs.appsmithai.com/reference/widgets/form) used to collect input for the new record.
 
 In the **Query** window:
 
@@ -144,9 +144,9 @@ In the **Query variables** window:
 ```
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Download Files](https://docs.appsmith.com/connect-data/how-to-guides/how-to-download-files-using-api) - Learn how to download files using a URL with API integrations.
-- [Upload Files using API](https://docs.appsmith.com//build-apps/how-to-guides/Send-Filepicker-Data-with-API-Requests) - Step-by-step guide on how to upload files via API using the Filepicker widget.
+- [Download Files](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-download-files-using-api) - Learn how to download files using a URL with API integrations.
+- [Upload Files using API](https://docs.appsmithai.com//build-apps/how-to-guides/Send-Filepicker-Data-with-API-Requests) - Step-by-step guide on how to upload files via API using the Filepicker widget.

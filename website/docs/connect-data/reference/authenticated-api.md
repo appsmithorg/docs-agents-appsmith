@@ -6,7 +6,7 @@ toc_max_heading_level: 4
 
 # Authenticated API
 
-Authenticated APIs require secure access, typically involving some form of authentication. Use this datasource to create queries within the same API, sharing common settings such as base URL, authentication, headers, and more, thereby minimizing redundant configurations. For a single-query setup, consider using a [REST API](https://docs.appsmith.com/connect-data/reference/rest-api) datasource. This page provides information on how to connect your application to an API that requires authentication.
+Authenticated APIs require secure access, typically involving some form of authentication. Use this datasource to create queries within the same API, sharing common settings such as base URL, authentication, headers, and more, thereby minimizing redundant configurations. For a single-query setup, consider using a [REST API](https://docs.appsmithai.com/connect-data/reference/rest-api) datasource. This page provides information on how to connect your application to an API that requires authentication.
 
 ## Connection parameters
 
@@ -22,7 +22,7 @@ The datasource configuration fields do not accept JavaScript code or bindings us
 
 <dd>
 
-The uniform resource locator (URL) specifies the address of the service or endpoint to which the requests will be made. This is typically the base URL of the REST API you are connecting to. If you wish to connect to a local database or API, see the [Connect Local Datasource](https://docs.appsmith.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith) guide.
+The uniform resource locator (URL) specifies the address of the service or endpoint to which the requests will be made. This is typically the base URL of the REST API you are connecting to. If you wish to connect to a local database or API, see the [Connect Local Datasource](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith) guide.
 
 </dd>
 
@@ -216,15 +216,15 @@ The _Send client credentials with (on refresh token)_ setting is available only 
 
 ## Queries
 
-Once you have configured your Authenticated API datasource, create queries to interact with the APIs. For detailed information on configuring queries, refer to the [REST API documentation](https://docs.appsmith.com/connect-data/reference/rest-api).
+Once you have configured your Authenticated API datasource, create queries to interact with the APIs. For detailed information on configuring queries, refer to the [REST API documentation](https://docs.appsmithai.com/connect-data/reference/rest-api).
 
 
 ## Troubleshooting
 
-If you are facing issues, refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors), or contact support via the chat widget at the bottom right of this page.
+If you are facing issues, refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors), or contact support via the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Download Files](https://docs.appsmith.com/connect-data/how-to-guides/how-to-download-files-using-api) - Learn how to download files using a URL with API integrations.
-- [Upload Files using API](https://docs.appsmith.com//build-apps/how-to-guides/Send-Filepicker-Data-with-API-Requests) - Step-by-step guide on how to upload files via API using the Filepicker widget.
-- [Setup Server-Side Pagination ](https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table) - Learn how to efficiently handle large datasets by implementing Server-side pagination in Table.
+- [Download Files](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-download-files-using-api) - Learn how to download files using a URL with API integrations.
+- [Upload Files using API](https://docs.appsmithai.com//build-apps/how-to-guides/Send-Filepicker-Data-with-API-Requests) - Step-by-step guide on how to upload files via API using the Filepicker widget.
+- [Setup Server-Side Pagination ](https://docs.appsmithai.com//build-apps/how-to-guides/Server-side-pagination-in-table) - Learn how to efficiently handle large datasets by implementing Server-side pagination in Table.

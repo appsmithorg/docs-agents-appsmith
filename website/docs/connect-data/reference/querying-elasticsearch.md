@@ -21,7 +21,7 @@ The following is a reference guide that provides a description of the parameters
 
 #### Host URL
 
-<dd>The network location where your Elasticsearch data is hosted. This can be a domain name or an IP address. To connect to a local database, see <a href="https://docs.appsmith.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions. </dd>
+<dd>The network location where your Elasticsearch data is hosted. This can be a domain name or an IP address. To connect to a local database, see <a href="https://docs.appsmithai.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions. </dd>
 
 #### Port
 
@@ -104,7 +104,7 @@ You can create a single new document using the `POST` method, with a JSON body t
 }
 ```
 
-Above, user input is collected with a [Form widget](https://docs.appsmith.com/reference/widgets/form) called `NewUserForm`.
+Above, user input is collected with a [Form widget](https://docs.appsmithai.com/reference/widgets/form) called `NewUserForm`.
 
 ### Update a document
 
@@ -123,7 +123,7 @@ A single document can be updated using its `id` within an index using a `POST` r
 }
 ```
 
-Above, the record with its `id` is selected from a Table widget called `UsersTable` and updated with input from a [JSON Form](https://docs.appsmith.com/reference/widgets/json-form) widget.
+Above, the record with its `id` is selected from a Table widget called `UsersTable` and updated with input from a [JSON Form](https://docs.appsmithai.com/reference/widgets/json-form) widget.
 
 This performs a partial update, where the properties you supply are added to the document; you don't need to add ones that have not changed.
 
@@ -140,11 +140,11 @@ Above, the record with its `id` is selected from a Table widget called `UsersTab
 
 ## Troubleshooting
 
-If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
+If you are experiencing difficulties, you can refer to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/action-errors/datasource-errors) or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Display and Lookup Data in Table](https://docs.appsmith.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
-- [Search and Filter Table Data](https://docs.appsmith.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
-- [Update Data](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
-- [Insert Data](https://docs.appsmith.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.
+- [Display and Lookup Data in Table](https://docs.appsmithai.com//build-apps/how-to-guides/display-search-and-filter-table-data) - Learn how to display query results in a Table and enable users to look up data with ease.
+- [Search and Filter Table Data](https://docs.appsmithai.com//build-apps/how-to-guides/search-and-filter-table-data) - Guide on adding search and filter functionality to Tables for better data navigation.
+- [Update Data](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
+- [Insert Data](https://docs.appsmithai.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.

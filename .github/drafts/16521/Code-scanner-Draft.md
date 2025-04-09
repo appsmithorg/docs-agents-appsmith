@@ -28,10 +28,10 @@ Properties allow you to edit the widget, connect it with other widgets and custo
 | Property                                                       | Type                 | Description                                                                                                                                                                                        | Code Snippet                |
 | -------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | Text                                                           | Formatting           | Sets the label text of the widget.                                                                                                                                                                 | -                           |
-| [Visible](https://docs.appsmith.com/reference/widgets)         | Binding & Formatting | Controls widget's visibility on the page. When turned off, the widget won't be visible when the app is published. Learn more about [Visible Property](https://docs.appsmith.com/reference/widgets) | {{CodeScanner1.isVisible}}  |
-| [Disabled](https://docs.appsmith.com/reference/widgets)        | Binding & Formatting | Disables input to the widget. The widget will remain visible to the user but a user input won't be allowed. Learn more about [Disable Property](https://docs.appsmith.com/reference/widgets)       | {{CodeScanner1.isDisabled}} |
-| [Animate Loading](https://docs.appsmith.com/reference/widgets) | Formatting           | Controls the loading of the widget. Learn more about [Animate Loading](https://docs.appsmith.com/reference/widgets)                                                                                | -                           |
-| [Tooltip](https://docs.appsmith.com/reference/widgets)         | Formatting           | It sets a tooltip for the widget. You can add hints or extra information about the required input from the user. Learn more about [Tooltip](https://docs.appsmith.com/reference/widgets)           | -                           |
+| [Visible](https://docs.appsmithai.com/reference/widgets)         | Binding & Formatting | Controls widget's visibility on the page. When turned off, the widget won't be visible when the app is published. Learn more about [Visible Property](https://docs.appsmithai.com/reference/widgets) | {{CodeScanner1.isVisible}}  |
+| [Disabled](https://docs.appsmithai.com/reference/widgets)        | Binding & Formatting | Disables input to the widget. The widget will remain visible to the user but a user input won't be allowed. Learn more about [Disable Property](https://docs.appsmithai.com/reference/widgets)       | {{CodeScanner1.isDisabled}} |
+| [Animate Loading](https://docs.appsmithai.com/reference/widgets) | Formatting           | Controls the loading of the widget. Learn more about [Animate Loading](https://docs.appsmithai.com/reference/widgets)                                                                                | -                           |
+| [Tooltip](https://docs.appsmithai.com/reference/widgets)         | Formatting           | It sets a tooltip for the widget. You can add hints or extra information about the required input from the user. Learn more about [Tooltip](https://docs.appsmithai.com/reference/widgets)           | -                           |
 | value                                                          | Binding              | Fetches the value of scanned code                                                                                                                                                                  | {{CodeScanner1.value}}      |
 
 ### Text
@@ -62,17 +62,17 @@ You can define functions that will be called when these events are triggered in 
 
 | Event          | Description                                                                                                                                                 |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onCodeDetected | Triggers an action when a valid code is detected. See a list of [supported actions](https://docs.appsmith.com/reference/appsmith-framework/widget-actions). |
+| onCodeDetected | Triggers an action when a valid code is detected. See a list of [supported actions](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions). |
 
 ### onCodeDetected
 
 When a valid barcode or QR code is detected, this event triggers an action. 
 The Appsmith framework allows triggering actions for widget events and inside JS Objects. Let’s take an example to understand how the onCodeDetected event works.
 
-In this example, we will use the [Modal widget](https://docs.appsmith.comhttps://docs.appsmith.com/reference/widgets/modal) to display the code response.
+In this example, we will use the [Modal widget](https://docs.appsmithai.comhttps://docs.appsmithai.com/reference/widgets/modal) to display the code response.
 
 - Set the onCodeDetected event to open a New Modal, and choose to Create New.
-- This will open up a new modal; let's drag the [text widget](https://docs.appsmith.comhttps://docs.appsmith.com/reference/widgets/text) into the modal.
+- This will open up a new modal; let's drag the [text widget](https://docs.appsmithai.comhttps://docs.appsmithai.com/reference/widgets/text) into the modal.
 - In the property section, add the following code:
 
 ```
@@ -99,5 +99,5 @@ Style properties allow you to change the look and feel of the widget.
 
 The following resources will come in handy as you need to learn new tricks:
 
-- [Core Concepts](https://docs.appsmith.com/core-concepts/connecting-to-data-sources)
-- [Appsmith Framework](https://docs.appsmith.com/reference/appsmith-framework)
+- [Core Concepts](https://docs.appsmithai.com/core-concepts/connecting-to-data-sources)
+- [Appsmith Framework](https://docs.appsmithai.com/reference/appsmith-framework)

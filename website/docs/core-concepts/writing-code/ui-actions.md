@@ -37,7 +37,7 @@ You can only execute two levels of **onSuccess** callbacks from the UI. To add a
 </dd>
 
 
-Learn more about [Global Functions](https://docs.appsmith.com/reference/appsmith-framework/widget-actions).
+Learn more about [Global Functions](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions).
 
 
 
@@ -190,4 +190,4 @@ This code determines whether to disable the Refund button on the customer dashbo
 
 
 
-See [how to pass parameters at runtime](https://docs.appsmith.com/connect-data/concepts/dynamic-queries#passing-parameters-at-runtime-using-run).
+See [how to pass parameters at runtime](https://docs.appsmithai.com/connect-data/concepts/dynamic-queries#passing-parameters-at-runtime-using-run).

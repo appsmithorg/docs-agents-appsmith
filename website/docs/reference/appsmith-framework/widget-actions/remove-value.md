@@ -6,7 +6,7 @@ toc_max_heading_level: 2
 
 # removeValue()
 
-The removeValue() function clears the value associated with a specified key, which was previously stored in the browser's local storage using the [storeValue()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/store-value) function.
+The removeValue() function clears the value associated with a specified key, which was previously stored in the browser's local storage using the [storeValue()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/store-value) function.
 
 ## Signature
 

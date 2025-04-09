@@ -1,6 +1,6 @@
 # Appsmith Documentation
 
-This is the source of documentation for [Appsmith](https://appsmith.com), hosted at [docs.appsmith.com](https://docs.appsmith.com), powered by Docusaurus v2.
+This is the source of documentation for [Appsmith](https://appsmith.com), hosted at [docs.appsmithai.com](https://docs.appsmithai.com), powered by Docusaurus v2.
 
 ## Installation
 Navigate to the website sub-directory

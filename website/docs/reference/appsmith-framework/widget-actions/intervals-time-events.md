@@ -53,7 +53,7 @@ The time interval (in milliseconds) between each execution of the `callbackFunct
 
 `id` is a string that can serve as a unique identifier for your `setInterval()` function. This id can be used to clear the interval using the `clearInterval()` function. By assigning a unique `id` to each interval timer, you can easily manage multiple timers and stop them as needed.
 
-See [clearInterval()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/clear-interval).
+See [clearInterval()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/clear-interval).
 
 </dd>
 
@@ -78,11 +78,11 @@ startAutoRefresh() {
 }
 ```
 
-For more information, see [Polling for data updates](https://docs.appsmith.com/build-apps/how-to-guides/setup-polling).
+For more information, see [Polling for data updates](https://docs.appsmithai.com/build-apps/how-to-guides/setup-polling).
 
 </dd>
 
 
 ## See also
-- [clearInterval()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/clear-interval)
-- [setTimeout()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/set-timeout)
+- [clearInterval()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/clear-interval)
+- [setTimeout()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/set-timeout)

@@ -18,29 +18,29 @@ With Appsmith, you can connect with a wide range of tools and platforms; if ther
 <div className="containerGrid">
     <div className="columnGrid column-one" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/authenticated-api">
+            <a href="https://docs.appsmithai.com/connect-data/reference/authenticated-api">
             <img className="containerImage" src="/img/api-logo_.png" alt="RestAPI"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/authenticated-api">API</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/authenticated-api">API</a></b>
     </div>
   
    <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/graphql">
+            <a href="https://docs.appsmithai.com/connect-data/reference/graphql">
             <img className="containerImage" src="/img/graphqllogo.png" alt="GraphQL"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/graphql">GraphQL</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/graphql">GraphQL</a></b>
    </div>
 
  <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/rest-api">
+            <a href="https://docs.appsmithai.com/connect-data/reference/rest-api">
             <img className="containerImage" src="/img/api-logo_.png" alt="GoogleSheets"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/rest-api">REST API</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/rest-api">REST API</a></b>
    </div>
    
 </div>
@@ -56,35 +56,35 @@ Databases are an essential part of many applications and are used to store and m
 <div className="containerGrid">
     <div className="columnGrid column-one" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-postgres">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-postgres">
             <img className="containerImage" src="/img/postgresql.svg" alt="postgresql"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/querying-postgres">PostgreSQL</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-postgres">PostgreSQL</a></b>
     </div>
    <div className="columnGrid column-two" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-mongodb">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-mongodb">
             <img className="containerImage" src="/img/mongodb.svg" alt="MongoDB-logo"/>
             </a>     
         </div> 
-         <b><a href="https://docs.appsmith.com/connect-data/reference/querying-mongodb">MongoDB</a></b>
+         <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-mongodb">MongoDB</a></b>
     </div>
    <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-mysql">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-mysql">
             <img className="containerImage" src="/img/mysql.svg" alt="MySQL-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-mysql">MySQL</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-mysql">MySQL</a></b>
    </div>
   <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-elasticsearch">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-elasticsearch">
             <img className="containerImage" src="/img/elastic.svg" alt="Elasticsearch-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-elasticsearch">Elasticsearch</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-elasticsearch">Elasticsearch</a></b>
    </div>
 
 </div>
@@ -92,35 +92,35 @@ Databases are an essential part of many applications and are used to store and m
 <div className="containerGrid">
     <div className="columnGrid column-one" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-redis">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-redis">
             <img className="containerImage" src="/img/redis.svg" alt="Redis-logo"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/querying-redis">Redis</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-redis">Redis</a></b>
     </div>
    <div className="columnGrid column-two" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-mssql">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-mssql">
             <img className="containerImage" src="/img/mssql.svg" alt="MSSQL-logo"/>
             </a>     
         </div> 
-         <b><a href="https://docs.appsmith.com/connect-data/reference/querying-mssql">Microsoft SQL Server</a></b>
+         <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-mssql">Microsoft SQL Server</a></b>
     </div>
    <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-firestore">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-firestore">
             <img className="containerImage" src="/img/firestore.svg" alt="Firestore"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-firestore">Firestore</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-firestore">Firestore</a></b>
    </div>
   <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-redshift">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-redshift">
             <img className="containerImage" src="/img/aws-redshift.svg" alt="Redshift-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-redshift">Redshift</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-redshift">Redshift</a></b>
    </div>
   
 </div>
@@ -129,37 +129,37 @@ Databases are an essential part of many applications and are used to store and m
 
  <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-amazon-s3">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-amazon-s3">
             <img className="containerImage" src="/img/aws-s3.svg" alt="Amazon-S3-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-amazon-s3">S3</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-amazon-s3">S3</a></b>
    </div>
    
  <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-dynamodb">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-dynamodb">
             <img className="containerImage" src="/img/aws-dynamodb.svg" alt="DynamoDB-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-dynamodb">DynamoDB</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-dynamodb">DynamoDB</a></b>
    </div>
 
  <div className="columnGrid column-one" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-snowflake-db">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-snowflake-db">
             <img className="containerImage" src="/img/snowflake.svg" alt="SnowflakeDB-logo"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/querying-snowflake-db">Snowflake</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-snowflake-db">Snowflake</a></b>
     </div>
    <div className="columnGrid column-two" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-arango-db">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-arango-db">
             <img className="containerImage" src="/img/arangodb_.png" alt="ArangoDB-logo"/>
             </a>     
         </div> 
-         <b><a href="https://docs.appsmith.com/connect-data/reference/querying-arango-db">ArangoDB</a></b>
+         <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-arango-db">ArangoDB</a></b>
     </div>
  
 
@@ -168,27 +168,27 @@ Databases are an essential part of many applications and are used to store and m
 <div className="containerGrid">
     <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-oracle">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-oracle">
             <img className="containerImage" src="/img/oracle-logo.svg" alt="Oracle-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-oracle">Oracle</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-oracle">Oracle</a></b>
    </div>
  <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/using-smtp">
+            <a href="https://docs.appsmithai.com/connect-data/reference/using-smtp">
             <img className="containerImage" src="/img/smtp-icon_1.png" alt="SMTP-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/using-smtp">SMTP</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/using-smtp">SMTP</a></b>
 </div>
    <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/databricks">
+            <a href="https://docs.appsmithai.com/connect-data/reference/databricks">
             <img className="containerImage" src="/img/logo-databricks-img.png" alt="SMTP-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/databricks">Databricks</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/databricks">Databricks</a></b>
 </div>
 
 </div>
@@ -202,27 +202,27 @@ Appsmith also supports integration with various Software as a Service (SAAS) pla
 <div className="containerGrid">
     <div className="columnGrid column-one" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/airtable">
+            <a href="https://docs.appsmithai.com/connect-data/reference/airtable">
             <img className="containerImage" src="/img/Airtable-logo.png" alt="Airtable"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/airtable">Airtable</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/airtable">Airtable</a></b>
     </div>
    <div className="columnGrid column-two" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/twilio">
+            <a href="https://docs.appsmithai.com/connect-data/reference/twilio">
             <img className="containerImage" src="/img/twilio_.png" alt="twilio-logo"/>
             </a>     
         </div> 
-         <b><a href="https://docs.appsmith.com/connect-data/reference/twilio">Twilio</a></b>
+         <b><a href="https://docs.appsmithai.com/connect-data/reference/twilio">Twilio</a></b>
     </div>
    <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/hubspot">
+            <a href="https://docs.appsmithai.com/connect-data/reference/hubspot">
             <img className="containerImage" src="/img/hubspot_.png" alt="hubspot-logo"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/hubspot">HubSpot</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/hubspot">HubSpot</a></b>
    </div>
 
 
@@ -233,19 +233,19 @@ Appsmith also supports integration with various Software as a Service (SAAS) pla
     
    <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/aws-lambda">
+            <a href="https://docs.appsmithai.com/connect-data/reference/aws-lambda">
             <img className="containerImage" src="/img/aws-logo02.svg" alt="AWS Lambda"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/aws-lambda">AWS Lambda</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/aws-lambda">AWS Lambda</a></b>
     </div>
  <div className="columnGrid column-three" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/querying-google-sheets">
+            <a href="https://docs.appsmithai.com/connect-data/reference/querying-google-sheets">
             <img className="containerImage" src="/img/gsheets_.png" alt="GoogleSheets"/>
             </a>   
         </div> 
-            <b><a href="https://docs.appsmith.com/connect-data/reference/querying-google-sheets">Google Sheets</a></b>
+            <b><a href="https://docs.appsmithai.com/connect-data/reference/querying-google-sheets">Google Sheets</a></b>
    </div>
 </div>
 
@@ -256,40 +256,40 @@ With AI integrations, you can add intelligent AI capabilties to automate human t
 <div className="containerGrid">
     <div className="columnGrid column-one" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/appsmith-ai">
+            <a href="https://docs.appsmithai.com/connect-data/reference/appsmith-ai">
             <img className="containerImage" src="/img/appsmith-ai-logo.svg" alt="Appsmith AI"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/appsmith-ai">Appsmith AI</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/appsmith-ai">Appsmith AI</a></b>
     </div>
    <div className="columnGrid column-two" align="center">
         <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/open-ai">
+            <a href="https://docs.appsmithai.com/connect-data/reference/open-ai">
             <img className="containerImage" src="/img/open-ai.svg" alt="OpenAI"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/open-ai">OpenAI</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/open-ai">OpenAI</a></b>
     </div>
    <div className="columnGrid column-three" align="center">
          <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/anthropic">
+            <a href="https://docs.appsmithai.com/connect-data/reference/anthropic">
             <img className="containerImage" src="/img/anthropic4.svg" alt="OpenAI"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/anthropic">Anthropic</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/anthropic">Anthropic</a></b>
    </div>
   <div className="columnGrid column-three" align="center">
        <div className="containerCol">
-            <a href="https://docs.appsmith.com/connect-data/reference/google-ai">
+            <a href="https://docs.appsmithai.com/connect-data/reference/google-ai">
             <img className="containerImage" src="/img/google-ai.svg" alt="Google AI"/>
             </a> 
         </div> 
-        <b><a href="https://docs.appsmith.com/connect-data/reference/google-ai">Google AI</a></b>
+        <b><a href="https://docs.appsmithai.com/connect-data/reference/google-ai">Google AI</a></b>
    </div>
 
 </div>
 
 
 ## See also
-- [Connect to Local Datasource](https://docs.appsmith.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith)
-- [Setup Multiple Datasource Environments](https://docs.appsmith.com/connect-data/how-to-guides/setup-datasource-environments)
+- [Connect to Local Datasource](https://docs.appsmithai.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith)
+- [Setup Multiple Datasource Environments](https://docs.appsmithai.com/connect-data/how-to-guides/setup-datasource-environments)

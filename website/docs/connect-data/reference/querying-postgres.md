@@ -32,7 +32,7 @@ The following section is a reference guide that provides a complete description 
 
 #### Host Address
 
-<dd>The network location of the PostgreSQL server that you want to connect. This can be a domain name or an IP address. To connect to a local PostgreSQL database, see <a href="https://docs.appsmith.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions on configuring the connection parameters. </dd>
+<dd>The network location of the PostgreSQL server that you want to connect. This can be a domain name or an IP address. To connect to a local PostgreSQL database, see <a href="https://docs.appsmithai.com/connect-data/how-to-guides/how-to-work-with-local-apis-on-appsmith"><b>Connect Local Database</b></a> for directions on configuring the connection parameters. </dd>
 
 #### Port
 
@@ -82,9 +82,9 @@ SELECT * FROM users LIMIT {{ tableUsers.pageSize }} OFFSET {{ tableUsers.pageOff
 
 ```
 
-In the above example, `tableUsers` is the name of the Table widget used to display the data using [**server-side pagination**](https://docs.appsmith.com//build-apps/how-to-guides/Server-side-pagination-in-table).
+In the above example, `tableUsers` is the name of the Table widget used to display the data using [**server-side pagination**](https://docs.appsmithai.com//build-apps/how-to-guides/Server-side-pagination-in-table).
 
-See how to guide on [Fetch and Filter data in SQL](https://docs.appsmith.com/connect-data/how-to-guides/fetch-and-filter-data-in-sql).
+See how to guide on [Fetch and Filter data in SQL](https://docs.appsmithai.com/connect-data/how-to-guides/fetch-and-filter-data-in-sql).
 
 ### Insert data
 
@@ -102,7 +102,7 @@ VALUES
 
 In the above example,  `nameInput`,  `genderDropdown`, and `emailInput` are the names of the widgets used to capture input from the user for name, gender and email fields, respectively.
 
-See how-to guide on [Insert and Update data in SQL](https://docs.appsmith.com/connect-data/how-to-guides/insert-and-update-data-in-sql).
+See how-to guide on [Insert and Update data in SQL](https://docs.appsmithai.com/connect-data/how-to-guides/insert-and-update-data-in-sql).
 
 ### Update data
 
@@ -122,7 +122,7 @@ DELETE FROM users WHERE id = {{tableUsers.selectedRow.id}};
 
 ```
 
-In the above example, `tableUsers` is the name of the Table widget where the user selects the row for deletion. For information on how to delete data in a Table, see [Delete Data in Table](https://docs.appsmith.com/reference/widgets/table/inline-editing#delete-row).
+In the above example, `tableUsers` is the name of the Table widget where the user selects the row for deletion. For information on how to delete data in a Table, see [Delete Data in Table](https://docs.appsmithai.com/reference/widgets/table/inline-editing#delete-row).
 
 
 
@@ -131,7 +131,7 @@ In the above example, `tableUsers` is the name of the Table widget where the use
 
 
 :::info
-Prepared statements are turned on by default in your queries to help prevent SQL injection attacks. For more details, see [**Prepared Statements**](https://docs.appsmith.com/connect-data/concepts/how-to-use-prepared-statements).
+Prepared statements are turned on by default in your queries to help prevent SQL injection attacks. For more details, see [**Prepared Statements**](https://docs.appsmithai.com/connect-data/concepts/how-to-use-prepared-statements).
 :::
 
 ## Row Level Security (RLS)
@@ -140,11 +140,11 @@ Row level security is a PostgreSQL security feature the database provides to lim
 
 ## Troubleshooting
 
-If you're experiencing difficulties, you can refer to to the [Datasource troubleshooting guide](https://docs.appsmith.com/help-and-support/troubleshooting-guide/application-errors), or contact the support team using the chat widget at the bottom right of this page.
+If you're experiencing difficulties, you can refer to to the [Datasource troubleshooting guide](https://docs.appsmithai.com/help-and-support/troubleshooting-guide/application-errors), or contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
-- [Fetch and Filter Data in SQL](https://docs.appsmith.com/connect-data/how-to-guides/fetch-and-filter-data-in-sql) - Learn how to fetch and filter data from SQL databases using queries.
-- [Insert and Update Data in SQL](https://docs.appsmith.com/connect-data/how-to-guides/insert-and-update-data-in-sql) - Step-by-step guide on inserting new records and updating existing data in SQL databases.
-- [Update Data](https://docs.appsmith.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
-- [Insert Data](https://docs.appsmith.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.
+- [Fetch and Filter Data in SQL](https://docs.appsmithai.com/connect-data/how-to-guides/fetch-and-filter-data-in-sql) - Learn how to fetch and filter data from SQL databases using queries.
+- [Insert and Update Data in SQL](https://docs.appsmithai.com/connect-data/how-to-guides/insert-and-update-data-in-sql) - Step-by-step guide on inserting new records and updating existing data in SQL databases.
+- [Update Data](https://docs.appsmithai.com//build-apps/how-to-guides/submit-form-data) - Understand how to update data in your application using Form widget.
+- [Insert Data](https://docs.appsmithai.com//build-apps/how-to-guides/insert-data) - Step-by-step instructions on inserting new records into your database using Form widget.

@@ -215,5 +215,5 @@ The `getUniqueValue` function calls  `GetUniqueNameAPI.run()` to fetch data from
 
 ## See also
 
-- [clearStore()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/clear-store)
-- [removeValue()](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/remove-value)
+- [clearStore()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/clear-store)
+- [removeValue()](https://docs.appsmithai.com/reference/appsmith-framework/widget-actions/remove-value)
