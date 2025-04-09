@@ -29,7 +29,7 @@ const config = {
     process.env.VERCEL_ENV === "production" && [
       '@twilio-labs/docusaurus-plugin-segment',
       {
-        writeKey: 'tjqTIkJzeqSTB1SUookBTdWhZEoR031c',
+        writeKey: 'NZ8dgb2QGoiGM2f5GtRnk92xhNvEZtaQ',
         allowedInDev: false,
       },
     ],
