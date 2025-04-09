@@ -22,7 +22,7 @@ This tutorial guides you through building a customer support AI agent that can a
 
 
 
-1. Open the [Appsmith Agents](https://login.test.appsmithai.com/) Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
+1. Open the [Appsmith Agents](https://test.appsmithai.com/applications) Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
 
 2. To create a new agent, click the **Create New** dropdown in the top-right corner of the workspace and select **AI Agents**.
 
