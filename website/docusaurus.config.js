@@ -52,7 +52,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/appsmithorg/appsmith-docs/edit/main/website/',
+            'https://github.com/appsmithorg/docs-agents-appsmith/edit/main/website/',
         },
         blog: false,
         theme: {
