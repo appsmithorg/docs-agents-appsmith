@@ -37,7 +37,7 @@ You can use this template to raise any improvements on the existing documentatio
 | --- | --- |
 | Title | Title of the Doc Issue |
 | Existing Issues | Ensure that you’ve searched the existing issues for any similar issues if there are similar issues available. Update the existing issue with your scenario. |
-| Documentation Link | Add the link from docs.appsmith.com to the appropriate page for which the improvement request is raised. |
+| Documentation Link | Add the link from docs.appsmithai.com to the appropriate page for which the improvement request is raised. |
 | Discord/Slack/intercom link | Add the link to the appropriate channel/discussion thread. |
 | Describe the problem | Add a summary of issues or sections that needs improvements. |
 | Describe the improvement | Add a summary of improvements that you are requesting. |
@@ -74,7 +74,7 @@ You should raise a pull request[PR] for adding the first draft by creating a fol
 For example, you are working on adding the first draft for SSO - OIDC integration with AWS Cognito. Then, you would add the new documentation page in the below documentation hierarchy:
 
 filename - aws-cognito.md
-hierarchy - website/docshttps://docs.appsmith.com/getting-started/setup/instance-configuration/authentication/openid-connect-oidc
+hierarchy - website/docshttps://docs.appsmithai.com/getting-started/setup/instance-configuration/authentication/openid-connect-oidc
 
 Write your first draft, raise a pull request against the ```main``` branch, and assign it to the appropriate stakeholders (engineering team members) for review. 
 
@@ -90,7 +90,7 @@ You should raise a pull request[PR] for adding changes to a current document in 
 For example, you are modifying docker documentation. Then, you should edit the file available in the below documentation hierarchy:
 
 filename - README.md
-hierarchy - website/docshttps://docs.appsmith.com/getting-started/setup/installation-guides/docker/README.md
+hierarchy - website/docshttps://docs.appsmithai.com/getting-started/setup/installation-guides/docker/README.md
 
 Do the changes to the file and raise a pull request against the ```main``` branch, and assign it to the appropriate stakeholders (engineering team members and documentation team members) for review. 
 
