@@ -21,18 +21,9 @@ This page provides information on the agent query and how you can configure it t
 
 The System Instructions property enables you to define specific behaviors and guidelines for the AI assistant, ensuring its responses align with your requirements. 
 
-You can also pass parameters between queries using `this.params.name`, allowing for a connected and dynamic experience.
+You can use the Generate Instructions button to automatically create a starting set of instructions based on your current chat context and app setup. These can then be customized further as needed.
 
-
-*Example:* You want the AI assistant to help users fetch support ticket details. The user enters a prompt in the chat widget, such as “Can you check the status of ticket 498?”
-
-You can extract the ticket ID from this prompt and pass it to the query as a parameter. In your query configuration, use `{{this.params.id}}` wherever the ticket ID is required.
-
-For example, if you are querying a backend API or database:
-
-```sql
-SELECT * FROM tickets WHERE id = {{this.params.id}};
-```
+You can also use System Instructions to provide context about the flow, expected inputs, and data types. Based on this context, the AI can automatically extract relevant values from user prompts, populate this.params, and trigger the appropriate query or function.
 
 
 </dd>

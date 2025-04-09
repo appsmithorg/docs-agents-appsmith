@@ -36,7 +36,7 @@ Agents rely on function descriptions to understand when and how a function shoul
 Clear parameter definitions help prevent misuse and make the function agent-friendly.
 
 - Use descriptive names for parameters.
-- Specify data types and required vs. optional inputs.
+- Specify data types and required.
 - Add default values where appropriate.
 
 <dd>
