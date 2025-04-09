@@ -1,0 +1,87 @@
+.pricingGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 0.5rem 0;
+  }
+  
+  .subtext {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    margin: 1rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .featureItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .buttonWrapper {
+    margin-top: auto;
+  }
+  
+  .buttonPrimary,
+  .buttonSecondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .buttonPrimary {
+    background-color: #3f51b5; /* Indigo */
+    color: white;
+  }
+  
+  .buttonPrimary:hover {
+    background-color: #303f9f;
+  }
+  
+  .buttonSecondary {
+    background-color: #009688; /* Teal */
+    color: white;
+  }
+  
+  .buttonSecondary:hover {
+    background-color: #00796b;
+  }
+  
