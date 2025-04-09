@@ -12,7 +12,7 @@ Appsmith's backend server supports **TLS1.1** and **TLS1.2** for connecting to e
 ## Connect MS SQL
 
 :::caution important
-If you are a cloud user, you must whitelist the IP addresses `18.223.74.85` and `3.131.104.27` of the Appsmith deployment on your database instance before connecting to your database.
+If you are a cloud user, you must whitelist the IP addresses `18.223.74.0/24`, `3.131.104.27/24`, and `3.148.74.197/24` of the Appsmith deployment on your database instance before connecting to your database.
 :::
 
 ### Connection parameters
