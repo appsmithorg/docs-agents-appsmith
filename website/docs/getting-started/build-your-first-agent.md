@@ -6,6 +6,22 @@ This tutorial guides you through building a customer support AI agent that can a
 
 ## Set Up Your AI Agent
 
+<div style={{ position: "relative", paddingBottom: "calc(50.52% + 41px)", height: 0, width: "100%" }}>
+  <iframe
+    src="https://demo.arcade.software/U2wDO3adeI3y4jDN2IyK?embed"
+    frameBorder="0"
+    loading="lazy"
+    webkitAllowFullScreen
+    mozAllowFullScreen
+    allowFullScreen
+    allow="fullscreen"
+    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+    title="Appsmith | Connect Data"
+  />
+</div>
+
+
+
 1. Open the [Appsmith Agents](https://login.test.appsmithai.com/) Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
 
 2. To create a new agent, click the **Create New** dropdown in the top-right corner of the workspace and select **AI Agents**.
@@ -87,6 +103,21 @@ To verify the setup, enter a query in the Chat Widget, such as "What is the refu
 ## Set Up Function Calling
 
 Function calling allows the AI to interact with connected databases and fetch real-time information. In this section, you will connect a PostgreSQL database and configure queries to retrieve ticket status details dynamically based on user input.
+
+<div style={{ position: "relative", paddingBottom: "calc(50.52% + 41px)", height: 0, width: "100%" }}>
+  <iframe
+    src="https://demo.arcade.software/KyCIMfHl10U2CJ4xM28b?embed"
+    frameBorder="0"
+    loading="lazy"
+    webkitAllowFullScreen
+    mozAllowFullScreen
+    allowFullScreen
+    allow="fullscreen"
+    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+    title="Appsmith | Connect Data"
+  />
+</div>
+
 
 1. Navigate to the **Data** section, click the **+** icon, and select PostgreSQL. Create a new PostgreSQL database using the following connection details:
 
