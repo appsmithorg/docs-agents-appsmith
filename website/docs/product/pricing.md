@@ -1,4 +1,4 @@
-# Appsmith Agents Pricing Plans
+# Pricing
 
 Appsmith Agents offers flexible pricing designed for teams and organizations of all sizes. Select the plan that best matches your team's needs.
 
