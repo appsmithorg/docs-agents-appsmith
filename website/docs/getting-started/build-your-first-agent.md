@@ -54,29 +54,14 @@ Within the prompt, you can explicitly define which queries the AI can call and w
 This AI assists users with customer support inquiries by retrieving information from the uploaded FAQ document and checking ticket statuses in the PostgreSQL database. Always reference the document before responding. To retrieve ticket status, call the Get_Ticket_Status function with the ticket_id provided by the user. To create a new ticket, use the Create_New_Ticket function with the user's user_id and the issue_type.
 ```
 
-</dd>
-
-5. In the AI Query Settings, configure the following parameters:
-
-<dd>
-
-- **Model:** Select `gpt-4o` for the best results in understanding and handling customer support queries with speed and accuracy.
-
-- **Temperature**: Set to` 0.3`. This controls the randomness of responses—lower values (e.g., `0.2`) yield more focused, deterministic replies, while higher values (e.g., `0.8`) allow for more varied or creative output.
-
-- **Top-p (Nucleus Sampling):** Set to `0.9`. This determines the cumulative probability mass considered when generating responses, helping strike a balance between reliability and diversity.
-
-- **Re-ranking Model:** Select `JINA` for optimal performance. Re-ranking helps the AI prioritize the most relevant responses when multiple documents or answers are retrieved. 
-
-- **Number of Chunks:** Set to `4`. This defines how the knowledge document is split for retrieval-augmented generation (RAG), ensuring that the AI can access relevant context without losing coherence.
+See [How to Configure Chat Query](/build-agents/agent).
 
 </dd>
 
 
+5.  In the AI Query, navigate to the **Knowledge Sources** section. This is where you configure the AI's knowledge base, enabling it to retrieve accurate responses from uploaded documents.
 
-6.  In the AI Query, navigate to the **Knowledge Sources** section. This is where you configure the AI's knowledge base, enabling it to retrieve accurate responses from uploaded documents.
-
-7. Click **Add Source**, then select **Import Source**. Choose Local File as the import option. You can also connect to external storage services such as Google Drive, Dropbox, or OneDrive to import documents. 
+6. Click **Add Source**, then select **Import Source**. Choose Local File as the import option. You can also connect to external storage services such as Google Drive, Dropbox, or OneDrive to import documents. 
 
 <dd>
 
@@ -91,7 +76,7 @@ Download the FAQ document provided below and upload it to Appsmith AI to serve a
 
 </dd>
 
-9. After uploading, save the source configuration to enable document-based retrieval.
+7. After uploading, save the source configuration to enable document-based retrieval.
 
 <dd>
 
