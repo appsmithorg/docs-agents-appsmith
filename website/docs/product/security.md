@@ -16,7 +16,7 @@ Appsmith applications are secure-by-default, with a number of strategies in plac
 
 - **SSL Certification**: Self-hosted instances have the option to set up SSL certificates during the installation process using Let's Encrypt, or admins can choose to upload their own SSL certificates to establish a secure connection.
 
-- **Secure Connections**: Appsmith Cloud establishes connections with databases and API endpoints exclusively through whitelisted IP addresses `18.223.74.0/24`, `3.131.104.27/24`, and `3.148.74.197/24`. All traffic to and from Appsmith Cloud is secured using TLS encryption.
+- **Secure Connections**: Appsmith Cloud establishes connections with databases and API endpoints exclusively through whitelisted IP addresses `18.223.74.0/32`, `3.131.104.27/32`, and `3.148.74.197/32`. All traffic to and from Appsmith Cloud is secured using TLS encryption.
 
 - **Domain Whitelisting**: For self-hosted Appsmith users, it’s necessary to whitelist the domain `cs.appsmith.com`. IP-based whitelisting is not allowed for this domain because it relies on dynamic IPs for scaling and load balancing. 
 

@@ -10,7 +10,7 @@ This page gives information to connect Appsmith to a PostgreSQL database and to 
 ## Connect PostgreSQL
 
 :::caution
-If you are a cloud user, you must configure the `pg_hba.conf` file to whitelist the IP addresses `18.223.74.0/24`, `3.131.104.27/24`, and `3.148.74.197/24` of the Appsmith deployment on your database instance before connecting to a database. See [**Client Authentication**](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) for more details.
+If you are a cloud user, you must configure the `pg_hba.conf` file to whitelist the IP addresses `18.223.74.0/32`, `3.131.104.27/32`, and `3.148.74.197/32` of the Appsmith deployment on your database instance before connecting to a database. See [**Client Authentication**](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) for more details.
 :::
 
 ### Connection parameters

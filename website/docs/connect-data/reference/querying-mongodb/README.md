@@ -15,7 +15,7 @@ This page gives information to connect Appsmith to a MongoDB database and to rea
 ## Connect MongoDB
 
 :::caution
-If you are a cloud user, you must whitelist the IP address of the Appsmith deployment `18.223.74.0/24`, `3.131.104.27/24`, and `3.148.74.197/24` on your database instance or VPC before connecting to a database. See [**How to whitelist IP addresses on MongoDB Atlas**](https://studio3t.com/knowledge-base/articles/mongodb-atlas-login-ip-whitelisting/#how-to-whitelist-ip-addresses-on-mongodb-atlas) for more details.
+If you are a cloud user, you must whitelist the IP address of the Appsmith deployment `18.223.74.0/32`, `3.131.104.27/32`, and `3.148.74.197/32` on your database instance or VPC before connecting to a database. See [**How to whitelist IP addresses on MongoDB Atlas**](https://studio3t.com/knowledge-base/articles/mongodb-atlas-login-ip-whitelisting/#how-to-whitelist-ip-addresses-on-mongodb-atlas) for more details.
 :::
 
 ### Connection parameters
