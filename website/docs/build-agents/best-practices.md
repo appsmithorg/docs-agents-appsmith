@@ -124,9 +124,33 @@ function notifyUser(email) { ... }
 
 </dd>
 
+### Avoid Overfetching Data
+
+Limit data returned by queries to only what's necessary.
+
+- Use `SELECT` instead of `SELECT *`.
+- Apply pagination where applicable.
+- Filter results based on context-specific parameters.
+
+<dd>
+
+**Avoid:**
+
+```sql
+SELECT * FROM users;
+```
+
+**Use:**
+
+```sql
+SELECT id, name, email FROM users WHERE email = {{this.params.email}};
+```
+
+</dd>
 
 ### Save Changes Before Use
 
 Agents can only access the latest saved version of your function. Click "Save" in the editor after any modification.
 
 Ensure that no unsaved changes remain before assigning a function to an agent workflow.
+
