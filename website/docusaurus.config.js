@@ -84,7 +84,7 @@ const config = {
       algolia: {
         appId: '6G9O1QP75U',
         apiKey: '9a9a704407540f884f3724fdfb298aa8',
-        indexName: 'crawler_Agent Docs',
+        indexName: 'crawler_Agent_Docs',
         contextualSearch: false,
 
         //... other Algolia params
