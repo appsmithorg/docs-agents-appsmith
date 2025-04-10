@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 <!-- vale off -->
 
 <div className="tag-wrapper">
- <h1>Chat Query</h1>
+ <h1>Agent Chat Query</h1>
 </div>
 
 <!-- vale on -->
