@@ -5,45 +5,31 @@ slug: /
 ---
 import HomepageCards from '@site/src/components/HomepageCards';
 
+Appsmith Agents is a platform to scale your support, sales, success, and people teams with secure, embedded agents powered by your data.
+With Appsmith Agents, you can quickly create AI-powered experiences that are deeply integrated with your business data, workflows, and user interfaces. Whether you're enhancing an existing process or building something entirely new, Agents help you go from idea to impact — fast.
 
-# Introducing Appsmith Agents
+## What Are Agents?
 
-**Appsmith Agents** is the easiest way to build custom AI agents that work exactly where you work — inside your internal tools, workflows, and applications.
+Agents are secure, AI-powered assistants that live inside the tools your teams already use — like CRMs, dashboards, help desks, and HR platforms.
+They help your support, sales, success, and people teams:
 
-With Appsmith Agents, you can quickly create AI-powered experiences that are deeply integrated with your business data, workflows, and user interfaces. Whether you're enhancing an existing application or building something entirely new, Agents help you go from idea to impact — fast.
+* Instantly answer questions using real-time data
+* Automate repetitive or multi-step processes
+* Highlight insights and next steps inside everyday tools
+* Involve the right people when human input is needed
 
-
-## What You Can Do with Agents
-
-- **Connect to your business data**  
-Securely access databases, APIs, and other data sources using Appsmith’s built-in integrations.
-
-- **Add AI to any UI**  
-Drop agents into your dashboards, forms, admin panels — anywhere you already use Appsmith.
-
-- **Orchestrate intelligent workflows**  
-Combine AI with UI widgets and JavaScript logic to automate multi-step processes.
-
-- **Keep humans in the loop**  
-Design flows where agents and people work together, with checkpoints, reviews, and approvals.
-
-## What Are Appsmith Agents?
-
-Appsmith Agents are intelligent, customizable AI assistants that can:
-
-- **Access your organization’s data**: Connect securely to databases, APIs, and other data sources using Appsmith’s existing integrations.
-- **Embed directly inside your apps**: Drop agents into your current Appsmith applications to extend their capabilities with natural language interfaces and intelligent behavior.
-- **Trigger complex workflows**: Combine agents with UI widgets and custom JavaScript to orchestrate multi-step processes across tools and teams.
-- **Enable human-in-the-loop automation**: Build AI workflows where agents and humans collaborate — with configurable checkpoints, reviews, and approvals.
-
-Whether you're automating support tasks, streamlining onboarding, helping users navigate internal tools, or building full-fledged AI copilots for your team, Appsmith Agents give you the building blocks to do it — all within the platform you already use and love.
+Agents use natural language and your existing business logic to speed up tasks, reduce manual effort, and improve decision-making.
 
 ## Why Use Appsmith Agents?
 
-- **No need to reinvent your stack**: Agents work with the data and tools you already have.
-- **Designed for internal apps**: Agents are built for structured, secure, and accountable workflows.
-- **Frictionless customization**: Use JavaScript, drag-and-drop UI, and conditional logic to tailor agent behavior to your exact needs.
-- **Seamless integration**: Embed agents into dashboards, admin panels, or any other Appsmith app with a few clicks.
+* **1-click RAG:** Give context from your unstructured data without having to build complex pipelines. Instantly boost your agents with relevant knowledge from docs, chats, tickets, and more.
+* **Embed privately anywhere:** Add agents directly into the tools your teams use — from internal dashboards to help desks — with full control over access and visibility.
+* **Seamless integrations:** Connect to your existing data stack using Appsmith's native connectors — databases, APIs, SaaS tools, and more — with zero friction.
+* **Powerful customization:** Use drag-and-drop UI widgets, JavaScript logic, and workflows to build intelligent agents tailored to your team’s exact needs and processes.
+* **Enterprise-grade security:** Agents come with built-in access control, audit logs, and enterprise-level security to meet your compliance and governance needs.
+
+
+
 
 
 ## Get Started
