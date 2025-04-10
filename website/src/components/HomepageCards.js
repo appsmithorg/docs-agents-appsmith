@@ -16,9 +16,9 @@ const HomePageCards = () => {
       className: styles.tutorials,
     },
     {
-      title: "Guides",
-      description: "Explore detailed documentation on features and best practices.",
-      link: "/build-agents/how-to-guides/overview",
+      title: "Connect Data",
+      description: "Learn how to connect knowledge bases, functions, and databases to power your AI agents.",
+      link: "/connect-data/intro",
       bg: guidesBg,
       className: styles.guides,
     },
