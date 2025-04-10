@@ -4,6 +4,15 @@ import DownloadButton from '@site/src/components/DownloadButton';
 
 This tutorial guides you through building a customer support AI agent that can answer FAQs from a knowledge base and retrieve ticket statuses from a database.
 
+
+:::tip ⏳ Estimated Time: 15 minutes
+By the end of this tutorial, you will learn to:
+
+- Connect a knowledge base to your agent.
+- Set up function calling using an API (e.g., order or ticket status).
+- Create and test a basic RAG (Retrieval-Augmented Generation) agent.
+:::
+
 ## Set Up Your AI Agent
 
 <div style={{ position: "relative", paddingBottom: "calc(50.52% + 41px)", height: 0, width: "100%" }}>

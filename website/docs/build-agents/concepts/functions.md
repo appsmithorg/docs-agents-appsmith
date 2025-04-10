@@ -1,5 +1,5 @@
 ---
-title: Function Calls
+title: Function Calling
 description: Learn how Appsmith agents can call queries and JavaScript functions
 ---
 
