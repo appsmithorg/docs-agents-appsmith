@@ -15,6 +15,14 @@ import TabItem from '@theme/TabItem';
 <!-- vale on -->
 This page provides information on the agent query and how you can configure it to fine tune your agent and provide it with context.
 
+
+
+<ZoomImage
+  src="/img/chat-query-ai.png" 
+  alt=""
+  caption=""
+/>
+
 #### System Instructions
 
 <dd>
@@ -177,3 +185,9 @@ Execution flow:
 3. The results—ticket metadata and user comments—are returned in the assistant’s response.
 
 </dd>
+
+## See also
+
+- [Function calling concepts](/build-agents/concepts/functions)
+- [Build your first agent](/getting-started/build-your-first-agent)
+- [Connect data overview](/connect-data/intro)
