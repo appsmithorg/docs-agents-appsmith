@@ -31,18 +31,22 @@ By the end of this tutorial, you will learn to:
 
 
 
-1. Open the [Appsmith Agents](https://test.appsmithai.com/applications) Home to view all workspaces and agents. A workspace is a collection of agents where teams can collaborate on building and managing different apps.
+1. Open your Appsmith Agent if you already have access.
 
-2. To create a new agent, click the **Create New** dropdown in the top-right corner of the workspace and select **AI Agents**.
+<dd>
 
-3. When the AI Agent editor opens, you'll see a split layout. The chat widget appears on the right, where you can interact with your agent. On the left, the editor pane allows you to configure how your agent behaves.
+If you are not yet signed up, visit [login.appsmith.com](https://login.appsmithai.com), enter your organization name and domain to create your workspace (e.g., `org-name.appsmithai.com`).
+
+</dd>
+
+2. Once you open your AI Agent, the editor will launch with a split layout. The chat widget appears on the right, where you can interact with your agent. On the left, the editor pane allows you to configure how your agent behaves.
 
 <dd> 
 
 
 By default, you're in the Query tab with a pre-configured AI Chat Query. This is where you can:
 
-- Add knowledge sources, such as uploaded documents or URLs.
+- Add [knowledge sources](/connect-data/overview), such as uploaded documents or URLs.
 
 - Connect to database queries for function calling, so your agent can perform actions like checking a ticket status.
 
@@ -50,7 +54,7 @@ By default, you're in the Query tab with a pre-configured AI Chat Query. This is
 </dd>
 
 
-4. Add a **System Instructions** to define how the AI should behave. This prompt guides the AI's responses by setting clear expectations for how it should use the knowledge base and database functions.
+3. Add a **System Instructions** to define how the AI should behave. This prompt guides the AI's responses by setting clear expectations for how it should use the knowledge base and database functions.
 
 <dd> 
 
@@ -68,9 +72,9 @@ See [How to Configure Chat Query](/build-agents/agent).
 </dd>
 
 
-5.  In the AI Query, navigate to the **Knowledge Sources** section. This is where you configure the AI's knowledge base, enabling it to retrieve accurate responses from uploaded documents.
+4.  In the AI Query, navigate to the **Knowledge Sources** section. This is where you configure the AI's knowledge base, enabling it to retrieve accurate responses from uploaded documents.
 
-6. Click **Add Source**, then select **Import Source**. Choose Local File as the import option. You can also connect to external storage services such as Google Drive, Dropbox, or OneDrive to import documents. 
+5. Click **Add Source**, then select **Import Source**. Choose Local File as the import option. You can also connect to external storage services such as Google Drive, Dropbox, or OneDrive to import documents. 
 
 <dd>
 
@@ -85,7 +89,7 @@ Download the FAQ document provided below and upload it to Appsmith AI to serve a
 
 </dd>
 
-7. After uploading, save the source configuration to enable document-based retrieval.
+6. After uploading, save the source configuration to enable document-based retrieval.
 
 <dd>
 
