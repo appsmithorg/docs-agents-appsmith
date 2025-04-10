@@ -87,3 +87,5 @@ When the user asks about a product's availability, follow this flow:
 ```
 
 </dd>
+
+This allows you to execute multiple queries and functions in sequence, handle conditional logic, and return a single, meaningful result to the end user.

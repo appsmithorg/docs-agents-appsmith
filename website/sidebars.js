@@ -106,7 +106,6 @@ const sidebars = {
       label: 'Build Agents',
       items: [
         'build-agents/overview',
-        'build-agents/agent',
         {
           type: 'category',
           collapsed: true,
@@ -114,15 +113,7 @@ const sidebars = {
           items: [
             'build-agents/how-to-guides/embed-agents',
             'build-agents/how-to-guides/custom-ui-agent',
-          ],
-        },
-        {
-          type: 'category',
-          collapsed: true,
-          label: 'Concepts',
-          items: [
-            'build-agents/concepts/functions',
-            'build-agents/concepts/ui-workflows',
+            'build-agents/how-to-guides/run-multiple-functions',
           ],
         },
         {
@@ -130,6 +121,7 @@ const sidebars = {
           collapsed: false,
           label: 'Reference',
           items: [
+            'build-agents/agent',
             'build-agents/reference/pass-parameters',
             {
               type: 'category',
@@ -167,6 +159,15 @@ const sidebars = {
                 'build-agents/widgets/reference/zone',
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          collapsed: true,
+          label: 'Concepts',
+          items: [
+            'build-agents/concepts/functions',
+            'build-agents/concepts/ui-workflows',
           ],
         },
         'build-agents/best-practices',
