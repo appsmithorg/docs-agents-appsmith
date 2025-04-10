@@ -1,5 +1,5 @@
 ---
-title: Agent Query
+title: Chat Query
 hide_title: true
 toc_max_heading_level: 2
 ---
