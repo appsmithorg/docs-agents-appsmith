@@ -3,6 +3,7 @@ name: Run Algolia Crawler
 on:
   schedule:
     - cron: '0 2 * * *'  # Runs every day at 2:00 AM UTC
+  workflow_dispatch:      # 👈 This line enables the manual "Run workflow" button
 
 jobs:
   run-crawler:
