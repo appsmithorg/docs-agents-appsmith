@@ -1,0 +1,17 @@
+name: Run Algolia Crawler
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Runs every day at 2:00 AM UTC
+
+jobs:
+  run-crawler:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Algolia Crawler
+        run: |
+          curl -X POST 'https://crawler.algolia.com/api/1/crawlers/8b786e95-d4a9-4229-a89b-d7bb66/reindex' \
+          -H 'Content-Type: application/json' \
+          -H 'X-Algolia-API-Key: ${{ secrets.ALGOLIA_CRAWLER_API_KEY }}' \
+          -H 'X-Algolia-Application-Id: ${{ secrets.ALGOLIA_APP_ID }}'
