@@ -74,13 +74,16 @@ const sidebars = {
                   type: 'category',
                   label: 'SaaS Integrations',
                   items: [
-                    'connect-data/reference/airtable',
+                     'connect-data/reference/asana',
+                     'connect-data/reference/airtable',
                     'connect-data/reference/aws-lambda',
+                    'connect-data/reference/google-docs',
                     'connect-data/reference/querying-google-sheets',
                     'connect-data/reference/hubspot',
                     'connect-data/reference/jira',
                     'connect-data/reference/slack',
-                    'connect-data/reference/twilio'
+                    'connect-data/reference/twilio',
+                    'connect-data/reference/zendesk',
                   ],
                 },
                 //category- AI Integrations
