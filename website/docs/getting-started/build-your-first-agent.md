@@ -2,13 +2,11 @@ import DownloadButton from '@site/src/components/DownloadButton';
 
 # Build Your First Agent
 
-This tutorial guides you through building a customer support AI agent that can answer FAQs from a knowledge base and retrieve ticket statuses from a database.
+In this tutorial, you'll learn how to build your first AI agent using Appsmith Agents. By the end, you'll have created a Project Management Assistant that integrates with Jira to help teams analyze issues, generate status reports, and draft responses to stakeholders.
 
-
-:::tip ⏳ Estimated Time: 15 minutes
+:::tip ⏳ Estimated Time: 10 minutes
 By the end of this tutorial, you will learn to:
 
-- Connect a knowledge base to your agent.
 - Set up function calling using an API (e.g., order or ticket status).
 - Create and test a basic RAG (Retrieval-Augmented Generation) agent.
 :::
@@ -17,7 +15,7 @@ By the end of this tutorial, you will learn to:
 
 <div style={{ position: "relative", paddingBottom: "calc(50.52% + 41px)", height: 0, width: "100%" }}>
   <iframe
-    src="https://demo.arcade.software/U2wDO3adeI3y4jDN2IyK?embed"
+    src="https://demo.arcade.software/bbndcJQPApcNzmatoQoR?embed"
     frameBorder="0"
     loading="lazy"
     webkitAllowFullScreen
@@ -39,139 +37,89 @@ If you are not yet signed up, visit [login.appsmith.com](https://login.appsmitha
 
 </dd>
 
-2. Once you open your AI Agent, the editor will launch with a split layout. The chat widget appears on the right, where you can interact with your agent. On the left, the editor pane allows you to configure how your agent behaves.
-
-<dd> 
+2. Click the **Create Agent** button in the top-right corner. Select **Create from Scratch** to begin building a new agent. 
 
 
-By default, you're in the Query tab with a pre-configured AI Chat Query. This is where you can:
+3. Once the agent is created, a setup modal will appear.
 
-- Add [knowledge sources](/connect-data/overview), such as uploaded documents or URLs.
 
-- Connect to database queries for function calling, so your agent can perform actions like checking a ticket status.
 
+<dd>
+
+This modal contains two primary tabs: **Actions** and **Knowledge Sources**. These tabs allow you to define how the agent interacts with external systems and how it retrieves contextual information.
+
+
+- **Actions**: You can connect to different SaaS tools that allow the agent to perform actions like creating or updating tickets, sending messages, or managing tasks. These connected tools act as function calls the agent can trigger during a conversation. When added from this modal, Appsmith automatically creates queries for common operations like create, update, and delete. If you want to connect other tools, you can do so anytime from the Datasource panel in the editor.
+
+- **[Knowledge Sources]((/connect-data/overview))**: You can upload documents or sync external content that the agent can reference while responding. Supported options include uploading files (up to 20MB each), syncing up to 1000 web links, or connecting with platforms like Notion or OneDrive. The agent will search these sources to provide accurate, grounded answers based on the content.
+
+</dd>
+
+4. Click on **Jira** from the **Actions** tab in the setup modal. In the connection options, select **Connect with OAuth**.
+
+<dd>
+
+Use the following details to complete the connection:
+
+- **Email:** `docs+jira@appsmith.com`
+
+- **Password:** `w9k6kJX2G*aRYJS`
+
+- **Site URL:** `https://appsmith-docs-team.atlassian.net`
+
+Once connected, Appsmith will automatically generate a set of queries for this Jira instance.
 
 </dd>
 
 
-3. Add a **System Instructions** to define how the AI should behave. This prompt guides the AI's responses by setting clear expectations for how it should use the knowledge base and database functions.
+5. Define the system prompt for your agent. This prompt instructs the AI on how it should behave, what tools it can use, and how to interpret user inputs.
 
-<dd> 
+<dd>
 
-Within the prompt, you can explicitly define which queries the AI can call and what kind of data each query expects. 
-
-
-*Example system prompt:*
+You can write your own prompt or click **Generate System Prompt** to auto-generate one based on your current setup.
 
 ```js
-This AI assists users with customer support inquiries by retrieving information from the uploaded FAQ document and checking ticket statuses in the PostgreSQL database. Always reference the document before responding. To retrieve ticket status, call the Get_Ticket_Status function with the ticket_id provided by the user. To create a new ticket, use the Create_New_Ticket function with the user's user_id and the issue_type.
+This AI assists users with support-related tasks by referencing the uploaded FAQ document and interacting with Jira. To create a new issue, call the Create_Issue function using the summary, description, and issue_type provided by the user. To retrieve ticket details, use the Get_Issue_By_ID function with the ticket_id. Always use the knowledge source to answer general questions, and call Jira functions only when the user explicitly asks to create or check a ticket.
 ```
 
 See [How to Configure Chat Query](/build-agents/agent).
 
+
 </dd>
 
+6. Click **+ New Function** and select Create Query. Choose the Jira datasource you connected earlier, and rename the query to `Create_Issue` for clarity and easy reference in the agent.
 
-4.  In the AI Query, navigate to the **Knowledge Sources** section. This is where you configure the AI's knowledge base, enabling it to retrieve accurate responses from uploaded documents.
-
-5. Click **Add Source**, then select **Import Source**. Choose Local File as the import option. You can also connect to external storage services such as Google Drive, Dropbox, or OneDrive to import documents. 
+7. Select the **Create Issue** command to pass data from the AI to Jira using `{{this.params.name}}` for each input field. This enables the agent to dynamically send values like summary and issue type during a conversation.
 
 <dd>
 
-Download the FAQ document provided below and upload it to Appsmith AI to serve as the primary knowledge base for your agent.
+Configure the query inputs using `{{this.params}}` to make the values dynamic:
 
-<DownloadButton
-  fileName="Customer_Support_SLA_Guide.pdf"
-  fileUrl="/user-files/Customer_Support_SLA_Guide.pdf"
-  description="Download the agent configuration file (used for step 2 setup)"
-/>
+- **Summary**: `{{this.params.issue}}`
 
+- **Issue type**: `{{this.params.issue_type}}`
 
 </dd>
 
-6. After uploading, save the source configuration to enable document-based retrieval.
-
-<dd>
-
-To verify the setup, enter a query in the Chat Widget, such as "What is the refund policy?" or "How long does it take to resolve a ticket?" The AI should generate responses based on the uploaded document. 
-
-
-</dd>
-
-## Set Up Function Calling
-
-Function calling allows the AI to interact with connected databases and fetch real-time information. In this section, you will connect a PostgreSQL database and configure queries to retrieve ticket status details dynamically based on user input.
-
-<div style={{ position: "relative", paddingBottom: "calc(50.52% + 41px)", height: 0, width: "100%" }}>
-  <iframe
-    src="https://demo.arcade.software/KyCIMfHl10U2CJ4xM28b?embed"
-    frameBorder="0"
-    loading="lazy"
-    webkitAllowFullScreen
-    mozAllowFullScreen
-    allowFullScreen
-    allow="fullscreen"
-    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-    title="Appsmith | Connect Data"
-  />
-</div>
-
-
-1. Navigate to the **Data** section, click the **+** icon, and select PostgreSQL. Create a new PostgreSQL database using the following connection details:
+8. Add a description for the function:
 
 <dd>
 
 ```js
-Host: dpg-cvmgjgje5dus73f5f3tg-a.oregon-postgres.render.com
-Port: 5432
-Database: customer_support_db
-Username: admin
-Password: Jfy1wkrukPb5n4QMS3o5A0Ju7vx3uvjO
+This function creates a new issue in Jira. It accepts two parameters—summary and issue type—provided by the user during the conversation.
 ```
-
-This datasource will be used to retrieve real-time data during AI interactions, such as checking the status of support tickets.
 
 </dd>
 
-2.  Create a new query (`Create_New_Ticket`) that allows the AI to add a new support ticket to the database based on user input:
+9. Once configured, save the query to make it available for AI function calling.
 
 <dd>
 
-```sql
-INSERT INTO tickets (user_id, issue_type, status, created_at) 
-VALUES ({{this.params.user_id}}, {{this.params.issue_type}}, 'Open', NOW()) 
-RETURNING ticket_id;
-```
-
-This query inserts a new ticket into the tickets table. The `{{this.params.user_id}}` and `{{this.params.issue_type}} `placeholders allow dynamic values to be passed at runtime, enabling function calling to create tickets based on user input.
-
+You can now test the integration by entering prompts in the chat, such as:
+"John P is having an issue with payment. Create a new high-priority ticket."
 
 </dd>
 
-3. Create a new query (`Get_Ticket_Status`) to retrieve the current status of a specific support ticket:
-
-
-<dd>
-
-```sql
-SELECT ticket_id, user_id, issue_type, status, created_at, updated_at 
-FROM tickets 
-WHERE ticket_id = {{this.params.ticket_id}};
-```
-
-This query fetches ticket details based on the provided `ticket_id`. The `{{this.params.ticket_id}}` placeholder ensures that the AI dynamically retrieves information based on user input.
-
-</dd>
-
-4. Navigate to Chat Query and add both functions (`Create_New_Ticket` and `Get_Ticket_Status`) to enable AI-driven database interactions. If required, enable Requires Approval to review and approve database actions before execution, ensuring control over ticket creation and retrieval.
-
-5. Once configured, save the query to make it available for AI function calling.
-
-
-<dd>
-
-You can now test the integration by entering prompts in the chat, such as "Fetch details of ticket 2" or "John P is having an issue with payment. Create a new high-priority ticket."
-</dd>
 
 
 ## See also
