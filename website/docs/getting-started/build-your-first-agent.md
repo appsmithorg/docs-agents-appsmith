@@ -106,7 +106,7 @@ Configure the query inputs using `{{this.params}}` to make the values dynamic:
 <dd>
 
 ```js
-This function creates a new issue in Jira. It accepts two parameters—summary and issue type—provided by the user during the conversation.
+This function creates a new issue in Jira. It accepts parameters—summary —provided by the user during the conversation.
 ```
 
 </dd>
