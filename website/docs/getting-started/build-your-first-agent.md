@@ -51,7 +51,7 @@ This modal contains two primary tabs: **Actions** and **Knowledge Sources**. The
 
 - **Actions**: You can connect to different SaaS tools that allow the agent to perform actions like creating or updating tickets, sending messages, or managing tasks. These connected tools act as function calls the agent can trigger during a conversation. When added from this modal, Appsmith automatically creates queries for common operations like create, update, and delete. If you want to connect other tools, you can do so anytime from the Datasource panel in the editor.
 
-- **[Knowledge Sources]((/connect-data/overview))**: You can upload documents or sync external content that the agent can reference while responding. Supported options include uploading files (up to 20MB each), syncing up to 1000 web links, or connecting with platforms like Notion or OneDrive. The agent will search these sources to provide accurate, grounded answers based on the content.
+- **[Knowledge Sources](/connect-data/overview)**: You can upload documents or sync external content that the agent can reference while responding. Supported options include uploading files (up to 20MB each), syncing up to 1000 web links, or connecting with platforms like Notion or OneDrive. The agent will search these sources to provide accurate, grounded answers based on the content.
 
 </dd>
 
