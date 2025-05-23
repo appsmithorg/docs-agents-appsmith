@@ -33,7 +33,7 @@ By the end of this tutorial, you will learn to:
 
 <dd>
 
-If you are not yet signed up, visit [login.appsmith.com](https://login.appsmithai.com), enter your organization name and domain to create your workspace (e.g., `org-name.appsmithai.com`).
+If you are not yet signed up, visit [login.appsmithai.com](https://login.appsmithai.com), enter your organization name and domain to create your workspace (e.g., `org-name.appsmithai.com`).
 
 </dd>
 
