@@ -2,10 +2,9 @@ name: Run Crawler
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
-
+    - cron: "0 */6 * * *"  # Runs every 6 hours
   workflow_dispatch:
-    
+
 jobs:
   deploy:
     name: Update Algolia Index
@@ -16,11 +15,11 @@ jobs:
         shell: bash
 
     steps:
-         # Checkout the code
+      # Checkout the code
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          
+
       - name: Check invalid redirect rules
         run: |
           incorrect_paths="$(jq -r '.redirects[] | select(.source == .destination) | .source' vercel.json)"
@@ -29,6 +28,7 @@ jobs:
             echo "$incorrect_paths" >&2
             exit 1
           fi
+
           repeated_sources="$(jq -r '.redirects[].source' vercel.json | sort | uniq --count --repeated)"
           if [[ -n $repeated_sources ]]; then
             echo "There are repeated sources in redirect rules. Please correct them." >&2
@@ -36,7 +36,9 @@ jobs:
             exit 1
           fi
 
-      - name: Run Docker Container
+      - name: Trigger Algolia Crawler
         run: |
-            docker run -e "APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" -e "ALGOLIA_API_KEY=${{ secrets.ALOGLIA_API_KEY }}" -e "CONFIG=$(cat config.json | jq -r tostring)" algolia/docsearch-scraper:latest
-            
+          curl -X POST 'https://crawler.algolia.com/api/1/crawlers/8b786e95-d4a9-4229-a89b-d7bb66/reindex' \
+          -H 'Content-Type: application/json' \
+          -H 'X-Algolia-API-Key: ${{ secrets.ALGOLIA_CRAWLER_API_KEY }}' \
+          -H 'X-Algolia-Application-Id: ${{ secrets.ALGOLIA_APPLICATION_ID }}'
