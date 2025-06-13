@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import DocSearch from '@theme-original/SearchBar';
+import AISearchButton from '@site/src/components/ask-ai/AISearchButton';
 import '@site/src/components/custom-search/css/CustomSearch.css';
 
 const CustomSearchBar = () => {
@@ -9,8 +10,11 @@ const CustomSearchBar = () => {
     useEffect(() => {
         if (ExecutionEnvironment.canUseDOM) {
             const searchInput = document.querySelector('.DocSearch-Button');
+            const aiInput = document.querySelector('.custom-doc-Search-bar');
 
-            if (searchType === 'docs' && searchInput) {
+            if (searchType === 'ai' && aiInput) {
+                aiInput.click();
+            } else if (searchType === 'docs' && searchInput) {
                 searchInput.click();
                 setTimeout(() => {
                     const searchTerm = document.querySelector('.DocSearch-Input');
@@ -23,11 +27,12 @@ const CustomSearchBar = () => {
         }
     }, [searchType]);
 
-    const handleClick = () => {
-        setSearchType('docs');
+    const handleClick = (type) => {
+        setSearchType(type);
         if (ExecutionEnvironment.canUseDOM) {
+            const eventName = type === 'ai' ? 'Ask AI Button Click' : 'Search Button Click';
             if (typeof window.analytics !== 'undefined') {
-                window.analytics.track('Search Button Click', { searchType: 'docs' });
+                window.analytics.track(eventName, { searchType: type });
             }
         }
     };
@@ -36,12 +41,19 @@ const CustomSearchBar = () => {
         <>
             <div className="custom-segmented-search-option">
                 <div
-                    className="custom-search-option selected"
-                    onClick={handleClick}
+                    className={`custom-search-option ${searchType === 'ai' ? 'selected' : ''}`}
+                    onClick={() => handleClick('ai')}
+                >
+                    <img src="/img/ask-ai-robot-icon.svg" alt="Ask AI" className='ai-search-icon'></img> Ask AI
+                </div>
+                <div
+                    className={`custom-search-option ${searchType === 'docs' ? 'selected' : ''}`}
+                    onClick={() => handleClick('docs')}
                 >
                     <img src="/img/search-in-docs-icon.svg" alt="Search" className='doc-search-icon'></img> Search
                 </div>
             </div>
+            <AISearchButton />
             <div style={{ display: 'none' }}>
                 <DocSearch />
             </div>
